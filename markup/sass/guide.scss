@@ -1,0 +1,81 @@
+// =======================================
+// Style Common
+// =======================================
+@import "style";
+
+// =======================================
+// Guide Style
+// =======================================
+body {
+    background: #ededed !important;
+    font-size: rem(16px) !important;
+    height: 100vh;
+}
+.guide {
+    margin-bottom: 0;
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: rem(20px);
+    }
+}
+.wrap {
+    @include container;
+    padding: rem(24px);
+    article {
+        .title {
+            font-size: rem(30px);
+            font-weight: bold;
+            color: #1566c1;
+            &:before {
+                content: "\f013";
+                font-family: FontAwesome;
+                font-size: rem(24px);
+                color: #1566c1;
+                padding-right: rem(10px);
+            }
+        }
+    }
+    .all-link {
+        @include span(full);
+        margin-top: $base-line-height;
+        .location {
+            padding: rem(23px) $base-line-height;
+            border: 1px solid #ddd;
+            margin-bottom: $base-line-height;
+            background: #fff;
+            p {
+                line-height: rem(24px);
+                &.check {
+                    &:before {
+                        content: "\f00c";
+                        color: #e51d68;
+                    }
+                }
+                &:before {
+                    content: "\f0c1";
+                    font-family: FontAwesome;
+                    font-size: rem(10px);
+                    color: #ccc;
+                    padding-right: rem(5px);
+                    vertical-align: top;
+                }
+                a {
+                    color: #333;
+                    display: inline-block;
+                }
+                span {
+                    font-size: rem(12px);
+                    color: #aaa;
+                    display: block;
+                    margin-left: 20px;
+                    margin-bottom: 10px;
+                    &:before {
+                        content: "(";
+                    }
+                    &:after {
+                        content: ")";
+                    }
+                }
+            }
+        }
+    }
+}

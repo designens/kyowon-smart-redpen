@@ -1,0 +1,54 @@
+// =======================================
+// Common Style
+// =======================================
+// 폰트 기본 설정
+html {
+    font-family: $font-family;
+    font-size: $html-fz;
+    body {
+        font-size: rem($body-fz);
+        color: $font-base;
+        line-height: $line-height;
+    }
+    body * {
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+}
+
+// 원격 지원 고정 사이즈 설정
+.remote {
+    width: 940px;
+    height: 640px;
+}
+.container {
+    min-width: 940px;
+    .content {
+        padding: 30px 50px;
+    }
+}
+
+// 정렬 설정
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.mr20 {
+    margin-right: 20px;
+}
+
+// 버튼 마우스 포인터
+[class^="btn-"] {
+    cursor: pointer;
+}

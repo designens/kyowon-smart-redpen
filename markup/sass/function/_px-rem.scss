@@ -1,0 +1,9 @@
+// 단위 제거
+@function de-unit($unit) {
+  @return $unit / ($unit * 0 + 1);
+}
+
+// PSD Px => Rem 단위 변경
+@function rem ($unit, $px-ratio: 1, $base: $html-fz) {
+  @return de-unit($unit/$px-ratio) / de-unit($base) + rem;
+}

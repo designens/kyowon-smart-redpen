@@ -1,0 +1,18 @@
+// =======================================
+// Fonts Style Settings
+// =======================================
+
+// 시스템폰트 설정
+$font-family: "Nanum Gothic", sans-serif;
+
+// Rem 단위 계산을 위한 기본 사이즈
+$html-fz: 10px;
+
+// 본문 폰트 사이즈
+$body-fz: 16px;
+
+// 본문 기본 행간 비율
+$line-height: 1.5;
+
+// 나눔고딕 (Nanum Gothic)
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);

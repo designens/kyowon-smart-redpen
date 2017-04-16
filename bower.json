@@ -1,0 +1,41 @@
+{
+  "name": "framework",
+  "description": "교원 빨간펜 스마트 라이브러리",
+  "main": "gulpfile.js",
+  "authors": [
+    "정인영"
+  ],
+  "license": "Kyowon",
+  "keywords": [
+    "susy",
+    "jquery",
+    "font-awesome",
+    "svg-injector"
+  ],
+  "homepage": "https://unicorn-iy.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "^2.2.12",
+    "font-awesome": "^4.7.0",
+    "svg-injector": "^1.1.3"
+  },
+  "preen": {
+    "susy": [
+      "sass/**"
+    ],
+    "font-awesome": [
+      "fonts/**",
+      "css/**"
+    ],
+    "svg-injector": [
+      "dist/svg-injector.min.js"
+    ]
+  }
+}

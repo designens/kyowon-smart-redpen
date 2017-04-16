@@ -1,0 +1,14 @@
+// 버튼 기본 디자인 설정 (PSD 기준사이즈)
+@mixin btn($fz:20px, $color:#fff, $width:110px, $height:40px, $bg:null, $bd:null, $radius:20px) {
+    font-size: rem($fz);
+    font-weight: bold;
+    color: $color;
+    width: $width;
+    height: $height;
+    line-height: $height;
+    text-align: center;
+    text-shadow: 0 0 1px hsla(0, 0%, 0%, 0.6);
+    border-radius: $radius;
+    border: 1px solid $bd;
+    background: $bg;
+}
