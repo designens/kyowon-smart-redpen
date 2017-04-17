@@ -6,123 +6,7 @@
  03_웹공유_01진척도점검_01전체_05
  (kyowon-smart-redpen/html/remote-check-progress-all.html)
 --------------------------------------------------------------------------------------- */
-.remote-check-progress-all {
-    .header {
-        position: relative;
-        width: 100%;
-        height: 62px;
-        background: url("../../assets/images/bg/bg-2depth.png");
-        background-repeat: repeat-x;
-    }
-}
-.remote-check-progress-all {
-    .header {
-        .year-month {
-            position: relative;
-            left: 14px;
-            top: 14px;
-            width: 216px;
-            height: 40px;
-            background: url("../../assets/images/common/bg-btn-set.png") no-repeat;
-            p {
-                font-weight: bold;
-                color: #fff;
-                text-align: center;
-                padding: 8px 40px;
-            }
-        }
-    }
-}
-.remote-check-progress-all {
-    .header {
-        .year-month {
-            [class^="btn-"]{
-                position: absolute;
-                top: 4px;
-                width: 32px;
-                height: 34px;
-                span {
-                    @include text-aria;
-                }
-            }
-            .btn-prev {
-                left: 4px;
-                background: url("../../assets/images/common/btn-prev-month.png") no-repeat;
-            }
-            .btn-next {
-                right: 4px;
-                background: url("../../assets/images/common/btn-next-month.png") no-repeat;
-            }
-        }
-    }
-}
-.remote-check-progress-all {
-    .header {
-        .tab-menu {
-            position: absolute;
-            right: 14px;
-            bottom: 0;
-            ul {
-                li {
-                    float: left;
-                    &:hover, &:focus, &:active {
-                        a {
-                                span {
-                                    border-left: 2px solid transparent;
-                                    color: #f24a71 !important;
-                                }
-                            }
-                    }
-                    &.selected, &:hover, &:focus, &:active {
-                        background: #fff;
-                        border-radius: 10px 10px 0px 0px;
-                        -moz-border-radius: 10px 10px 0px 0px;
-                        -webkit-border-radius: 10px 10px 0px 0px;
-                        + li {
-                            a {
-                                span {
-                                    border-left: 2px solid transparent;
-                                    color: #fff;
-                                }
-                            }
-                        }
-                        a {
-                            span {
-                                border-left: 2px solid transparent;
-                                color: #f24a71;
-                            }
-                        }
-                    }
-                    a {
-                        display: block;
-                        width: 110px;
-                        height: 48px;
-                        line-height: 48px;
-                        font-size: rem(17px);
-                        font-weight: bold;
-                        span {
-                            display: inline-block;
-                            color: #fff;
-                            width: 100%;
-                            text-align: center;
-                            line-height: 1;
-                            vertical-align: middle;
-                            border-left: 2px solid hsla(0, 0%, 0%, 0.2);
-                        }
-                    }
-                    &:first-child {
-                        a {
-                            span {
-                                border: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-.remote-check-progress-all {
+.check-progress-all {
     .container {
         .content {
             .progress-set {
@@ -143,7 +27,7 @@
         }
     }
 }
-.remote-check-progress-all {
+.check-progress-all {
     .container {
         .content {
             .progress-set {
@@ -172,7 +56,7 @@
         }
     }
 }
-.remote-check-progress-all {
+.check-progress-all {
     .container {
         .content {
             .progress-set {
@@ -190,14 +74,14 @@
                             &.number {
                                 width: 110px;
                                 text-align: center;
-                                font-size: 50px;
+                                font-size: rem(50px);
                                 font-weight: bold;
                                 color: #fff;
                                 background: #622f0a;
                                 border-radius: 10px;
                             }
                             &:nth-of-type(2) {
-                                font-size: 29px;
+                                font-size: rem(29px);
                                 color: #622f0a;
                                 padding-left: 5px;
                             }
@@ -211,7 +95,7 @@
         }
     }
 }
-.remote-check-progress-all {
+.check-progress-all {
     .container {
         .content {
             .progress-graph {
@@ -242,19 +126,38 @@
                         position: absolute;
                         top: 13px;
                         left: 13px;
+                        z-index: 1;
+                    }
+                    [class^="percent-tool-"] {
+                        position: absolute;
+                        top: 0;
+                        z-index: 2;
+                        &.percent-tool-20 {
+                            left: 86px;
+                        }
+                        &.percent-tool-40 {
+                            left: 172px;
+                        }
+                        &.percent-tool-80 {
+                            left: 344px;
+                        }
+                        &.percent-tool-100 {
+                            left: 430px;
+                        }
                     }
                 }
             }
         }
     }
 }
-.remote-check-progress-all {
+.check-progress-all {
     .container {
         .content {
             .item-title {
                 float: left;
                 .sub-title {
                     margin-top: 18px;
+                    margin-left: 10px;
                 }
             }
             .btn-island-go {
@@ -266,12 +169,13 @@
                 color: #fff;
                 margin-right: 11px;
                 margin-bottom: 20px;
-                background: url("../../assets/images/common/bg-btn-go.png") no-repeat;
+                background: url("../../assets/images/bg/bg-btn-go.png") no-repeat;
             }
         }
         .item-table {
             width: 821px;
             height: 141px;
+            margin: 0 auto;
             clear: both;
             ol {
                 li {
@@ -282,9 +186,9 @@
                 &.title {
                     height: 30px;
                     line-height: 30px;
-                    background: url("../../assets/images/common/bg-item-table.png") no-repeat;
+                    background: url("../../assets/images/bg/bg-item-table.png") no-repeat;
                     li {
-                        font-size: 18px;
+                        font-size: rem(18px);
                         font-weight: bold;
                         color: #fff;
                     }
@@ -305,6 +209,239 @@
                             border-left: 1px solid #ccc;
                         }
 
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_01진척도점검_03교과서단짝_01저학년,
+ 03_웹공유_01진척도점검_03교과서단짝_02고학년
+ (kyowon-smart-redpen/html/remote-check-progress-textbook.html)
+--------------------------------------------------------------------------------------- */
+.check-progress-textbook {
+    &.remote {
+        .container {
+            .content {
+                .table-type {
+                    thead {
+                        tr {
+                            th {
+                                height: 27px;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            th {
+                                font-size: rem(16px);
+                                height: 96px;
+                                line-height: 17px;
+                                vertical-align: middle;
+                                background: #fff5e6;
+                            }
+                            td {
+                                font-size: rem(14px);
+                                vertical-align: top;
+                                .wrap {
+                                    padding: 10px;
+                                    p {
+                                        font-weight: bold;
+                                    }
+                                    .day {
+                                        color: #f24a71;
+                                    }
+                                    .learning {
+                                        margin-top: 13px;
+                                        span {
+                                            display: block;
+                                            width: 50px;
+                                            height: 18px;
+                                            line-height: 18px;
+                                            font-size: rem(13px);
+                                            color: #fff;
+                                            letter-spacing: -0.03em;
+                                            background: #ff8550;
+                                            border-radius: 9px;
+                                            margin: 0 auto;
+                                        }
+                                    }
+                                    .date {
+                                        color: #7c4e29;
+                                        margin-top: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_화상관리_02학습진척도_03교과서단짝_01저학년,
+ 03_화상관리_02학습진척도_03교과서단짝_02고학년
+ (kyowon-smart-redpen/html/full-check-progress-textbook.html)
+--------------------------------------------------------------------------------------- */
+.check-progress-textbook {
+    &.remote-full {
+        .container {
+            .content {
+                padding: 30px;
+                .table-type {
+                    thead {
+                        tr {
+                            th {
+                                height: 50px;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            th {
+                                font-size: rem(18px);
+                                height: 110px;
+                                line-height: 20px;
+                                vertical-align: middle;
+                                background: #fff5e6;
+                            }
+                            td {
+                                font-size: rem(16px);
+                                vertical-align: top;
+                                .wrap {
+                                    padding: 10px;
+                                    p {
+                                        font-weight: bold;
+                                    }
+                                    .day {
+                                        color: #f24a71;
+                                    }
+                                    .learning {
+                                        margin-top: 13px;
+                                        span {
+                                            display: block;
+                                            width: 50px;
+                                            height: 20px;
+                                            line-height: 20px;
+                                            font-size: rem(14px);
+                                            color: #fff;
+                                            letter-spacing: -0.03em;
+                                            background: #ff8550;
+                                            border-radius: 9px;
+                                            margin: 0 auto;
+                                        }
+                                    }
+                                    .date {
+                                        font-size: rem(20px);
+                                        color: #7c4e29;
+                                        margin-top: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_01진척도점검_04주간진단_01저학년,
+ 03_웹공유_01진척도점검_04주간진단_02고학년
+ (kyowon-smart-redpen/html/remote-check-progress-weekly-diagnosis.html)
+--------------------------------------------------------------------------------------- */
+.check-progress-weekly-diagnosis {
+    .container {
+        .content {
+            .week-tab-menu {
+                margin-left: -14px;
+                margin-bottom: 22px;
+                @extend %clearfix;
+                ul {
+                    li {
+                        position: relative;
+                        float: left;
+                        display: block;
+                        min-width: 90px;
+                        text-align: center;
+                        a {
+                            display: inline-block;
+                            height: 34px;
+                            line-height: 34px;
+                            font-size: rem(16px);
+                            color: #888;
+                            text-align: center;
+                            padding: 0 20px;
+                        }
+                        &:after {
+                            position: absolute;
+                            top: 8px;
+                            left: 0;
+                            right: 0;
+                            display: inline-block;
+                            content: "";
+                            height: 18px;
+                            padding: 0 20px;
+                            border-right: 2px solid #ddd;
+                        }
+                        &:last-child {
+                            padding: 0 10px;
+                            &:after {
+                                border-right: 0;
+                            }
+                        }
+                        &.selected, &:hover, &:focus, &:active {
+                            a {
+                                color: #fff;
+                                border-radius: 17px;
+                                background: #f24a71;
+                                box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.check-progress-weekly-diagnosis {
+    &.remote {
+        .table-type {
+            font-size: rem(14px) !important;
+            tbody {
+                th {
+                    height: 96px;
+                    &.row-title {
+                        [class^="badge-scoring-results"] {
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: #fff;
+                            line-height: 1.2;
+                            margin: 0 auto;
+                            margin-top: 5px;
+                            padding-top: 7px;
+                            @extend .kw-icon;
+                        }
+                        .badge-scoring-results-on {
+                            @include sprite($icon-badge-scoring-results-on);
+                        }
+                        .badge-scoring-results-off {
+                            @include sprite($icon-badge-scoring-results-off);
+                        }
+                    }
+                }
+                td {
+                    &:nth-of-type(2) {
+                        line-height: 20px;
+                    }
+                    .badge-praise-sticker {
+                        @include sprite($icon-badge-praise-sticker);
+                        @extend .kw-icon;
+                        margin: 0 auto;
                     }
                 }
             }

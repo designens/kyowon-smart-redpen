@@ -110,6 +110,7 @@ gulp.task('build', function() {
     gulp.start('remove');
     gulp.start('htmlSSI');
     gulp.start('sass');
+    gulp.start('sass:guide');
     gulp.start('js');
     gulp.start('sprites');
     gulp.start('iconfont');
@@ -126,6 +127,7 @@ gulp.task('build', function() {
 gulp.task('watch', function() {
     gulp.watch( SRC + '/**/*.html', ['htmlSSI'] );
     gulp.watch( SRC + '/sass/**/*', ['sass']);
+    gulp.watch( SRC + '/guide/**/*', ['sass:guide']);
     gulp.watch( SRC + '/js/**/*', ['js']);
     gulp.watch(SRC + '/assets/images/**/*', ['imagemin']);
     gulp.watch(SRC + '/assets/images/sprite/**/*', ['sprites']);
@@ -141,7 +143,7 @@ gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + SRC + '/iconfont/fonts 
 // =======================================
 // 서버 업무
 // =======================================
-gulp.task('server', ['imagemin', 'iconfont', 'htmlSSI', 'sass', 'js', 'sprites'], function() {
+gulp.task('server', ['imagemin', 'iconfont', 'htmlSSI', 'sass', 'sass:guide', 'js', 'sprites'], function() {
     browserSync.init({
         // 알림 설정
         notify: !true,
@@ -182,6 +184,17 @@ gulp.task('sass', function() {
         }).on('error', sass.logError) )
         .pipe( sourcemaps.write( './map' ) )
         .pipe( gulp.dest(BUILD + '/assets/css') )
+        .pipe( filter("**/*.css") )
+        .pipe( reload({stream: true}) );
+ });
+gulp.task('sass:guide', function() {
+    return gulp.src( SRC + '/guide/**.{sass,scss}')
+        .pipe(sourcemaps.init())
+        .pipe( sass({
+            'outputStyle': 'compact'
+        }).on('error', sass.logError) )
+        .pipe( sourcemaps.write( './map' ) )
+        .pipe( gulp.dest(BUILD + '/guide') )
         .pipe( filter("**/*.css") )
         .pipe( reload({stream: true}) );
  });

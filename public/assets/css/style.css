@@ -3024,13 +3024,13 @@ hr { display: none; }
 
 legend, caption { display: none; clear: both; }
 
-a { color: #4a4a4a; }
+a { color: #222; }
 
-a:visited { color: #4a4a4a; }
+a:visited { color: #222; }
 
 a:link { text-decoration: none; }
 
-a:hover, a:active { color: #4a4a4a; text-decoration: none; }
+a:hover, a:active { color: #222; text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; word-break: keep-all; }
 
@@ -3040,7 +3040,7 @@ input, textarea, select, button, table { font-size: inherit; font-family: inheri
 
 textarea, input, select { -webkit-appearance: none; -ms-appearance: none; -moz-appearance: none; appearance: none; -webkit-border-radius: 0; -ms-border-radius: 0; -moz-border-radius: 0; border-radius: 0; border: 0; outline-color: -moz-use-text-color; outline-style: none; outline-width: medium; }
 
-textarea { resize: none; color: #4a4a4a; }
+textarea { resize: none; color: #222; }
 
 label { cursor: pointer; }
 
@@ -3056,155 +3056,240 @@ input[type="reset"], input[type="button"], input[type="submit"] { line-height: n
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0 0 0px 1000px white inset; }
 
-input::-webkit-input-placeholder { color: #4a4a4a; }
+input::-webkit-input-placeholder { color: #222; }
 
-input::-moz-placeholder { color: #4a4a4a; }
+input::-moz-placeholder { color: #222; }
 
-input:-ms-input-placeholder { color: #4a4a4a; }
+input:-ms-input-placeholder { color: #222; }
 
-input:-moz-placeholder { color: #4a4a4a; }
+input:-moz-placeholder { color: #222; }
 
-.kw-icon { background-image: url("/assets/images/sprite/sprite-icon.png"); }
+.kw-icon, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="badge-scoring-results"], .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker { background-image: url("/assets/images/sprite/sprite-icon.png"); }
+
+.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next { background-image: url("/assets/images/sprite/sprite-btn.png"); }
+
+.container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-diagnosis .container .content .week-tab-menu:after { content: ''; display: block; clear: both; }
+
+html { font-family: "Nanum Gothic", sans-serif; font-size: 10px; }
+
+html body { font-size: 1.6rem; color: #222; line-height: 1.5; }
+
+html body * { box-sizing: border-box; word-wrap: break-word; }
 
 h1 { font-size: 25px; font-size: 2.5rem; font-weight: bold; line-height: 1; color: #222; }
 
 .sub-title { font-size: 2rem; font-weight: bold; color: #7c4e29; }
 
-.btn-popup-close { position: absolute; right: 0; top: 0; width: 68px; height: 68px; }
-
-.btn-popup-close:before { display: block; content: ""; width: 100%; height: 100%; background: url("/assets/images/svg/btn-popup-close.svg") center no-repeat; background-size: 19px 19px; }
-
-.btn-popup-close span { position: absolute; top: -9999px; visibility: hidden; }
-
-.modal-popup .modal:target + .modal-dialog { top: 50%; }
-
-.modal-popup .modal-dialog { position: fixed; top: -50%; left: 50%; width: 420px; height: 224px; border: #fade20 solid 1px; border-radius: 5px; margin-top: -112px; margin-left: -210px; background: #ffface; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2); z-index: 100; }
-
-.modal-popup .modal-dialog .modal-header h4 { padding: 22px; color: #84501c; }
-
-.modal-popup .modal-dialog .modal-body { height: 134px; font-size: 2.2rem; color: #4f452c; padding: 0 22px; overflow-y: auto; }
-
-html { font-family: "Nanum Gothic", sans-serif; font-size: 10px; }
-
-html body { font-size: 1.6rem; color: #4a4a4a; line-height: 1.5; }
-
-html body * { box-sizing: border-box; word-wrap: break-word; }
-
+/* 원격 지원 축소 화면 설정 */
 .remote { width: 940px; height: 640px; }
 
-.container { min-width: 940px; }
+/* 원격 지원 풀 화면 설정 */
+.remote-full { min-width: 940px; min-height: 640px; }
+
+.container { background: #fff; }
+
+.container .header { position: relative; width: 100%; height: 62px; background: url("../../assets/images/bg/bg-2depth.png"); background-repeat: repeat-x; }
 
 .container .content { padding: 30px 50px; }
+
+.container .header .year-month { position: relative; left: 14px; top: 14px; width: 216px; height: 40px; background: url("../../assets/images/bg/bg-btn-set.png") no-repeat; }
+
+.container .header .year-month p { font-weight: bold; color: #fff; text-align: center; padding: 8px 40px; }
+
+.container .header .year-month [class^="btn-"] { position: absolute; top: 2px; }
+
+.container .header .year-month [class^="btn-"] span { position: absolute; top: -9999px; visibility: hidden; }
+
+.container .header .year-month .btn-prev { left: 2px; background-position: -36px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
+
+.container .header .year-month .btn-next { right: 2px; background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
+
+.container .header .tab-menu { position: absolute; right: 14px; bottom: 0; }
+
+.container .header .tab-menu ul li { float: left; }
+
+.container .header .tab-menu ul li.selected a span, .container .header .tab-menu ul li:hover a span, .container .header .tab-menu ul li:focus a span, .container .header .tab-menu ul li:active a span { border-left: 2px solid transparent; color: #f24a71 !important; }
+
+.container .header .tab-menu ul li.selected, .container .header .tab-menu ul li:hover, .container .header .tab-menu ul li:focus, .container .header .tab-menu ul li:active { background: #fff; border-radius: 10px 10px 0px 0px; -moz-border-radius: 10px 10px 0px 0px; -webkit-border-radius: 10px 10px 0px 0px; }
+
+.container .header .tab-menu ul li.selected + li a span, .container .header .tab-menu ul li:hover + li a span, .container .header .tab-menu ul li:focus + li a span, .container .header .tab-menu ul li:active + li a span { border-left: 2px solid transparent; color: #fff; }
+
+.container .header .tab-menu ul li.selected a span, .container .header .tab-menu ul li:hover a span, .container .header .tab-menu ul li:focus a span, .container .header .tab-menu ul li:active a span { border-left: 2px solid transparent; color: #f24a71; }
+
+.container .header .tab-menu ul li a { display: block; width: 110px; height: 48px; line-height: 48px; font-size: 1.7rem; font-weight: bold; }
+
+.container .header .tab-menu ul li a span { display: inline-block; color: #fff; width: 100%; text-align: center; line-height: 1; vertical-align: middle; border-left: 2px solid rgba(0, 0, 0, 0.2); }
+
+.container .header .tab-menu ul li:first-child a span { border: 0; }
+
+.container .content .table-type { width: 100%; border-top: 2px solid #555; }
+
+.container .content .table-type thead { background: #f3f3f3; }
+
+.container .content .table-type thead tr th { border-bottom: 1px solid #555 !important; }
+
+.container .content .table-type thead tr th:first-child { border-left-width: 0; border-right: 1px solid #555 !important; }
+
+.container .content .table-type thead tr th:last-child { border-right-width: 0; }
+
+.container .content .table-type tbody tr th:first-child { border-left-width: 0; }
+
+.container .content .table-type tbody tr th.row-title { border-right: 1px solid #555 !important; }
+
+.container .content .table-type tbody tr td:last-child { border-right-width: 0; }
+
+.container .content .table-type tr th, .container .content .table-type tr td { text-align: center; vertical-align: middle; border: 1px solid #ccc; }
+
+.bg-color { background: #082c45; }
 
 .fl { float: left; }
 
 .fr { float: right; }
 
-.mt20 { margin-top: 20px; }
-
-.mb20 { margin-bottom: 20px; }
-
-.ml20 { margin-left: 20px; }
-
-.mr20 { margin-right: 20px; }
-
 [class^="btn-"] { cursor: pointer; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_01전체_01, 03_웹공유_01진척도점검_01전체_02, 03_웹공유_01진척도점검_01전체_03, 03_웹공유_01진척도점검_01전체_04, 03_웹공유_01진척도점검_01전체_05 (kyowon-smart-redpen/html/remote-check-progress-all.html) --------------------------------------------------------------------------------------- */
-.remote-check-progress-all .header { position: relative; width: 100%; height: 62px; background: url("../../assets/images/bg/bg-2depth.png"); background-repeat: repeat-x; }
+.check-progress-all .container .content .progress-set { position: relative; width: 100%; height: 208px; border-bottom: 2px solid #e5e5e5; margin-top: 18px; }
 
-.remote-check-progress-all .header .year-month { position: relative; left: 14px; top: 14px; width: 216px; height: 40px; background: url("../../assets/images/common/bg-btn-set.png") no-repeat; }
+.check-progress-all .container .content .progress-set .progress-percent { float: left; height: inherit; }
 
-.remote-check-progress-all .header .year-month p { font-weight: bold; color: #fff; text-align: center; padding: 8px 40px; }
+.check-progress-all .container .content .progress-set .progress-graph { float: right; height: inherit; }
 
-.remote-check-progress-all .header .year-month [class^="btn-"] { position: absolute; top: 4px; width: 32px; height: 34px; }
+.check-progress-all .container .content .progress-set .progress-percent [class^="percent-"] { position: absolute; left: 0; }
 
-.remote-check-progress-all .header .year-month [class^="btn-"] span { position: absolute; top: -9999px; visibility: hidden; }
+.check-progress-all .container .content .progress-set .progress-percent .percent-0 { top: 6px; }
 
-.remote-check-progress-all .header .year-month .btn-prev { left: 4px; background: url("../../assets/images/common/btn-prev-month.png") no-repeat; }
+.check-progress-all .container .content .progress-set .progress-percent .percent-20 { top: 4px; }
 
-.remote-check-progress-all .header .year-month .btn-next { right: 4px; background: url("../../assets/images/common/btn-next-month.png") no-repeat; }
+.check-progress-all .container .content .progress-set .progress-percent .percent-40 { top: -7px; }
 
-.remote-check-progress-all .header .tab-menu { position: absolute; right: 14px; bottom: 0; }
+.check-progress-all .container .content .progress-set .progress-percent .percent-80 { top: 19px; }
 
-.remote-check-progress-all .header .tab-menu ul li { float: left; }
+.check-progress-all .container .content .progress-set .progress-percent .percent-100 { top: 11px; }
 
-.remote-check-progress-all .header .tab-menu ul li:hover a span, .remote-check-progress-all .header .tab-menu ul li:focus a span, .remote-check-progress-all .header .tab-menu ul li:active a span { border-left: 2px solid transparent; color: #f24a71 !important; }
+.check-progress-all .container .content .progress-set .progress-percent { min-width: 326px; }
 
-.remote-check-progress-all .header .tab-menu ul li.selected, .remote-check-progress-all .header .tab-menu ul li:hover, .remote-check-progress-all .header .tab-menu ul li:focus, .remote-check-progress-all .header .tab-menu ul li:active { background: #fff; border-radius: 10px 10px 0px 0px; -moz-border-radius: 10px 10px 0px 0px; -webkit-border-radius: 10px 10px 0px 0px; }
+.check-progress-all .container .content .progress-set .progress-percent .percent { position: absolute; left: 0; bottom: 54px; }
 
-.remote-check-progress-all .header .tab-menu ul li.selected + li a span, .remote-check-progress-all .header .tab-menu ul li:hover + li a span, .remote-check-progress-all .header .tab-menu ul li:focus + li a span, .remote-check-progress-all .header .tab-menu ul li:active + li a span { border-left: 2px solid transparent; color: #fff; }
+.check-progress-all .container .content .progress-set .progress-percent .percent span { display: inline-block; height: 54px; line-height: 54px; vertical-align: top; }
 
-.remote-check-progress-all .header .tab-menu ul li.selected a span, .remote-check-progress-all .header .tab-menu ul li:hover a span, .remote-check-progress-all .header .tab-menu ul li:focus a span, .remote-check-progress-all .header .tab-menu ul li:active a span { border-left: 2px solid transparent; color: #f24a71; }
+.check-progress-all .container .content .progress-set .progress-percent .percent span.number { width: 110px; text-align: center; font-size: 5rem; font-weight: bold; color: #fff; background: #622f0a; border-radius: 10px; }
 
-.remote-check-progress-all .header .tab-menu ul li a { display: block; width: 110px; height: 48px; line-height: 48px; font-size: 1.7rem; font-weight: bold; }
+.check-progress-all .container .content .progress-set .progress-percent .percent span:nth-of-type(2) { font-size: 2.9rem; color: #622f0a; padding-left: 5px; }
 
-.remote-check-progress-all .header .tab-menu ul li a span { display: inline-block; color: #fff; width: 100%; text-align: center; line-height: 1; vertical-align: middle; border-left: 2px solid rgba(0, 0, 0, 0.2); }
+.check-progress-all .container .content .progress-set .progress-graph { min-width: 514px; }
 
-.remote-check-progress-all .header .tab-menu ul li:first-child a span { border: 0; }
+.check-progress-all .container .content .progress-graph p.percent { font-size: 1.6rem; margin-top: 10px; }
 
-.remote-check-progress-all .container .content .progress-set { position: relative; width: 100%; height: 208px; border-bottom: 2px solid #e5e5e5; margin-top: 18px; }
+.check-progress-all .container .content .progress-graph p.percent span:nth-of-type(1) { margin-left: 14px; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent { float: left; height: inherit; }
+.check-progress-all .container .content .progress-graph p.percent span:nth-of-type(2) { margin-left: 190px; }
 
-.remote-check-progress-all .container .content .progress-set .progress-graph { float: right; height: inherit; }
+.check-progress-all .container .content .progress-graph p.percent span:nth-of-type(3) { margin-left: 170px; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent [class^="percent-"] { position: absolute; left: 0; }
+.check-progress-all .container .content .progress-graph .graph { position: relative; top: 4px; width: 514px; height: 125px; background: url("../../assets/images/common/progress-graph.png") no-repeat; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent-0 { top: 6px; }
+.check-progress-all .container .content .progress-graph .graph [class^="percent-"] { position: absolute; top: 13px; left: 13px; z-index: 1; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent-20 { top: 4px; }
+.check-progress-all .container .content .progress-graph .graph [class^="percent-tool-"] { position: absolute; top: 0; z-index: 2; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent-40 { top: -7px; }
+.check-progress-all .container .content .progress-graph .graph [class^="percent-tool-"].percent-tool-20 { left: 86px; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent-80 { top: 19px; }
+.check-progress-all .container .content .progress-graph .graph [class^="percent-tool-"].percent-tool-40 { left: 172px; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent-100 { top: 11px; }
+.check-progress-all .container .content .progress-graph .graph [class^="percent-tool-"].percent-tool-80 { left: 344px; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent { min-width: 326px; }
+.check-progress-all .container .content .progress-graph .graph [class^="percent-tool-"].percent-tool-100 { left: 430px; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent { position: absolute; left: 0; bottom: 54px; }
+.check-progress-all .container .content .item-title { float: left; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent span { display: inline-block; height: 54px; line-height: 54px; vertical-align: top; }
+.check-progress-all .container .content .item-title .sub-title { margin-top: 18px; margin-left: 10px; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent span.number { width: 110px; text-align: center; font-size: 50px; font-weight: bold; color: #fff; background: #622f0a; border-radius: 10px; }
+.check-progress-all .container .content .btn-island-go { float: right; width: 400px; height: 63px; font-size: 2rem; font-weight: bold; color: #fff; margin-right: 11px; margin-bottom: 20px; background: url("../../assets/images/bg/bg-btn-go.png") no-repeat; }
 
-.remote-check-progress-all .container .content .progress-set .progress-percent .percent span:nth-of-type(2) { font-size: 29px; color: #622f0a; padding-left: 5px; }
+.check-progress-all .container .item-table { width: 821px; height: 141px; margin: 0 auto; clear: both; }
 
-.remote-check-progress-all .container .content .progress-set .progress-graph { min-width: 514px; }
+.check-progress-all .container .item-table ol li { float: left; width: 20%; text-align: center; }
 
-.remote-check-progress-all .container .content .progress-graph p.percent { font-size: 1.6rem; margin-top: 10px; }
+.check-progress-all .container .item-table ol.title { height: 30px; line-height: 30px; background: url("../../assets/images/bg/bg-item-table.png") no-repeat; }
 
-.remote-check-progress-all .container .content .progress-graph p.percent span:nth-of-type(1) { margin-left: 14px; }
+.check-progress-all .container .item-table ol.title li { font-size: 1.8rem; font-weight: bold; color: #fff; }
 
-.remote-check-progress-all .container .content .progress-graph p.percent span:nth-of-type(2) { margin-left: 190px; }
+.check-progress-all .container .item-table ol.item-box { height: 110px; }
 
-.remote-check-progress-all .container .content .progress-graph p.percent span:nth-of-type(3) { margin-left: 170px; }
+.check-progress-all .container .item-table ol.item-box li { height: inherit; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; background: url("../../assets/images/common/item-default.png") no-repeat; overflow: hidden; }
 
-.remote-check-progress-all .container .content .progress-graph .graph { position: relative; top: 4px; width: 514px; height: 125px; background: url("../../assets/images/common/progress-graph.png") no-repeat; }
+.check-progress-all .container .item-table ol.item-box li img { width: 100%; height: auto; }
 
-.remote-check-progress-all .container .content .progress-graph .graph [class^="percent-"] { position: absolute; top: 13px; left: 13px; }
+.check-progress-all .container .item-table ol.item-box li:first-child { border-left: 1px solid #ccc; }
 
-.remote-check-progress-all .container .content .item-title { float: left; }
+/* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_03교과서단짝_01저학년, 03_웹공유_01진척도점검_03교과서단짝_02고학년 (kyowon-smart-redpen/html/remote-check-progress-textbook.html) --------------------------------------------------------------------------------------- */
+.check-progress-textbook.remote .container .content .table-type thead tr th { height: 27px; }
 
-.remote-check-progress-all .container .content .item-title .sub-title { margin-top: 18px; }
+.check-progress-textbook.remote .container .content .table-type tbody tr th { font-size: 1.6rem; height: 96px; line-height: 17px; vertical-align: middle; background: #fff5e6; }
 
-.remote-check-progress-all .container .content .btn-island-go { float: right; width: 400px; height: 63px; font-size: 2rem; font-weight: bold; color: #fff; margin-right: 11px; margin-bottom: 20px; background: url("../../assets/images/common/bg-btn-go.png") no-repeat; }
+.check-progress-textbook.remote .container .content .table-type tbody tr td { font-size: 1.4rem; vertical-align: top; }
 
-.remote-check-progress-all .container .item-table { width: 821px; height: 141px; clear: both; }
+.check-progress-textbook.remote .container .content .table-type tbody tr td .wrap { padding: 10px; }
 
-.remote-check-progress-all .container .item-table ol li { float: left; width: 20%; text-align: center; }
+.check-progress-textbook.remote .container .content .table-type tbody tr td .wrap p { font-weight: bold; }
 
-.remote-check-progress-all .container .item-table ol.title { height: 30px; line-height: 30px; background: url("../../assets/images/common/bg-item-table.png") no-repeat; }
+.check-progress-textbook.remote .container .content .table-type tbody tr td .wrap .day { color: #f24a71; }
 
-.remote-check-progress-all .container .item-table ol.title li { font-size: 18px; font-weight: bold; color: #fff; }
+.check-progress-textbook.remote .container .content .table-type tbody tr td .wrap .learning { margin-top: 13px; }
 
-.remote-check-progress-all .container .item-table ol.item-box { height: 110px; }
+.check-progress-textbook.remote .container .content .table-type tbody tr td .wrap .learning span { display: block; width: 50px; height: 18px; line-height: 18px; font-size: 1.3rem; color: #fff; letter-spacing: -0.03em; background: #ff8550; border-radius: 9px; margin: 0 auto; }
 
-.remote-check-progress-all .container .item-table ol.item-box li { height: inherit; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; background: url("../../assets/images/common/item-default.png") no-repeat; overflow: hidden; }
+.check-progress-textbook.remote .container .content .table-type tbody tr td .wrap .date { color: #7c4e29; margin-top: 3px; }
 
-.remote-check-progress-all .container .item-table ol.item-box li img { width: 100%; height: auto; }
+/* -------------------------------------------------------------------------------------- 03_화상관리_02학습진척도_03교과서단짝_01저학년, 03_화상관리_02학습진척도_03교과서단짝_02고학년 (kyowon-smart-redpen/html/full-check-progress-textbook.html) --------------------------------------------------------------------------------------- */
+.check-progress-textbook.remote-full .container .content { padding: 30px; }
 
-.remote-check-progress-all .container .item-table ol.item-box li:first-child { border-left: 1px solid #ccc; }
+.check-progress-textbook.remote-full .container .content .table-type thead tr th { height: 50px; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr th { font-size: 1.8rem; height: 110px; line-height: 20px; vertical-align: middle; background: #fff5e6; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td { font-size: 1.6rem; vertical-align: top; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap { padding: 10px; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap p { font-weight: bold; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .day { color: #f24a71; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .learning { margin-top: 13px; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .learning span { display: block; width: 50px; height: 20px; line-height: 20px; font-size: 1.4rem; color: #fff; letter-spacing: -0.03em; background: #ff8550; border-radius: 9px; margin: 0 auto; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .date { font-size: 2rem; color: #7c4e29; margin-top: 3px; }
+
+/* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_01저학년, 03_웹공유_01진척도점검_04주간진단_02고학년 (kyowon-smart-redpen/html/remote-check-progress-weekly-diagnosis.html) --------------------------------------------------------------------------------------- */
+.check-progress-weekly-diagnosis .container .content .week-tab-menu { margin-left: -14px; margin-bottom: 22px; }
+
+.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li { position: relative; float: left; display: block; min-width: 90px; text-align: center; }
+
+.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li a { display: inline-block; height: 34px; line-height: 34px; font-size: 1.6rem; color: #888; text-align: center; padding: 0 20px; }
+
+.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:after { position: absolute; top: 8px; left: 0; right: 0; display: inline-block; content: ""; height: 18px; padding: 0 20px; border-right: 2px solid #ddd; }
+
+.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:last-child { padding: 0 10px; }
+
+.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:last-child:after { border-right: 0; }
+
+.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li.selected a, .check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:hover a, .check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:focus a, .check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:active a { color: #fff; border-radius: 17px; background: #f24a71; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
+
+.check-progress-weekly-diagnosis.remote .table-type { font-size: 1.4rem !important; }
+
+.check-progress-weekly-diagnosis.remote .table-type tbody th { height: 96px; }
+
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="badge-scoring-results"] { font-size: 14px; font-weight: bold; color: #fff; line-height: 1.2; margin: 0 auto; margin-top: 5px; padding-top: 7px; }
+
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .badge-scoring-results-on { background-position: -70px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
+
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .badge-scoring-results-off { background-position: -118px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 48px; }
+
+.check-progress-weekly-diagnosis.remote .table-type tbody td:nth-of-type(2) { line-height: 20px; }
+
+.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; }
 
 /*# sourceMappingURL=map/style.css.map */

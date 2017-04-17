@@ -7,13 +7,14 @@
         // For google fonts
         google: {
           families: ['Droid Sans', 'Droid Serif']
-        }
-    // For early access or custom font
+        },
+        // For early access or custom font
         custom: {
             families: ['Nanum Gothic'],
             urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
-        }
+        },
     });
+
     // 웹폰트 로더 비동기 로딩 방식
     WebFontConfig = {
         custom: {
@@ -21,15 +22,6 @@
             urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
         }
     };
-    (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-    })();
 
     // SVGInjector : Style 설정
     // [참고] https://github.com/iconic/SVGInjector

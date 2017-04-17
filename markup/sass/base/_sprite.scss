@@ -1,5 +1,9 @@
-$icon-elementary-student: -0px -0px 86px 85px;
-$icon-middle-schooler: -86px -0px 86px 85px;
+$icon-badge-praise-sticker: -0px -0px 70px 72px;
+$icon-badge-scoring-results-off: -118px -0px 48px 48px;
+$icon-badge-scoring-results-on: -70px -0px 48px 52px;
+$icon-goal-title: -0px -72px 39px 39px;
+$btn-next-month: -0px -0px 36px 38px;
+$btn-prev-month: -36px -0px 36px 38px;
 @mixin sprite-width($sprite) {
 	width: nth($sprite, 3);
 }
@@ -28,4 +32,8 @@ $icon-middle-schooler: -86px -0px 86px 85px;
 
 .kw-icon {
 	background-image: url('/assets/images/sprite/sprite-icon.png');
+}
+
+.kw-btn {
+	background-image: url('/assets/images/sprite/sprite-btn.png');
 }

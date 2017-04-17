@@ -1,7 +1,29 @@
+/*! style.css v1.0.0 © inyoung524@naver.com */
+
+@charset "utf-8";
+
 // =======================================
-// Style Common
+// Framework import
 // =======================================
-@import "style";
+@import "../sass/lib/susy/susy";
+
+// =======================================
+// Base Design
+// =======================================
+@import "../sass/base/color-system";
+@import "../sass/base/reset-css";
+@import "../sass/base/susy-settings";
+
+// =======================================
+// Function
+// =======================================
+@import "../sass/function/retina";
+@import "../sass/function/px-rem";
+
+// =======================================
+// Typography
+// =======================================
+@import "../sass/fonts/font-settings";
 
 // =======================================
 // Guide Style

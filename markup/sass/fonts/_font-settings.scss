@@ -2,6 +2,9 @@
 // Fonts Style Settings
 // =======================================
 
+// 나눔고딕 (Nanum Gothic)
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 // 시스템폰트 설정
 $font-family: "Nanum Gothic", sans-serif;
 
@@ -14,5 +17,17 @@ $body-fz: 16px;
 // 본문 기본 행간 비율
 $line-height: 1.5;
 
-// 나눔고딕 (Nanum Gothic)
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+// 폰트 기본 설정
+html {
+    font-family: $font-family;
+    font-size: $html-fz;
+    body {
+        font-size: rem($body-fz);
+        color: $font-base;
+        line-height: $line-height;
+    }
+    body * {
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+}

@@ -22,11 +22,97 @@
 <link rel="stylesheet" href="../assets/css/style.css">
     <!-- javascript :  jQuery v3.2.1 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- javascript :  Web Font Loader -->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 </head>
 
-<body>
+<!-- 임시 배경 설정 : class="bg-color" 이 부분 제거 후 개발 진행 -->
+<body class="bg-color">
     <!-- [Stert] Container Area -->
-    <section>
+    <section class="remote container check-progress-weekly-diagnosis">
+        <div class="header">
+            <div class="fl year-month">
+                <button class="btn-prev"><span>이전 달</span></button>
+                <button class="btn-next"><span>다음 달</span></button>
+                <p>2017년 4월</p>
+            </div>
+            <nav class="fr tab-menu">
+                <ul>
+                    <li><a href=""><span>전체</span></a></li>
+                    <li><a href=""><span>기본/선택</span></a></li>
+                    <li><a href=""><span>교과서 단짝</span></a></li>
+                    <li class="selected"><a href=""><span>주간 진단</span></a></li>
+                    <li><a href=""><span>모의고사</span></a></li>
+                    <li><a href=""><span>디지털 첨삭</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="week-tab-menu">
+                    <ul>
+                        <li class="selected"><a href="">1주</a></li>
+                        <li><a href="">2주</a></li>
+                        <li><a href="">3주</a></li>
+                        <li><a href="">4주</a></li>
+                        <li><a href="">칭찬 딱지 모아보기</a></li>
+                    </ul>
+                </div>
+            <!-- [Stert] 03_웹공유_01진척도점검_04주간진단_01저학년 -->
+                <table class="table-type">
+                    <thead>
+                        <tr>
+                            <th width="72"></th>
+                            <th>title</th>
+                            <th width="120">title</th>
+                            <th>title</th>
+                            <th>title</th>
+                            <th>title</th>
+                            <th width="106">title</th>
+                            <th width="106">title</th>
+                            <th>title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="row-title">국어<span class="badge-scoring-results-on">채점<br>결과</span></th>
+                            <td>2017년<br>4월 15일</td>
+                            <td>오후 6:00:00<br>~<br>오후 6:13:11</td>
+                            <td>8분 11초</td>
+                            <td>15분</td>
+                            <td>10분 20초</td>
+                            <td><span>8</span> / 10</td>
+                            <td><span>8</span> / 10</td>
+                            <td><span class="badge-praise-sticker"></span></td>
+                        </tr>
+                        <tr>
+                            <th class="row-title">수학<span class="badge-scoring-results-on">채점<br>결과</span></th>
+                            <td>2017년<br>4월 15일</td>
+                            <td>오후 6:00:00<br>~<br>오후 6:13:11</td>
+                            <td>8분 11초</td>
+                            <td>15분</td>
+                            <td>10분 20초</td>
+                            <td><span>8</span> / 10</td>
+                            <td><span>8</span> / 10</td>
+                            <td><span class="badge-praise-sticker"></span></td>
+                        </tr>
+                        <tr>
+                            <th class="row-title">바슬즐<span class="badge-scoring-results-off">채점<br>결과</span></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>15분</td>
+                            <td>10분 20초</td>
+                            <td></td>
+                            <td><span>8</span> / 10</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- [End] 03_웹공유_01진척도점검_04주간진단_01저학년 -->
+
+        </div>
     </section>
     <!-- [End] Container Area -->
     <!-- Javascript & jQuery Plugin 압축 -->
