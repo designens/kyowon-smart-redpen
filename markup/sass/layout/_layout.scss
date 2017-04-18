@@ -291,7 +291,6 @@
     &.remote-full {
         .container {
             .content {
-                padding: 30px;
                 .table-type {
                     thead {
                         tr {
@@ -353,6 +352,9 @@
  03_웹공유_01진척도점검_04주간진단_01저학년,
  03_웹공유_01진척도점검_04주간진단_02고학년
  (kyowon-smart-redpen/html/remote-check-progress-weekly-diagnosis.html)
+ 03_웹공유_02주간진단분석_01저학년,
+ 03_웹공유_02주간진단분석_02고학년
+ (kyowon-smart-redpen/html/remote-weekly-diagnostic-analysis.html)
 --------------------------------------------------------------------------------------- */
 .check-progress-weekly-diagnosis {
     .container {
@@ -368,11 +370,13 @@
                         display: block;
                         min-width: 90px;
                         text-align: center;
+                        cursor: pointer;
                         a {
                             display: inline-block;
                             height: 34px;
                             line-height: 34px;
                             font-size: rem(16px);
+                            font-weight: bold;
                             color: #888;
                             text-align: center;
                             padding: 0 20px;
@@ -412,29 +416,56 @@
     &.remote {
         .table-type {
             font-size: rem(14px) !important;
+            thead {
+                tr {
+                    th {
+                        height: 50px;
+                        line-height: 18px;
+                        span {
+                            font-weight: normal;
+                        }
+                        &.full {
+                            display: none;
+                        }
+                        &:nth-of-type(1) {
+                            width: 72px;
+                        }
+                        &:nth-of-type(3) {
+                            width: 102px;
+                        }
+                        &:nth-of-type(7) {
+                            width: 106px;
+                        }
+                        &:nth-of-type(8) {
+                            width: 106px;
+                        }
+                    }
+                }
+            }
             tbody {
                 th {
                     height: 96px;
                     &.row-title {
-                        [class^="badge-scoring-results"] {
-                            font-size: 14px;
-                            font-weight: bold;
+                        [class^="btn-scoring-results"] {
+                            font-size: rem(16px);
                             color: #fff;
-                            line-height: 1.2;
+                            line-height: 16px;
                             margin: 0 auto;
                             margin-top: 5px;
-                            padding-top: 7px;
-                            @extend .kw-icon;
+                            padding-bottom: 4px;
+                            @extend .kw-btn;
+                            cursor: pointer;
                         }
-                        .badge-scoring-results-on {
-                            @include sprite($icon-badge-scoring-results-on);
+                        .btn-scoring-results-on {
+                            @include sprite($btn-scoring-results-on);
                         }
-                        .badge-scoring-results-off {
-                            @include sprite($icon-badge-scoring-results-off);
+                        .btn-scoring-results-off {
+                            @include sprite($btn-scoring-results-off);
                         }
                     }
                 }
                 td {
+                    font-weight: bold;
                     &:nth-of-type(2) {
                         line-height: 20px;
                     }
@@ -442,6 +473,101 @@
                         @include sprite($icon-badge-praise-sticker);
                         @extend .kw-icon;
                         margin: 0 auto;
+                        text-indent: -9999px;
+                    }
+                    &.full {
+                        display: none;
+                        border-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_화상관리_02학습진척도_04주간진단_01저학년,
+ 03_화상관리_02학습진척도_04주간진단_02고학년
+ (kyowon-smart-redpen/html/full-learning-progress-weekly-diagnosis.html)
+--------------------------------------------------------------------------------------- */
+.check-progress-weekly-diagnosis {
+    &.remote-full {
+        .table-title {
+            display: none;
+        }
+        .table-type {
+            thead {
+                font-size: rem(16px) !important;
+                tr {
+                    th {
+                        height: 50px;
+                        line-height: 20px;
+                        border-right: 0 !important;
+                        border-top-width: 0;
+                        border-left-width: 0;
+                        border-right-width: 0;
+                        border-bottom-width: 1px;
+                        span {
+                            font-weight: normal;
+                        }
+                        &.full {
+                            display: table-cell;
+                        }
+                        &:nth-of-type(3) {
+                            width: 130px;
+                        }
+                        &:nth-of-type(7) {
+                            width: 130px;
+                        }
+                        &:nth-of-type(8) {
+                            width: 130px;
+                        }
+                    }
+                }
+            }
+            tbody {
+                font-size: rem(18px) !important;
+                th {
+                    height: 96px;
+                    border-right: 0 !important;
+                    &.row-title {
+                        [class^="btn-scoring-results"] {
+                            display: none;
+                        }
+                    }
+                }
+                td {
+                    font-weight: bold;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    border-right-width: 0;
+                    border-bottom-width: 1px;
+                    &:nth-of-type(2) {
+                        line-height: 20px;
+                    }
+                    &.full {
+                        display: table-cell;
+                    }
+                    .badge-praise-sticker {
+                        @include sprite($icon-badge-praise-sticker);
+                        @extend .kw-icon;
+                        margin: 0 auto;
+                        text-indent: -9999px;
+                    }
+                    [class^="btn-scoring-results-full"] {
+                        font-size: rem(14px);
+                        font-weight: bold;
+                        color: #fff;
+                        line-height: 1.2;
+                        margin: 0 auto;
+                        @extend .kw-btn;
+                        cursor: pointer;
+                    }
+                    .btn-scoring-results-full-on {
+                        @include sprite($btn-scoring-results-full-on);
+                    }
+                    .btn-scoring-results-full-off {
+                        @include sprite($btn-scoring-results-full-off);
                     }
                 }
             }

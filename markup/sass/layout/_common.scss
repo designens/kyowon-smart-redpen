@@ -6,11 +6,46 @@
 .remote {
     width: 940px;
     height: 640px;
+    .container {
+        .content {
+             padding: 30px 50px;
+        }
+    }
 }
 /* 원격 지원 풀 화면 설정 */
 .remote-full {
     min-width: 940px;
     min-height: 640px;
+    .container {
+        .content {
+            padding: 30px;
+        }
+    }
+}
+
+// 서브 타이틀
+.sub-title {
+    font-size: rem(20px);
+    font-weight: bold;
+    color: #7c4e29;
+}
+
+// 임시 배경 설정
+.bg-color {
+    background: #082c45;
+}
+
+// 정렬 설정
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+// 버튼 마우스 포인터
+[class^="btn-"] {
+    cursor: pointer;
 }
 
 // 레이아웃 구조화
@@ -24,7 +59,7 @@
         background-repeat: repeat-x;
     }
     .content {
-        padding: 30px 50px;
+
     }
 }
 .container {
@@ -134,6 +169,54 @@
 }
 .container {
     .content {
+        .table-title {
+            margin-bottom: 6px;
+            span {
+                &:nth-of-type(2) {
+                    position: relative;
+                    color: #f24a71;
+                    margin-right: 20px;
+                    &:after {
+                        position: absolute;
+                        top: 5px;
+                        display: inline-block;
+                        content: "";
+                        height: 18px;
+                        padding-right: 20px;
+                        border-right: 2px solid #ddd;
+                    }
+                }
+                &:nth-of-type(3) {
+                    margin-left: 20px;
+                }
+            }
+            .icon {
+                @include sprite($icon-goal-title);
+                @extend .kw-icon;
+                display: inline-block;
+                vertical-align: -12px;
+                margin-left: -2px;
+                margin-right: 6px;
+            }
+            .gray {
+                color: #c1c1c1;
+            }
+            .btn-next-week-goal {
+                float: right;
+                width: 190px;
+                height: 44px;
+                font-size: rem(18px);
+                font-weight: bold;
+                color: #fff;
+                padding-bottom: 5px;
+                margin-top: -1px;
+                background: url("../../assets/images/bg/bg-btn-goal.png") no-repeat;
+            }
+        }
+    }
+}
+.container {
+    .content {
         .table-type {
             width: 100%;
             border-top: 2px solid #555;
@@ -141,10 +224,11 @@
                 background: #f3f3f3;
                 tr {
                     th {
-                        border-bottom: 1px solid #555 !important;
+                        border-bottom: 1px solid #555;
+                        border-right-width: 0;
                         &:first-child {
                             border-left-width: 0;
-                            border-right: 1px solid #555 !important;
+                            border-right: 1px solid #555;
                         }
                         &:last-child {
                             border-right-width: 0;
@@ -159,7 +243,7 @@
                             border-left-width: 0;
                         }
                         &.row-title {
-                            border-right: 1px solid #555 !important;
+                            border-right: 1px solid #555;
                         }
                     }
                     td {
@@ -174,27 +258,10 @@
                     text-align: center;
                     vertical-align: middle;
                     border: 1px solid #ccc;
+                    border-right-width: 0;
                     @extend %clearfix;
                 }
             }
         }
     }
-}
-
-// 임시 배경 설정
-.bg-color {
-    background: #082c45;
-}
-
-// 정렬 설정
-.fl {
-    float: left;
-}
-.fr {
-    float: right;
-}
-
-// 버튼 마우스 포인터
-[class^="btn-"] {
-    cursor: pointer;
 }

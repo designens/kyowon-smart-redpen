@@ -3064,9 +3064,9 @@ input:-ms-input-placeholder { color: #222; }
 
 input:-moz-placeholder { color: #222; }
 
-.kw-icon, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="badge-scoring-results"], .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker { background-image: url("/assets/images/sprite/sprite-icon.png"); }
+.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"] { background-image: url("/assets/images/sprite/sprite-btn.png"); }
 
-.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next { background-image: url("/assets/images/sprite/sprite-btn.png"); }
+.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker { background-image: url("/assets/images/sprite/sprite-icon.png"); }
 
 .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-diagnosis .container .content .week-tab-menu:after { content: ''; display: block; clear: both; }
 
@@ -3076,21 +3076,35 @@ html body { font-size: 1.6rem; color: #222; line-height: 1.5; }
 
 html body * { box-sizing: border-box; word-wrap: break-word; }
 
-h1 { font-size: 25px; font-size: 2.5rem; font-weight: bold; line-height: 1; color: #222; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; line-height: 1; color: #222; }
 
-.sub-title { font-size: 2rem; font-weight: bold; color: #7c4e29; }
+h1 { font-size: 25px; font-size: 2.5rem; }
+
+h2 { font-size: 22px; font-size: 2.2rem; }
 
 /* 원격 지원 축소 화면 설정 */
 .remote { width: 940px; height: 640px; }
 
+.remote .container .content { padding: 30px 50px; }
+
 /* 원격 지원 풀 화면 설정 */
 .remote-full { min-width: 940px; min-height: 640px; }
+
+.remote-full .container .content { padding: 30px; }
+
+.sub-title { font-size: 2rem; font-weight: bold; color: #7c4e29; }
+
+.bg-color { background: #082c45; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+[class^="btn-"] { cursor: pointer; }
 
 .container { background: #fff; }
 
 .container .header { position: relative; width: 100%; height: 62px; background: url("../../assets/images/bg/bg-2depth.png"); background-repeat: repeat-x; }
-
-.container .content { padding: 30px 50px; }
 
 .container .header .year-month { position: relative; left: 14px; top: 14px; width: 216px; height: 40px; background: url("../../assets/images/bg/bg-btn-set.png") no-repeat; }
 
@@ -3100,9 +3114,9 @@ h1 { font-size: 25px; font-size: 2.5rem; font-weight: bold; line-height: 1; colo
 
 .container .header .year-month [class^="btn-"] span { position: absolute; top: -9999px; visibility: hidden; }
 
-.container .header .year-month .btn-prev { left: 2px; background-position: -36px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
+.container .header .year-month .btn-prev { left: 2px; background-position: -48px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
 
-.container .header .year-month .btn-next { right: 2px; background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
+.container .header .year-month .btn-next { right: 2px; background-position: -104px -52px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
 
 .container .header .tab-menu { position: absolute; right: 14px; bottom: 0; }
 
@@ -3122,31 +3136,37 @@ h1 { font-size: 25px; font-size: 2.5rem; font-weight: bold; line-height: 1; colo
 
 .container .header .tab-menu ul li:first-child a span { border: 0; }
 
+.container .content .table-title { margin-bottom: 6px; }
+
+.container .content .table-title span:nth-of-type(2) { position: relative; color: #f24a71; margin-right: 20px; }
+
+.container .content .table-title span:nth-of-type(2):after { position: absolute; top: 5px; display: inline-block; content: ""; height: 18px; padding-right: 20px; border-right: 2px solid #ddd; }
+
+.container .content .table-title span:nth-of-type(3) { margin-left: 20px; }
+
+.container .content .table-title .icon { background-position: -70px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 39px; height: 39px; display: inline-block; vertical-align: -12px; margin-left: -2px; margin-right: 6px; }
+
+.container .content .table-title .gray { color: #c1c1c1; }
+
+.container .content .table-title .btn-next-week-goal { float: right; width: 190px; height: 44px; font-size: 1.8rem; font-weight: bold; color: #fff; padding-bottom: 5px; margin-top: -1px; background: url("../../assets/images/bg/bg-btn-goal.png") no-repeat; }
+
 .container .content .table-type { width: 100%; border-top: 2px solid #555; }
 
 .container .content .table-type thead { background: #f3f3f3; }
 
-.container .content .table-type thead tr th { border-bottom: 1px solid #555 !important; }
+.container .content .table-type thead tr th { border-bottom: 1px solid #555; border-right-width: 0; }
 
-.container .content .table-type thead tr th:first-child { border-left-width: 0; border-right: 1px solid #555 !important; }
+.container .content .table-type thead tr th:first-child { border-left-width: 0; border-right: 1px solid #555; }
 
 .container .content .table-type thead tr th:last-child { border-right-width: 0; }
 
 .container .content .table-type tbody tr th:first-child { border-left-width: 0; }
 
-.container .content .table-type tbody tr th.row-title { border-right: 1px solid #555 !important; }
+.container .content .table-type tbody tr th.row-title { border-right: 1px solid #555; }
 
 .container .content .table-type tbody tr td:last-child { border-right-width: 0; }
 
-.container .content .table-type tr th, .container .content .table-type tr td { text-align: center; vertical-align: middle; border: 1px solid #ccc; }
-
-.bg-color { background: #082c45; }
-
-.fl { float: left; }
-
-.fr { float: right; }
-
-[class^="btn-"] { cursor: pointer; }
+.container .content .table-type tr th, .container .content .table-type tr td { text-align: center; vertical-align: middle; border: 1px solid #ccc; border-right-width: 0; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_01전체_01, 03_웹공유_01진척도점검_01전체_02, 03_웹공유_01진척도점검_01전체_03, 03_웹공유_01진척도점검_01전체_04, 03_웹공유_01진척도점검_01전체_05 (kyowon-smart-redpen/html/remote-check-progress-all.html) --------------------------------------------------------------------------------------- */
 .check-progress-all .container .content .progress-set { position: relative; width: 100%; height: 208px; border-bottom: 2px solid #e5e5e5; margin-top: 18px; }
@@ -3243,8 +3263,6 @@ h1 { font-size: 25px; font-size: 2.5rem; font-weight: bold; line-height: 1; colo
 .check-progress-textbook.remote .container .content .table-type tbody tr td .wrap .date { color: #7c4e29; margin-top: 3px; }
 
 /* -------------------------------------------------------------------------------------- 03_화상관리_02학습진척도_03교과서단짝_01저학년, 03_화상관리_02학습진척도_03교과서단짝_02고학년 (kyowon-smart-redpen/html/full-check-progress-textbook.html) --------------------------------------------------------------------------------------- */
-.check-progress-textbook.remote-full .container .content { padding: 30px; }
-
 .check-progress-textbook.remote-full .container .content .table-type thead tr th { height: 50px; }
 
 .check-progress-textbook.remote-full .container .content .table-type tbody tr th { font-size: 1.8rem; height: 110px; line-height: 20px; vertical-align: middle; background: #fff5e6; }
@@ -3263,12 +3281,12 @@ h1 { font-size: 25px; font-size: 2.5rem; font-weight: bold; line-height: 1; colo
 
 .check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .date { font-size: 2rem; color: #7c4e29; margin-top: 3px; }
 
-/* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_01저학년, 03_웹공유_01진척도점검_04주간진단_02고학년 (kyowon-smart-redpen/html/remote-check-progress-weekly-diagnosis.html) --------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_01저학년, 03_웹공유_01진척도점검_04주간진단_02고학년 (kyowon-smart-redpen/html/remote-check-progress-weekly-diagnosis.html) 03_웹공유_02주간진단분석_01저학년, 03_웹공유_02주간진단분석_02고학년 (kyowon-smart-redpen/html/remote-weekly-diagnostic-analysis.html) --------------------------------------------------------------------------------------- */
 .check-progress-weekly-diagnosis .container .content .week-tab-menu { margin-left: -14px; margin-bottom: 22px; }
 
-.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li { position: relative; float: left; display: block; min-width: 90px; text-align: center; }
+.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li { position: relative; float: left; display: block; min-width: 90px; text-align: center; cursor: pointer; }
 
-.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li a { display: inline-block; height: 34px; line-height: 34px; font-size: 1.6rem; color: #888; text-align: center; padding: 0 20px; }
+.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li a { display: inline-block; height: 34px; line-height: 34px; font-size: 1.6rem; font-weight: bold; color: #888; text-align: center; padding: 0 20px; }
 
 .check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:after { position: absolute; top: 8px; left: 0; right: 0; display: inline-block; content: ""; height: 18px; padding: 0 20px; border-right: 2px solid #ddd; }
 
@@ -3280,16 +3298,71 @@ h1 { font-size: 25px; font-size: 2.5rem; font-weight: bold; line-height: 1; colo
 
 .check-progress-weekly-diagnosis.remote .table-type { font-size: 1.4rem !important; }
 
+.check-progress-weekly-diagnosis.remote .table-type thead tr th { height: 50px; line-height: 18px; }
+
+.check-progress-weekly-diagnosis.remote .table-type thead tr th span { font-weight: normal; }
+
+.check-progress-weekly-diagnosis.remote .table-type thead tr th.full { display: none; }
+
+.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(1) { width: 72px; }
+
+.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(3) { width: 102px; }
+
+.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(7) { width: 106px; }
+
+.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(8) { width: 106px; }
+
 .check-progress-weekly-diagnosis.remote .table-type tbody th { height: 96px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="badge-scoring-results"] { font-size: 14px; font-weight: bold; color: #fff; line-height: 1.2; margin: 0 auto; margin-top: 5px; padding-top: 7px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"] { font-size: 1.6rem; color: #fff; line-height: 16px; margin: 0 auto; margin-top: 5px; padding-bottom: 4px; cursor: pointer; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .badge-scoring-results-on { background-position: -70px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-on { background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .badge-scoring-results-off { background-position: -118px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 48px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-off { background-position: -104px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
+
+.check-progress-weekly-diagnosis.remote .table-type tbody td { font-weight: bold; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody td:nth-of-type(2) { line-height: 20px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; }
+.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+
+.check-progress-weekly-diagnosis.remote .table-type tbody td.full { display: none; border-left: 0; }
+
+/* -------------------------------------------------------------------------------------- 03_화상관리_02학습진척도_04주간진단_01저학년, 03_화상관리_02학습진척도_04주간진단_02고학년 (kyowon-smart-redpen/html/full-learning-progress-weekly-diagnosis.html) --------------------------------------------------------------------------------------- */
+.check-progress-weekly-diagnosis.remote-full .table-title { display: none; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type thead { font-size: 1.6rem !important; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th { height: 50px; line-height: 20px; border-right: 0 !important; border-top-width: 0; border-left-width: 0; border-right-width: 0; border-bottom-width: 1px; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th span { font-weight: normal; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th.full { display: table-cell; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(3) { width: 130px; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(7) { width: 130px; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(8) { width: 130px; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody { font-size: 1.8rem !important; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody th { height: 96px; border-right: 0 !important; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody th.row-title [class^="btn-scoring-results"] { display: none; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td { font-weight: bold; border-top-width: 0; border-left-width: 0; border-right-width: 0; border-bottom-width: 1px; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td:nth-of-type(2) { line-height: 20px; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td.full { display: table-cell; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"] { font-size: 1.4rem; font-weight: bold; color: #fff; line-height: 1.2; margin: 0 auto; cursor: pointer; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-on { background-position: 0px -48px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
+
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-off { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
 
 /*# sourceMappingURL=map/style.css.map */

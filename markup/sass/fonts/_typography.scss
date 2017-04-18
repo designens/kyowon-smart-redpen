@@ -4,31 +4,25 @@
 
 // Heading Retina Design Font Size 설정
 $h1-fz: 25px;
-// $h2-fz: 32px;
+$h2-fz: 22px;
 // $h3-fz: 28px;
 // $h4-fz: 24px;
 // $h5-fz: 22px;
 // $h6-fz: 16px;
 
-// h1, h2, h3, h4, h5, h6 {
-//     line-height: 1;
-// }
-
-// 제목 폰트 사이즈, 행간 비율 (px, rem)
-h1 {
-    @include psd-fz($h1-fz);
+h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     line-height: 1;
     color: #222;
 }
-.sub-title {
-    font-size: rem(20px);
-    font-weight: bold;
-    color: #7c4e29;
+
+// 제목 폰트 사이즈, 행간 비율 (px, rem)
+h1 {
+    @include psd-fz($h1-fz);
 }
-// h2 {
-//     @include psd-fz($h2-fz);
-// }
+h2 {
+    @include psd-fz($h2-fz);
+}
 // h3 {
 //     @include psd-fz($h3-fz);
 // }
