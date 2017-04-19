@@ -520,6 +520,23 @@
 }
 
 /* --------------------------------------------------------------------------------------
+ 04_스마트주간진단_01저학년,
+ 04_스마트주간진단_02고학년
+ (kyowon-smart-redpen/html/full-smart-weekly-diagnosis.html)
+--------------------------------------------------------------------------------------- */
+.smart-weekly-diagnosis {
+    @extend .check-progress-weekly-diagnosis;
+    .container {
+        .content {
+            .week-tab-menu {
+                margin-left: 0;
+                margin-right: -10px;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
  03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_01,
  03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_02
  (kyowon-smart-redpen/html/remote-check-progress-weekly-compliment.html)

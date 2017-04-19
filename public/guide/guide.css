@@ -15,6 +15,8 @@ ul, ol, li { list-style: none; }
 
 hr { display: none; }
 
+pre { white-space: pre-wrap; }
+
 legend, caption { display: none; clear: both; }
 
 a { color: #222; }
@@ -57,11 +59,11 @@ input:-ms-input-placeholder { color: #222; }
 
 input:-moz-placeholder { color: #222; }
 
-html { font-family: "Nanum Gothic", sans-serif; font-size: 10px; }
+html { font-size: 10px; }
 
 html body { font-size: 1.6rem; color: #222; line-height: 1.5; }
 
-html body * { box-sizing: border-box; word-wrap: break-word; }
+html body * { font-family: "Nanum Gothic", sans-serif; box-sizing: border-box; word-wrap: break-word; }
 
 body { background: #ededed !important; font-size: 1.6rem !important; height: 100vh; }
 

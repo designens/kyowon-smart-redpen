@@ -3066,9 +3066,9 @@ input:-ms-input-placeholder { color: #222; }
 
 input:-moz-placeholder { color: #222; }
 
-.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"] { background-image: url("/assets/images/sprite/sprite-btn.png"); }
+.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
 
-.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker { background-image: url("/assets/images/sprite/sprite-icon.png"); }
+.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"] { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
 
 .container .content .week-tab-menu:after, .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-compliment .container .content .wrap:after { content: ''; display: block; clear: both; }
 
@@ -3300,74 +3300,77 @@ h3 { font-size: 20px; font-size: 2rem; }
 .check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .date { font-size: 2rem; color: #7c4e29; margin-top: 3px; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_01저학년, 03_웹공유_01진척도점검_04주간진단_02고학년 (kyowon-smart-redpen/html/remote-check-progress-weekly-diagnosis.html) 03_웹공유_02주간진단분석_01저학년, 03_웹공유_02주간진단분석_02고학년 (kyowon-smart-redpen/html/remote-weekly-diagnostic-analysis.html) --------------------------------------------------------------------------------------- */
-.check-progress-weekly-diagnosis.remote .table-type { font-size: 1.4rem !important; }
+.check-progress-weekly-diagnosis.remote .table-type, .remote.smart-weekly-diagnosis .table-type { font-size: 1.4rem !important; }
 
-.check-progress-weekly-diagnosis.remote .table-type thead tr th { height: 50px; line-height: 18px; }
+.check-progress-weekly-diagnosis.remote .table-type thead tr th, .remote.smart-weekly-diagnosis .table-type thead tr th { height: 50px; line-height: 18px; }
 
-.check-progress-weekly-diagnosis.remote .table-type thead tr th span { font-weight: normal; }
+.check-progress-weekly-diagnosis.remote .table-type thead tr th span, .remote.smart-weekly-diagnosis .table-type thead tr th span { font-weight: normal; }
 
-.check-progress-weekly-diagnosis.remote .table-type thead tr th.full { display: none; }
+.check-progress-weekly-diagnosis.remote .table-type thead tr th.full, .remote.smart-weekly-diagnosis .table-type thead tr th.full { display: none; }
 
-.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(1) { width: 72px; }
+.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(1), .remote.smart-weekly-diagnosis .table-type thead tr th:nth-of-type(1) { width: 72px; }
 
-.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(3) { width: 102px; }
+.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(3), .remote.smart-weekly-diagnosis .table-type thead tr th:nth-of-type(3) { width: 102px; }
 
-.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(7) { width: 106px; }
+.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(7), .remote.smart-weekly-diagnosis .table-type thead tr th:nth-of-type(7) { width: 106px; }
 
-.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(8) { width: 106px; }
+.check-progress-weekly-diagnosis.remote .table-type thead tr th:nth-of-type(8), .remote.smart-weekly-diagnosis .table-type thead tr th:nth-of-type(8) { width: 106px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th { height: 96px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th, .remote.smart-weekly-diagnosis .table-type tbody th { height: 96px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"] { font-size: 1.6rem; color: #fff; line-height: 16px; margin: 0 auto; margin-top: 5px; padding-bottom: 4px; cursor: pointer; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"] { font-size: 1.6rem; color: #fff; line-height: 16px; margin: 0 auto; margin-top: 5px; padding-bottom: 4px; cursor: pointer; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-on { background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-on, .remote.smart-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-on { background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-off { background-position: -104px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-off, .remote.smart-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-off { background-position: -104px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody td { font-weight: bold; }
+.check-progress-weekly-diagnosis.remote .table-type tbody td, .remote.smart-weekly-diagnosis .table-type tbody td { font-weight: bold; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody td:nth-of-type(2) { line-height: 20px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody td:nth-of-type(2), .remote.smart-weekly-diagnosis .table-type tbody td:nth-of-type(2) { line-height: 20px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody td.full { display: none; border-left: 0; }
+.check-progress-weekly-diagnosis.remote .table-type tbody td.full, .remote.smart-weekly-diagnosis .table-type tbody td.full { display: none; border-left: 0; }
 
 /* -------------------------------------------------------------------------------------- 03_화상관리_02학습진척도_04주간진단_01저학년, 03_화상관리_02학습진척도_04주간진단_02고학년 (kyowon-smart-redpen/html/full-learning-progress-weekly-diagnosis.html) --------------------------------------------------------------------------------------- */
-.check-progress-weekly-diagnosis.remote-full .table-title { display: none; }
+.check-progress-weekly-diagnosis.remote-full .table-title, .remote-full.smart-weekly-diagnosis .table-title { display: none; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type thead { font-size: 1.6rem !important; }
+.check-progress-weekly-diagnosis.remote-full .table-type thead, .remote-full.smart-weekly-diagnosis .table-type thead { font-size: 1.6rem !important; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type thead tr th { height: 50px; line-height: 20px; border-right: 0 !important; border-top-width: 0; border-left-width: 0; border-right-width: 0; border-bottom-width: 1px; }
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th, .remote-full.smart-weekly-diagnosis .table-type thead tr th { height: 50px; line-height: 20px; border-right: 0 !important; border-top-width: 0; border-left-width: 0; border-right-width: 0; border-bottom-width: 1px; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type thead tr th span { font-weight: normal; }
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th span, .remote-full.smart-weekly-diagnosis .table-type thead tr th span { font-weight: normal; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type thead tr th.full { display: table-cell; }
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th.full, .remote-full.smart-weekly-diagnosis .table-type thead tr th.full { display: table-cell; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(3) { width: 130px; }
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(3), .remote-full.smart-weekly-diagnosis .table-type thead tr th:nth-of-type(3) { width: 130px; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(7) { width: 130px; }
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(7), .remote-full.smart-weekly-diagnosis .table-type thead tr th:nth-of-type(7) { width: 130px; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(8) { width: 130px; }
+.check-progress-weekly-diagnosis.remote-full .table-type thead tr th:nth-of-type(8), .remote-full.smart-weekly-diagnosis .table-type thead tr th:nth-of-type(8) { width: 130px; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody { font-size: 1.8rem !important; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody, .remote-full.smart-weekly-diagnosis .table-type tbody { font-size: 1.8rem !important; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody th { height: 96px; border-right: 0 !important; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody th, .remote-full.smart-weekly-diagnosis .table-type tbody th { height: 96px; border-right: 0 !important; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody th.row-title [class^="btn-scoring-results"] { display: none; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody th.row-title [class^="btn-scoring-results"], .remote-full.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"] { display: none; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td { font-weight: bold; border-top-width: 0; border-left-width: 0; border-right-width: 0; border-bottom-width: 1px; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td, .remote-full.smart-weekly-diagnosis .table-type tbody td { font-weight: bold; border-top-width: 0; border-left-width: 0; border-right-width: 0; border-bottom-width: 1px; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td:nth-of-type(2) { line-height: 20px; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td:nth-of-type(2), .remote-full.smart-weekly-diagnosis .table-type tbody td:nth-of-type(2) { line-height: 20px; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td.full { display: table-cell; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td.full, .remote-full.smart-weekly-diagnosis .table-type tbody td.full { display: table-cell; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"] { font-size: 1.4rem; font-weight: bold; color: #fff; line-height: 1.2; margin: 0 auto; cursor: pointer; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"] { font-size: 1.4rem; font-weight: bold; color: #fff; line-height: 1.2; margin: 0 auto; cursor: pointer; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-on { background-position: 0px -48px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-on, .remote-full.smart-weekly-diagnosis .table-type tbody td .btn-scoring-results-full-on { background-position: 0px -48px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-off { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-off, .remote-full.smart-weekly-diagnosis .table-type tbody td .btn-scoring-results-full-off { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
+
+/* -------------------------------------------------------------------------------------- 04_스마트주간진단_01저학년, 04_스마트주간진단_02고학년 (kyowon-smart-redpen/html/full-smart-weekly-diagnosis.html) --------------------------------------------------------------------------------------- */
+.smart-weekly-diagnosis .container .content .week-tab-menu { margin-left: 0; margin-right: -10px; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_01, 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_02 (kyowon-smart-redpen/html/remote-check-progress-weekly-compliment.html) --------------------------------------------------------------------------------------- */
 .check-progress-weekly-compliment .container .content { padding: 30px 0 30px 50px; }

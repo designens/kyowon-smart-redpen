@@ -73,7 +73,7 @@ var sprity_options = {
     // _sprite.scss 파일 생성 위치 설정
     style: SRC + '/sass/base/_sprite.scss',
     // 생성된 _sprite.scss 파일에 삽입되는 배경이미지 CSS 경로 설정
-    cssPath: '/assets/images/sprite',
+    cssPath: '../../assets/images/sprite',
     // 생성되는 CSS 클래스 접두사 (ex: .{kw}-icon)
     prefix: 'kw',
     // 스프라이트 폴더 내부의 각 폴더 별로 분리 생성 설정
