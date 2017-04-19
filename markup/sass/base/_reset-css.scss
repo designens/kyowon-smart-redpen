@@ -28,6 +28,9 @@ ul, ol, li {
 hr {
     display: none;
 }
+pre {
+    white-space: pre-wrap;
+}
 legend, caption {
     display: none;
     clear: both;

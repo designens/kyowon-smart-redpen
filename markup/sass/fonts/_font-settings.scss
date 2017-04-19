@@ -19,7 +19,6 @@ $line-height: 1.5;
 
 // 폰트 기본 설정
 html {
-    font-family: $font-family;
     font-size: $html-fz;
     body {
         font-size: rem($body-fz);
@@ -27,6 +26,7 @@ html {
         line-height: $line-height;
     }
     body * {
+        font-family: $font-family;
         box-sizing: border-box;
         word-wrap: break-word;
     }

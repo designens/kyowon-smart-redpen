@@ -357,62 +357,6 @@
  (kyowon-smart-redpen/html/remote-weekly-diagnostic-analysis.html)
 --------------------------------------------------------------------------------------- */
 .check-progress-weekly-diagnosis {
-    .container {
-        .content {
-            .week-tab-menu {
-                margin-left: -14px;
-                margin-bottom: 22px;
-                @extend %clearfix;
-                ul {
-                    li {
-                        position: relative;
-                        float: left;
-                        display: block;
-                        min-width: 90px;
-                        text-align: center;
-                        cursor: pointer;
-                        a {
-                            display: inline-block;
-                            height: 34px;
-                            line-height: 34px;
-                            font-size: rem(16px);
-                            font-weight: bold;
-                            color: #888;
-                            text-align: center;
-                            padding: 0 20px;
-                        }
-                        &:after {
-                            position: absolute;
-                            top: 8px;
-                            left: 0;
-                            right: 0;
-                            display: inline-block;
-                            content: "";
-                            height: 18px;
-                            padding: 0 20px;
-                            border-right: 2px solid #ddd;
-                        }
-                        &:last-child {
-                            padding: 0 10px;
-                            &:after {
-                                border-right: 0;
-                            }
-                        }
-                        &.selected, &:hover, &:focus, &:active {
-                            a {
-                                color: #fff;
-                                border-radius: 17px;
-                                background: #f24a71;
-                                box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.2);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-.check-progress-weekly-diagnosis {
     &.remote {
         .table-type {
             font-size: rem(14px) !important;
@@ -568,6 +512,275 @@
                     }
                     .btn-scoring-results-full-off {
                         @include sprite($btn-scoring-results-full-off);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_01,
+ 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_02
+ (kyowon-smart-redpen/html/remote-check-progress-weekly-compliment.html)
+--------------------------------------------------------------------------------------- */
+.check-progress-weekly-compliment {
+    .container {
+        .content {
+            padding: 30px 0 30px 50px;
+            .wrap {
+                @extend %clearfix;
+                .fl {
+                    width: -webkit-calc( 100% - 388px );
+                    width: -moz-calc( 100% - 388px );
+                    width: calc( 100% - 388px );
+                    h1 {
+                        position: relative;
+                        margin-bottom: 10px;
+                        .receive-badge {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            display: inline-block;
+                            span {
+                                &:first-child {
+                                    font-size: rem(25px);
+                                    font-weight: bold;
+                                    color: #f24a71;
+                                }
+                                &:last-child {
+                                    font-size: rem(16px);
+                                    font-weight: normal;
+                                    color: #888;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.check-progress-weekly-compliment {
+    .container {
+        .content {
+            .wrap {
+                .fl {
+                    .table-type {
+                        width: 100%;
+                        tbody {
+                            tr {
+                                &:first-child {
+                                    border-top: 2px solid #555;
+                                }
+                                th, td {
+                                    height: 105px;
+                                }
+                                th {
+                                    width: 60px;
+                                    background: #f3f3f3;
+                                    border-right: 1px solid #555;
+                                }
+                                td {
+                                    position: relative;
+                                    &:before {
+                                        display: block;
+                                        width: 76px;
+                                        height: 76px;
+                                        line-height: 76px;
+                                        font-size: rem(16px);
+                                        font-weight: bold;
+                                        color: #fff;
+                                        text-align: center;
+                                        border-radius: 50%;
+                                        background: #f3f3f3;
+                                        margin: 0 auto;
+                                    }
+                                    &:nth-of-type(1) {
+                                        &:before {
+                                            content: "국어";
+                                        }
+                                    }
+                                    &:nth-of-type(2) {
+                                        &:before {
+                                            content: "수학";
+                                        }
+                                    }
+                                    &:nth-of-type(3) {
+                                        &:before {
+                                            content: "사회";
+                                        }
+                                    }
+                                    &:nth-of-type(4) {
+                                        &:before {
+                                            content: "과학";
+                                        }
+                                    }
+                                    .badge-praise-sticker {
+                                        @include wh-center ($position: absolute);
+                                        @include sprite($icon-badge-praise-sticker-full);
+                                        @extend .kw-icon;
+                                        text-indent: -9999px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.check-progress-weekly-compliment {
+    .container {
+        .content {
+            .wrap {
+                .fr {
+                    position: relative;
+                    width: -webkit-calc( 100% - 502px );
+                    width: -moz-calc( 100% - 502px );
+                    width: calc( 100% - 502px );
+                    &:before {
+                        position: absolute;
+                        top: -2px;
+                        left: 35px;
+                        display: block;
+                        content: "";
+                        width: 2px;
+                        height: 458px;
+                        background: #e5e5e5;
+                    }
+                    h3 {
+                        text-align: center;
+                        margin-top: 4px;
+                    }
+                    .img-box {
+                        position: relative;
+                        height: 300px;
+                        img {
+                            @include wh-center ($position: absolute);
+                        }
+                    }
+                    p {
+                        color: #333;
+                        margin-bottom: 13px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        &.gray {
+                            color: #888;
+                        }
+                    }
+                    pre {
+                        color: #333;
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+}
+.check-progress-weekly-compliment {
+    &.remote {
+        .container {
+            .content {
+                .wrap {
+                    .fl {
+                        p.full {
+                            display: none;
+                        }
+                    }
+                    .fr {
+                        padding: 0 50px 0 70px;
+                        p {
+                            span {
+                                display: inline;
+                            }
+                            &.full {
+                                &:nth-of-type(1) {
+                                    display: none;
+                                }
+                                &:nth-of-type(2) {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_화상관리_02학습진척도_04주간진단_03칭찬딱지모아보기
+ (kyowon-smart-redpen/html/full-learning-progress-weekly-compliment.html)
+--------------------------------------------------------------------------------------- */
+
+.check-progress-weekly-compliment {
+    &.remote-full {
+        .container {
+            .content {
+                padding: 30px 0 30px 30px;
+                .wrap {
+                    @include layout(11 15px/100px);
+                    .fl {
+                        @include span(6);
+                        h1 {
+                            font-size: rem(20px);
+                            text-align: center;
+                            .receive-badge {
+                                span:first-child {
+                                    font-size: rem(20px);
+                                }
+                            }
+                        }
+                        p {
+                            &.full {
+                                display: block;
+                            }
+                            &.messge {
+                                font-size: rem(16px);
+                                color: #888;
+                                text-align: center;
+                                margin: 12px 0 21px 0;
+                            }
+                        }
+                    }
+                    .fr {
+                        h3 {
+                            margin-top: 0;
+                        }
+                        &:before {
+                            left: 20px;
+                            height: 500px;
+                        }
+                        padding-left: 55px;
+                        padding-right: 30px;
+                        @include span(5 last);
+                        p {
+                            font-weight: bold;
+                            text-align: center;
+                            &.full {
+                                &:nth-of-type(1) {
+                                    display: block;
+                                    margin-top: 12px;
+                                    margin-bottom: 0;
+                                }
+                                &:nth-of-type(2) {
+                                    display: none;
+                                    text-align: center;
+                                }
+                            }
+                            span {
+                                display: block;
+                            }
+                        }
+                        pre {
+                            font-weight: bold;
+                            text-align: center;
+                            line-height: 1.5;
+                        }
                     }
                 }
             }

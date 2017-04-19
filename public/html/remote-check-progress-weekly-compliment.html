@@ -26,9 +26,105 @@
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 </head>
 
-<body>
+<!-- 임시 배경 설정 : class="bg-color" 이 부분 제거 후 개발 진행 -->
+<body class="bg-color">
     <!-- [Stert] Container Area -->
-    <section>
+    <section class="remote container check-progress-weekly-compliment">
+        <div class="header">
+            <div class="fl year-month">
+                <button class="btn-prev"><span>이전 달</span></button>
+                <button class="btn-next"><span>다음 달</span></button>
+                <p>2017년 4월</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+
+                <!-- [Stert] 1주~ 4주, 칭찬 딱지 모아보기 탭 메뉴 -->
+                <div class="week-tab-menu">
+                    <ul>
+                        <li><a href="">1주</a></li>
+                        <li><a href="">2주</a></li>
+                        <li><a href="">3주</a></li>
+                        <li><a href="">4주</a></li>
+                        <li class="selected"><a href="">칭찬 딱지 모아보기</a></li>
+                    </ul>
+                </div>
+                <!-- [End] 1주~ 4주, 칭찬 딱지 모아보기 탭 메뉴 -->
+
+                <div class="wrap">
+
+                    <!-- [Stert] 내가 받은 칭찬 딱지 -->
+                    <div class="fl">
+                        <h1>내가 받은 칭찬 딱지<p class="receive-badge"><span>8개</span><span> / 16개</span></p></h1>
+                        <p class="full messge">주간 진단 학습을 완료하고 받은 칭찬 딱지예요.</p>
+                        <table class="table-type">
+                            <tbody>
+                                <tr>
+                                    <th>1주</th>
+                                    <td><span class="badge-praise-sticker">국어</span></td>
+                                    <td><span class="badge-praise-sticker">수학</span></td>
+                                    <td><span class="badge-praise-sticker">사회</span></td>
+                                    <td><span class="badge-praise-sticker">과학</span></td>
+                                </tr>
+                                <tr>
+                                    <th>2주</th>
+                                    <td><span class="badge-praise-sticker">국어</span></td>
+                                    <td><span class="badge-praise-sticker">수학</span></td>
+                                    <td><span class="badge-praise-sticker">사회</span></td>
+                                    <td><span class="badge-praise-sticker">과학</span></td>
+                                </tr>
+                                <tr>
+                                    <th>3주</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>4주</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- [End] 내가 받은 칭찬 딱지 -->
+
+                    <div class="fr">
+                        <h3>부모님이 보낸 칭찬 메시지</h3>
+
+                        <!-- [Stert] 부모님이 보낸 칭찬 메시지 : 메시지 없음 -->
+                        <!-- <p class="gray full">칭찬 딱지를 모두 모으면 부모님의 칭찬 메시지를 받을 수 있어요.</p>
+                        <div class="img-box">
+                            <img src="../assets/images/bg/ico-stamp-default .png" alt="">
+                        </div>
+                        <p class="gray  full">칭찬 딱지를 모두 모으면 부모님의 칭찬 메시지를 받을 수 있어요.</p>
+                        <p>주간 진단 학습을 모두 완료하고<span>부모님의 칭찬 메시지를 기다려 주세요!</span></p> -->
+                        <!-- [End] 부모님이 보낸 칭찬 메시지 : 메시지 없음 -->
+
+                        <!-- [Stert] 부모님이 보낸 칭찬 메시지 : 메시지 있음 -->
+                        <p class="gray full">칭찬 딱지를 모두 모으면 부모님의 칭찬 메시지를 받을 수 있어요.</p>
+                        <div class="img-box">
+                            <!-- 칭찬 이미지 타입 6개 -->
+                            <img src="../assets/images/bg/ico-stamp-01.png" alt="백점 만점에 백점">
+                           <!--  <img src="../assets/images/bg/ico-stamp-02.png" alt="엄지척!">
+                            <img src="../assets/images/bg/ico-stamp-03.png" alt="목표 달성!">
+                            <img src="../assets/images/bg/ico-stamp-04.png" alt="힘내라 힘!">
+                            <img src="../assets/images/bg/ico-stamp-05.png" alt="토닥토닥">
+                            <img src="../assets/images/bg/ico-stamp-06.png" alt="아자 아자!"> -->
+                        </div>
+                        <pre>안녕 교원아 엄마야.
+즐겁게 공부하는 모습이 보기 좋았는데 이번 달에도 좋은 결실을 맺게 되어 엄마는 교원이가 너무 자랑스럽구나.
+다음 달에도 교원이의 뿌듯해하는 모습을 보고 싶어.</pre>
+                        <!-- [End] 부모님이 보낸 칭찬 메시지 : 메시지 있음 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- [End] Container Area -->
     <!-- Javascript & jQuery Plugin 압축 -->

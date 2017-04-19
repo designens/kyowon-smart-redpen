@@ -26,9 +26,31 @@
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 </head>
 
-<body>
+<!-- 임시 배경 설정 : class="bg-color" 이 부분 제거 후 개발 진행 -->
+<body class="bg-color">
     <!-- [Stert] Container Area -->
-    <section>
+    <section class="remote container check-progress-weekly-diagnosis">
+        <div class="header">
+            <div class="fl year-month">
+                <button class="btn-prev"><span>이전 달</span></button>
+                <button class="btn-next"><span>다음 달</span></button>
+                <p>2017년 4월</p>
+            </div>
+            <nav class="fr tab-menu">
+                <ul>
+                    <li><a href=""><span>전체</span></a></li>
+                    <li><a href=""><span>기본/선택</span></a></li>
+                    <li><a href=""><span>교과서 단짝</span></a></li>
+                    <li class="selected"><a href=""><span>주간 진단</span></a></li>
+                    <li><a href=""><span>모의고사</span></a></li>
+                    <li><a href=""><span>디지털 첨삭</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="content">
+            </div>
+        </div>
     </section>
     <!-- [End] Container Area -->
     <!-- Javascript & jQuery Plugin 압축 -->

@@ -2,6 +2,11 @@
 // Common Style
 // =======================================
 
+// 임시 배경 설정
+.bg-color {
+    background: #082c45;
+}
+
 /* 원격 지원 축소 화면 설정 */
 .remote {
     width: 940px;
@@ -30,11 +35,6 @@
     color: #7c4e29;
 }
 
-// 임시 배경 설정
-.bg-color {
-    background: #082c45;
-}
-
 // 정렬 설정
 .fl {
     float: left;
@@ -59,7 +59,56 @@
         background-repeat: repeat-x;
     }
     .content {
-
+        .week-tab-menu {
+            margin-left: -14px;
+            margin-bottom: 22px;
+            @extend %clearfix;
+            ul {
+                li {
+                    position: relative;
+                    float: left;
+                    display: block;
+                    min-width: 90px;
+                    text-align: center;
+                    cursor: pointer;
+                    a {
+                        display: inline-block;
+                        height: 34px;
+                        line-height: 34px;
+                        font-size: rem(16px);
+                        font-weight: bold;
+                        color: #888;
+                        text-align: center;
+                        padding: 0 20px;
+                    }
+                    &:after {
+                        position: absolute;
+                        top: 8px;
+                        left: 0;
+                        right: 0;
+                        display: inline-block;
+                        content: "";
+                        height: 18px;
+                        padding: 0 20px;
+                        border-right: 2px solid #ddd;
+                    }
+                    &:last-child {
+                        padding: 0 10px;
+                        &:after {
+                            border-right: 0;
+                        }
+                    }
+                    &.selected, &:hover, &:focus, &:active {
+                        a {
+                            color: #fff;
+                            border-radius: 17px;
+                            background: #f24a71;
+                            box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.2);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .container {

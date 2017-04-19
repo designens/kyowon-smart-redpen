@@ -3022,6 +3022,8 @@ ul, ol, li { list-style: none; }
 
 hr { display: none; }
 
+pre { white-space: pre-wrap; }
+
 legend, caption { display: none; clear: both; }
 
 a { color: #222; }
@@ -3066,21 +3068,25 @@ input:-moz-placeholder { color: #222; }
 
 .kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"] { background-image: url("/assets/images/sprite/sprite-btn.png"); }
 
-.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker { background-image: url("/assets/images/sprite/sprite-icon.png"); }
+.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker { background-image: url("/assets/images/sprite/sprite-icon.png"); }
 
-.container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-diagnosis .container .content .week-tab-menu:after { content: ''; display: block; clear: both; }
+.container .content .week-tab-menu:after, .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-compliment .container .content .wrap:after { content: ''; display: block; clear: both; }
 
-html { font-family: "Nanum Gothic", sans-serif; font-size: 10px; }
+html { font-size: 10px; }
 
 html body { font-size: 1.6rem; color: #222; line-height: 1.5; }
 
-html body * { box-sizing: border-box; word-wrap: break-word; }
+html body * { font-family: "Nanum Gothic", sans-serif; box-sizing: border-box; word-wrap: break-word; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: bold; line-height: 1; color: #222; }
 
 h1 { font-size: 25px; font-size: 2.5rem; }
 
 h2 { font-size: 22px; font-size: 2.2rem; }
+
+h3 { font-size: 20px; font-size: 2rem; }
+
+.bg-color { background: #082c45; }
 
 /* 원격 지원 축소 화면 설정 */
 .remote { width: 940px; height: 640px; }
@@ -3094,8 +3100,6 @@ h2 { font-size: 22px; font-size: 2.2rem; }
 
 .sub-title { font-size: 2rem; font-weight: bold; color: #7c4e29; }
 
-.bg-color { background: #082c45; }
-
 .fl { float: left; }
 
 .fr { float: right; }
@@ -3105,6 +3109,20 @@ h2 { font-size: 22px; font-size: 2.2rem; }
 .container { background: #fff; }
 
 .container .header { position: relative; width: 100%; height: 62px; background: url("../../assets/images/bg/bg-2depth.png"); background-repeat: repeat-x; }
+
+.container .content .week-tab-menu { margin-left: -14px; margin-bottom: 22px; }
+
+.container .content .week-tab-menu ul li { position: relative; float: left; display: block; min-width: 90px; text-align: center; cursor: pointer; }
+
+.container .content .week-tab-menu ul li a { display: inline-block; height: 34px; line-height: 34px; font-size: 1.6rem; font-weight: bold; color: #888; text-align: center; padding: 0 20px; }
+
+.container .content .week-tab-menu ul li:after { position: absolute; top: 8px; left: 0; right: 0; display: inline-block; content: ""; height: 18px; padding: 0 20px; border-right: 2px solid #ddd; }
+
+.container .content .week-tab-menu ul li:last-child { padding: 0 10px; }
+
+.container .content .week-tab-menu ul li:last-child:after { border-right: 0; }
+
+.container .content .week-tab-menu ul li.selected a, .container .content .week-tab-menu ul li:hover a, .container .content .week-tab-menu ul li:focus a, .container .content .week-tab-menu ul li:active a { color: #fff; border-radius: 17px; background: #f24a71; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
 
 .container .header .year-month { position: relative; left: 14px; top: 14px; width: 216px; height: 40px; background: url("../../assets/images/bg/bg-btn-set.png") no-repeat; }
 
@@ -3144,7 +3162,7 @@ h2 { font-size: 22px; font-size: 2.2rem; }
 
 .container .content .table-title span:nth-of-type(3) { margin-left: 20px; }
 
-.container .content .table-title .icon { background-position: -70px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 39px; height: 39px; display: inline-block; vertical-align: -12px; margin-left: -2px; margin-right: 6px; }
+.container .content .table-title .icon { background-position: 0px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 39px; height: 39px; display: inline-block; vertical-align: -12px; margin-left: -2px; margin-right: 6px; }
 
 .container .content .table-title .gray { color: #c1c1c1; }
 
@@ -3282,20 +3300,6 @@ h2 { font-size: 22px; font-size: 2.2rem; }
 .check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .date { font-size: 2rem; color: #7c4e29; margin-top: 3px; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_01저학년, 03_웹공유_01진척도점검_04주간진단_02고학년 (kyowon-smart-redpen/html/remote-check-progress-weekly-diagnosis.html) 03_웹공유_02주간진단분석_01저학년, 03_웹공유_02주간진단분석_02고학년 (kyowon-smart-redpen/html/remote-weekly-diagnostic-analysis.html) --------------------------------------------------------------------------------------- */
-.check-progress-weekly-diagnosis .container .content .week-tab-menu { margin-left: -14px; margin-bottom: 22px; }
-
-.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li { position: relative; float: left; display: block; min-width: 90px; text-align: center; cursor: pointer; }
-
-.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li a { display: inline-block; height: 34px; line-height: 34px; font-size: 1.6rem; font-weight: bold; color: #888; text-align: center; padding: 0 20px; }
-
-.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:after { position: absolute; top: 8px; left: 0; right: 0; display: inline-block; content: ""; height: 18px; padding: 0 20px; border-right: 2px solid #ddd; }
-
-.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:last-child { padding: 0 10px; }
-
-.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:last-child:after { border-right: 0; }
-
-.check-progress-weekly-diagnosis .container .content .week-tab-menu ul li.selected a, .check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:hover a, .check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:focus a, .check-progress-weekly-diagnosis .container .content .week-tab-menu ul li:active a { color: #fff; border-radius: 17px; background: #f24a71; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
-
 .check-progress-weekly-diagnosis.remote .table-type { font-size: 1.4rem !important; }
 
 .check-progress-weekly-diagnosis.remote .table-type thead tr th { height: 50px; line-height: 18px; }
@@ -3324,7 +3328,7 @@ h2 { font-size: 22px; font-size: 2.2rem; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody td:nth-of-type(2) { line-height: 20px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody td.full { display: none; border-left: 0; }
 
@@ -3357,12 +3361,104 @@ h2 { font-size: 22px; font-size: 2.2rem; }
 
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td.full { display: table-cell; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
 
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"] { font-size: 1.4rem; font-weight: bold; color: #fff; line-height: 1.2; margin: 0 auto; cursor: pointer; }
 
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-on { background-position: 0px -48px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
 
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-off { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
+
+/* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_01, 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_02 (kyowon-smart-redpen/html/remote-check-progress-weekly-compliment.html) --------------------------------------------------------------------------------------- */
+.check-progress-weekly-compliment .container .content { padding: 30px 0 30px 50px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl { width: -webkit-calc( 100% - 388px); width: -moz-calc( 100% - 388px); width: calc( 100% - 388px); }
+
+.check-progress-weekly-compliment .container .content .wrap .fl h1 { position: relative; margin-bottom: 10px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl h1 .receive-badge { position: absolute; top: 0; right: 0; display: inline-block; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl h1 .receive-badge span:first-child { font-size: 2.5rem; font-weight: bold; color: #f24a71; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl h1 .receive-badge span:last-child { font-size: 1.6rem; font-weight: normal; color: #888; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type { width: 100%; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr:first-child { border-top: 2px solid #555; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr th, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td { height: 105px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr th { width: 60px; background: #f3f3f3; border-right: 1px solid #555; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td { position: relative; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td:before { display: block; width: 76px; height: 76px; line-height: 76px; font-size: 1.6rem; font-weight: bold; color: #fff; text-align: center; border-radius: 50%; background: #f3f3f3; margin: 0 auto; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td:nth-of-type(1):before { content: "국어"; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td:nth-of-type(2):before { content: "수학"; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td:nth-of-type(3):before { content: "사회"; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td:nth-of-type(4):before { content: "과학"; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 94px; height: 99px; text-indent: -9999px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fr { position: relative; width: -webkit-calc( 100% - 502px); width: -moz-calc( 100% - 502px); width: calc( 100% - 502px); }
+
+.check-progress-weekly-compliment .container .content .wrap .fr:before { position: absolute; top: -2px; left: 35px; display: block; content: ""; width: 2px; height: 458px; background: #e5e5e5; }
+
+.check-progress-weekly-compliment .container .content .wrap .fr h3 { text-align: center; margin-top: 4px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fr .img-box { position: relative; height: 300px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fr .img-box img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.check-progress-weekly-compliment .container .content .wrap .fr p { color: #333; margin-bottom: 13px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fr p:last-child { margin-bottom: 0; }
+
+.check-progress-weekly-compliment .container .content .wrap .fr p.gray { color: #888; }
+
+.check-progress-weekly-compliment .container .content .wrap .fr pre { color: #333; line-height: 1.4; }
+
+.check-progress-weekly-compliment.remote .container .content .wrap .fl p.full { display: none; }
+
+.check-progress-weekly-compliment.remote .container .content .wrap .fr { padding: 0 50px 0 70px; }
+
+.check-progress-weekly-compliment.remote .container .content .wrap .fr p span { display: inline; }
+
+.check-progress-weekly-compliment.remote .container .content .wrap .fr p.full:nth-of-type(1) { display: none; }
+
+.check-progress-weekly-compliment.remote .container .content .wrap .fr p.full:nth-of-type(2) { display: block; }
+
+/* -------------------------------------------------------------------------------------- 03_화상관리_02학습진척도_04주간진단_03칭찬딱지모아보기 (kyowon-smart-redpen/html/full-learning-progress-weekly-compliment.html) --------------------------------------------------------------------------------------- */
+.check-progress-weekly-compliment.remote-full .container .content { padding: 30px 0 30px 30px; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fl { width: 54%; float: left; margin-right: 1.2%; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fl h1 { font-size: 2rem; text-align: center; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fl h1 .receive-badge span:first-child { font-size: 2rem; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fl p.full { display: block; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fl p.messge { font-size: 1.6rem; color: #888; text-align: center; margin: 12px 0 21px 0; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fr { padding-left: 55px; padding-right: 30px; width: 44.8%; float: right; margin-right: 0; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fr h3 { margin-top: 0; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fr:before { left: 20px; height: 500px; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fr p { font-weight: bold; text-align: center; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fr p.full:nth-of-type(1) { display: block; margin-top: 12px; margin-bottom: 0; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fr p.full:nth-of-type(2) { display: none; text-align: center; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fr p span { display: block; }
+
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fr pre { font-weight: bold; text-align: center; line-height: 1.5; }
 
 /*# sourceMappingURL=map/style.css.map */
