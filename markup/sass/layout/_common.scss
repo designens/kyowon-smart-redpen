@@ -240,9 +240,8 @@
                 }
             }
             .icon {
-                @include sprite($icon-goal-title);
+                @include sprite($icon-goal-title, $display: inline-block);
                 @extend .kw-icon;
-                display: inline-block;
                 vertical-align: -12px;
                 margin-left: -2px;
                 margin-right: 6px;

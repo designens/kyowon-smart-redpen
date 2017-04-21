@@ -3066,11 +3066,11 @@ input:-ms-input-placeholder { color: #222; }
 
 input:-moz-placeholder { color: #222; }
 
-.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"], .weekly-scoring-result .header .btn-close, .weekly-scoring-result.remote-full .container .content .table-bg .table-score td .btn-clinic-lecture { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
+.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker, .weekly-scoring-result .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .comment .fl:before, .weekly-scoring-result.remote-full .container .content .comment .fr:before { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
 
-.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker, .weekly-scoring-result.remote-full .container .content .table-bg .table-score th.answer, .weekly-scoring-result.remote-full .container .content .table-bg .table-score th.wrong-answer { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
+.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"], .weekly-scoring-result .header .btn-close, .weekly-scoring-result .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-scoring-result .table-bg .table-score tbody tr td .btn-clinic-lecture { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
 
-.container .content .week-tab-menu:after, .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-compliment .container .content .wrap:after, .check-progress-digital .container .content .medal-box:after, .weekly-scoring-result.remote-full .container .content:after { content: ''; display: block; clear: both; }
+.container .content .week-tab-menu:after, .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-compliment .container .content .wrap:after, .check-progress-digital .container .content .medal-box:after, .weekly-scoring-result .container .content:after, .weekly-scoring-result.remote-full .container .content .comment:after { content: ''; display: block; clear: both; }
 
 html { font-size: 10px; }
 
@@ -3162,7 +3162,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .container .content .table-title > span:nth-of-type(3) { margin-left: 20px; }
 
-.container .content .table-title .icon { background-position: -188px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 39px; height: 39px; display: inline-block; vertical-align: -12px; margin-left: -2px; margin-right: 6px; }
+.container .content .table-title .icon { background-position: -348px -277px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 39px; height: 39px; vertical-align: -12px; margin-left: -2px; margin-right: 6px; }
 
 .container .content .table-title .gray { color: #c1c1c1; }
 
@@ -3328,7 +3328,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody td:nth-of-type(2), .remote.smart-weekly-diagnosis .table-type tbody td:nth-of-type(2) { line-height: 20px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: 0px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: -152px -183px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody td.full, .remote.smart-weekly-diagnosis .table-type tbody td.full { display: none; border-left: 0; }
 
@@ -3361,7 +3361,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td.full, .remote-full.smart-weekly-diagnosis .table-type tbody td.full { display: table-cell; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: 0px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: -152px -183px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
 
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"] { font-size: 1.4rem; font-weight: bold; color: #fff; line-height: 1.2; margin: 0 auto; cursor: pointer; }
 
@@ -3488,47 +3488,157 @@ h3 { font-size: 20px; font-size: 2rem; }
 /* -------------------------------------------------------------------------------------- 03_웹공유_02주간진단분석_03채점결과_01문항최대 03_웹공유_02주간진단분석_03채점결과_02문항10미만 (remote-weekly-scoring-result.html) --------------------------------------------------------------------------------------- */
 .weekly-scoring-result { background: url("../../assets/images/bg/bg-weekly-scoring-result.png"); }
 
-.weekly-scoring-result .header { position: relative; height: 80px; background: #f24a71; }
+.weekly-scoring-result .header { position: relative; height: 62px; background: #f24a71; }
 
-.weekly-scoring-result .header h1 { font-size: 3rem; color: #fff; line-height: 80px; text-align: center; }
+.weekly-scoring-result .header h1 { font-size: 2.5rem; color: #fff; line-height: 62px; text-align: center; }
 
-.weekly-scoring-result .header .btn-close { text-indent: -9999px; background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 52px; height: 56px; display: block; position: absolute; top: 15px; right: 20px; }
+.weekly-scoring-result .header .btn-close { text-indent: -9999px; background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 52px; height: 56px; position: absolute; top: 6px; right: 9px; }
 
 .weekly-scoring-result .container { background-color: transparent; }
 
-.weekly-scoring-result .table-bg { width: 1100px; height: 530px; background: url("../../assets/images/bg/bg-table.png") center no-repeat; margin: 0 auto; }
+.weekly-scoring-result .container .content { padding-top: 40px; }
 
-.weekly-scoring-result .table-bg .table-title { position: relative; width: 724px; height: 84px; background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat; margin: 0 auto; }
+.weekly-scoring-result .container .comment { display: none; }
 
-.weekly-scoring-result .table-bg .table-title dl { display: table; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.weekly-scoring-result .table-bg { position: relative; width: 840px; height: 485px; background: url("../../assets/images/bg/bg-table.png") center no-repeat; margin: 0 auto; }
+
+.weekly-scoring-result .table-bg .table-title { position: absolute; left: 50%; transform: translateX(-50%); top: 84px; width: 510px; height: 60px; background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat; }
+
+.weekly-scoring-result .table-bg .table-title dl { display: table; margin: 11px auto; }
 
 .weekly-scoring-result .table-bg .table-title dl dt, .weekly-scoring-result .table-bg .table-title dl dd { display: table-cell; font-weight: bold; }
 
-.weekly-scoring-result .table-bg .table-title dl dt { font-size: 2.2rem; color: #fff; padding-right: 47px; vertical-align: middle; }
+.weekly-scoring-result .table-bg .table-title dl dt { font-size: 1.8rem; color: #fff; padding-right: 13px; vertical-align: middle; }
 
-.weekly-scoring-result .table-bg .table-title dl dd { font-size: 3rem; color: #453a2e; }
+.weekly-scoring-result .table-bg .table-title dl dd { font-size: 2.5rem; color: #453a2e; }
 
-.weekly-scoring-result .table-bg .table-title dl dd span { font-size: 2.6rem; color: #453a2e !important; padding-left: 6px; letter-spacing: 0.4em; }
+.weekly-scoring-result .table-bg .table-title dl dd span { font-size: 2.2rem; color: #453a2e !important; padding-left: 6px; letter-spacing: 0.4em; }
 
-.weekly-scoring-result .table-bg .table-title dl dd span:nth-of-type(2):after { position: relative; top: 5px; display: inline-block; content: ""; height: 16px; padding-right: 50px; border-right: 2px solid #8be5fb; margin-right: 50px; }
+.weekly-scoring-result .table-bg .table-title dl dd span:nth-of-type(2):after { position: relative; top: 0; display: inline-block; content: ""; height: 16px; padding-right: 20px; border-right: 2px solid #8be5fb; margin-right: 30px; }
+
+.weekly-scoring-result .table-bg .table-score { position: absolute; left: 50%; transform: translateX(-50%); top: 184px; width: 720px; height: 270px; margin: 0 auto; background: #fff; border-radius: 10px; }
+
+.weekly-scoring-result .table-bg .table-score thead tr th { font-size: 1.5rem; color: #8e5406; height: 90px; background: #fff5e6; border-right: 1px solid #fadfc2; }
+
+.weekly-scoring-result .table-bg .table-score thead tr th:first-child { border-top-left-radius: 10px; }
+
+.weekly-scoring-result .table-bg .table-score thead tr th:last-child { border-top-right-radius: 10px; border-right: 0; }
+
+.weekly-scoring-result .table-bg .table-score thead tr th[class*=answer] { position: relative; }
+
+.weekly-scoring-result .table-bg .table-score thead tr th[class*=answer]:after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.weekly-scoring-result .table-bg .table-score thead tr th.answer:after { background-position: -348px -184px; background-repeat: no-repeat; overflow: hidden; display: block; width: 49px; height: 49px; }
+
+.weekly-scoring-result .table-bg .table-score thead tr th.wrong-answer:after { background-position: -348px -233px; background-repeat: no-repeat; overflow: hidden; display: block; width: 42px; height: 44px; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr th, .weekly-scoring-result .table-bg .table-score tbody tr td { font-size: 2.2rem; font-weight: bold; text-align: center; height: 90px; border: 1px solid #fadfc2; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-scoring-result .table-bg .table-score tbody tr td .btn-clinic-lecture { background-position: -104px 0px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 52px; height: 56px; text-indent: -9999px; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr th { position: relative; border-top-left-radius: 10px; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr th .title { position: absolute; left: -53px; width: 54px; font-size: 1.8rem; font-weight: bold; color: #fff; text-align: center; line-height: 22px; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr th:before { position: absolute; top: 16px; left: -58px; display: inline-block; content: ""; width: 58px; height: 59px; background-size: 58px 59px; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(1) th .title { top: 24px; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(1) th:before { background: url("../../assets/images/bg/bg-table-th-01.png") no-repeat; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(2) { border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(2) th { border-left: 0; border-bottom: 0; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(2) th .title { top: 34px; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(2) th:before { background: url("../../assets/images/bg/bg-table-th-02.png") no-repeat; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(2) td { border-bottom: 0; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(2) td:last-child { border-right: 0; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(3) { display: none; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(1) th, .weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(1) td { color: #492914; border-top: 0; border-left: 0; }
+
+.weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(2) th, .weekly-scoring-result .table-bg .table-score tbody tr:nth-of-type(2) td { color: #df2028; }
 
 /* -------------------------------------------------------------------------------------- 04_스마트주간진단_07채점결과 (kyowon-smart-redpen/html/full-weekly-scoring-result.html) --------------------------------------------------------------------------------------- */
-.weekly-scoring-result.remote-full { width: 100%; height: 100vh; }
+.weekly-scoring-result.remote-full { width: 100%; }
 
-.weekly-scoring-result.remote-full .container .content { padding: 0; padding-top: 30px; }
+.weekly-scoring-result.remote-full .header { height: 80px; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg { width: 1100px; height: 530px; background: url("../../assets/images/bg/bg-table.png") center no-repeat; margin: 0 auto; }
+.weekly-scoring-result.remote-full .header h1 { font-size: 3rem; line-height: 80px; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-title { width: 724px; height: 84px; background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat; margin: 0 auto; }
+.weekly-scoring-result.remote-full .header .btn-close { top: 15px; right: 20px; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score th { display: table-cell !important; font-size: 2rem; color: #8e5406; }
+.weekly-scoring-result.remote-full .container { min-width: 1200px; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score th.answer { background-position: -70px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 64px; height: 64px; }
+.weekly-scoring-result.remote-full .container .content .table-bg { width: 1100px; height: 530px; background: url("../../assets/images/bg/bg-table-full.png") center no-repeat; margin: 0 auto; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score th.wrong-answer { background-position: -134px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 54px; height: 56px; }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title { width: 724px; height: 84px; background: url("../../assets/images/bg/bg-guide-plate-full.png") center no-repeat; margin: 0 auto; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score td { font-size: 3rem; color: #492914; }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title dl { margin: 19px auto; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score td .btn-clinic-lecture { background-position: -104px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 52px; height: 56px; text-indent: -9999px; }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title dl dt { font-size: 2.2rem; padding-right: 47px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title dl dd { font-size: 3rem; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title dl dd span { font-size: 2.6rem; padding-left: 6px; letter-spacing: 0.4em; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title dl dd span:nth-of-type(2):after { top: -2px; height: 16px; padding-right: 50px; margin-right: 50px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score { top: 198px; width: 940px; height: 302px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr td { height: 60px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th { font-size: 2rem; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th[class*=answer] { position: relative; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th[class*=answer]:after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.answer:after { background-position: -348px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 64px; height: 64px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.wrong-answer:after { background-position: -348px -128px; background-repeat: no-repeat; overflow: hidden; display: block; width: 54px; height: 56px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr th, .weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr td { font-size: 3rem; height: 80px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr th .title { left: -65px; width: 65px; font-size: 1.8rem; color: #fff; line-height: 22px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr th:before { top: 8px; left: -70px; width: 70px; height: 64px; background-size: 70px 64px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(1) th .title { top: 18px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(1) th:before { background: url("../../assets/images/bg/bg-table-th-full-01.png") no-repeat; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(2) th .title { top: 29px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(2) th:before { background: url("../../assets/images/bg/bg-table-th-full-02.png") no-repeat; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) { display: table-row; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) th, .weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) td { display: table-cell; height: 80px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) th .title { top: 19px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) th:before { background: url("../../assets/images/bg/bg-table-th-full-03.png") no-repeat; }
+
+.weekly-scoring-result.remote-full .container .content .comment { display: block; padding-top: 32px; padding-bottom: 56px; }
+
+.weekly-scoring-result.remote-full .container .content .comment .fl, .weekly-scoring-result.remote-full .container .content .comment .fr { position: relative; width: 50%; height: 72px; }
+
+.weekly-scoring-result.remote-full .container .content .comment .fl span, .weekly-scoring-result.remote-full .container .content .comment .fr span { color: #f24a71; }
+
+.weekly-scoring-result.remote-full .container .content .comment .fl p, .weekly-scoring-result.remote-full .container .content .comment .fr p { font-weight: bold; position: absolute; top: 50%; transform: translateY(-50%); padding-left: 100px; padding-right: 40px; }
+
+.weekly-scoring-result.remote-full .container .content .comment .fl:before, .weekly-scoring-result.remote-full .container .content .comment .fr:before { position: absolute; left: 10px; right: 140px; content: ""; }
+
+.weekly-scoring-result.remote-full .container .content .comment .fl:before { background-position: -76px -183px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 76px; height: 76px; }
+
+.weekly-scoring-result.remote-full .container .content .comment .fr:before { background-position: 0px -183px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 76px; height: 76px; }
+
+/* -------------------------------------------------------------------------------------- 03_웹공유_03정리의달인_01저학년, 03_웹공유_03정리의달인_02고학년 (kyowon-smart-redpen/html/remote-theorem-swell.html) --------------------------------------------------------------------------------------- */
 
 /*# sourceMappingURL=map/style.css.map */

@@ -866,72 +866,230 @@
     background: url("../../assets/images/bg/bg-weekly-scoring-result.png");
     .header {
         position: relative;
-        height: 80px;
+        height: 62px;
         background: #f24a71;
         h1 {
-            font-size: rem(30px);
+            font-size: rem(25px);
             color: #fff;
-            line-height: 80px;
+            line-height: 62px;
             text-align: center;
         }
         .btn-close {
             text-indent: -9999px;
             @include sprite($btn-close);
             @extend .kw-btn;
-            display: block;
             position: absolute;
-            top: 15px;
-            right: 20px;
+            top: 6px;
+            right: 9px;
         }
     }
     .container {
         background-color: transparent;
+        .content {
+            padding-top: 40px;
+            @extend %clearfix;
+        }
+        .comment {
+            display: none;
+        }
     }
 }
 .weekly-scoring-result {
     .table-bg {
-        width: 1100px;
-        height: 530px;
+        position: relative;
+        width:  840px;
+        height: 485px;
         background: url("../../assets/images/bg/bg-table.png") center no-repeat;
         margin: 0 auto;
         .table-title {
-            position: relative;
-            width: 724px;
-            height: 84px;
+            @include w-center($position: absolute);
+            top: 84px;
+            width: 510px;
+            height: 60px;
             background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat;
-            margin: 0 auto;
             dl {
                 display: table;
-                @include wh-center ($position: absolute);
+                margin: 11px auto;
                 dt, dd {
                     display: table-cell;
                     font-weight: bold;
                 }
                 dt {
-                    font-size: rem(22px);
+                    font-size: rem(18px);
                     color: #fff;
-                    padding-right: 47px;
+                    padding-right: 13px;
                     vertical-align: middle;
                 }
                 dd {
-                    font-size: rem(30px);
+                    font-size: rem(25px);
                     color: #453a2e;
                     span {
-                        font-size: rem(26px);
+                        font-size: rem(22px);
                         color: #453a2e !important;
                         padding-left: 6px;
                         letter-spacing: 0.4em;
                         &:nth-of-type(2) {
                             &:after {
                                 position: relative;
-                                top: 5px;
+                                top: 0;
                                 display: inline-block;
                                 content: "";
                                 height: 16px;
-                                padding-right: 50px;
+                                padding-right: 20px;
                                 border-right: 2px solid #8be5fb;
-                                margin-right: 50px;
+                                margin-right: 30px;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.weekly-scoring-result {
+    .table-bg {
+        .table-score {
+            @include w-center($position: absolute);
+            top: 184px;
+            width: 720px;
+            height: 270px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            thead {
+                tr {
+                    th {
+                        font-size: rem(15px);
+                        color: #8e5406;
+                        height: 90px;
+                        background: #fff5e6;
+                        border-right: 1px solid #fadfc2;
+                        &:first-child {
+                            border-top-left-radius: 10px;
+                        }
+                        &:last-child {
+                            border-top-right-radius: 10px;
+                            border-right: 0;
+                        }
+                        &[class*=answer] {
+                            position: relative;
+                            &:after {
+                                content:"";
+                                @include wh-center ($position: absolute);
+                            }
+                        }
+                        &.answer {
+                            &:after {
+                                @extend .kw-icon;
+                                @include sprite($icon-answer);
+                            }
+                        }
+                        &.wrong-answer {
+                            &:after {
+                                @extend .kw-icon;
+                                @include sprite($icon-wrong-answer);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.weekly-scoring-result {
+    .table-bg {
+        .table-score {
+            tbody {
+                tr {
+                    th, td {
+                        font-size: rem(22px);
+                        font-weight: bold;
+                        text-align: center;
+                        height: 90px;
+                        border: 1px solid #fadfc2;
+                        .btn-clinic-lecture {
+                            @extend .kw-btn;
+                            @include sprite($btn-clinic-lecture, $display: inline-block);
+                            text-indent: -9999px;
+                        }
+                    }
+                    th {
+                        position: relative;
+                        border-top-left-radius: 10px;
+                        .title {
+                            position: absolute;
+                            left: -53px;
+                            width: 54px;
+                            font-size: rem(18px);
+                            font-weight: bold;
+                            color: #fff;
+                            text-align: center;
+                            line-height: 22px;
+                        }
+                        &:before {
+                            position: absolute;
+                            top: 16px;
+                            left: -58px;
+                            display: inline-block;
+                            content:"";
+                            width: 58px;
+                            height: 59px;
+                            background-size: 58px 59px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.weekly-scoring-result {
+    .table-bg {
+        .table-score {
+            tbody {
+                tr {
+                    &:nth-of-type(1) {
+                        th {
+                            .title {
+                                top: 24px;
+                            }
+                            &:before {
+                                background: url("../../assets/images/bg/bg-table-th-01.png") no-repeat;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        th {
+                            border-left: 0;
+                            border-bottom: 0;
+                            .title {
+                                top: 34px;
+                            }
+                            &:before {
+                                background: url("../../assets/images/bg/bg-table-th-02.png") no-repeat;
+                            }
+                        }
+                        td {
+                             border-bottom: 0;
+                             &:last-child {
+                                border-right: 0;
+                            }
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        display: none;
+                    }
+                    &:nth-of-type(1) {
+                        th, td {
+                            color: #492914;
+                            border-top: 0;
+                            border-left: 0;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        th, td {
+                            color: #df2028;
                         }
                     }
                 }
@@ -946,45 +1104,52 @@
 --------------------------------------------------------------------------------------- */
 .weekly-scoring-result {
     &.remote-full {
+        .header {
+            height: 80px;
+            h1 {
+                font-size: rem(30px);
+                line-height: 80px;
+            }
+            .btn-close {
+                top: 15px;
+                right: 20px;
+            }
+        }
         width: 100%;
-        height: 100vh;
         .container {
+            min-width: 1200px;
             .content {
-                @extend %clearfix;
-                padding: 0;
-                padding-top: 30px;
                 .table-bg {
                     width: 1100px;
                     height: 530px;
-                    background: url("../../assets/images/bg/bg-table.png") center no-repeat;
+                    background: url("../../assets/images/bg/bg-table-full.png") center no-repeat;
                     margin: 0 auto;
                     .table-title {
                         width: 724px;
                         height: 84px;
-                        background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat;
+                        background: url("../../assets/images/bg/bg-guide-plate-full.png") center no-repeat;
                         margin: 0 auto;
-                    }
-                    .table-score {
-                        th {
-                            display: table-cell !important;
-                            font-size: rem(20px);
-                            color: #8e5406;
-                            &.answer {
-                                @extend .kw-icon;
-                                @include sprite($icon-answer);
+                        dl {
+                            margin: 19px auto;
+                            dt {
+                                font-size: rem(22px);
+                                padding-right: 47px;
                             }
-                            &.wrong-answer {
-                                @extend .kw-icon;
-                                @include sprite($icon-wrong-answer);
-                            }
-                        }
-                        td {
-                            font-size: rem(30px);
-                            color: #492914;
-                            .btn-clinic-lecture {
-                                @extend .kw-btn;
-                                @include sprite($btn-clinic-lecture);
-                                text-indent: -9999px;
+                            dd {
+                                font-size: rem(30px);
+                                span {
+                                    font-size: rem(26px);
+                                    padding-left: 6px;
+                                    letter-spacing: 0.4em;
+                                    &:nth-of-type(2) {
+                                        &:after {
+                                            top: -2px;
+                                            height: 16px;
+                                            padding-right: 50px;
+                                            margin-right: 50px;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -993,3 +1158,158 @@
         }
     }
 }
+.weekly-scoring-result {
+    &.remote-full {
+        .container {
+            .content {
+                .table-bg {
+                    .table-score {
+                        top: 198px;
+                        width: 940px;
+                        height: 302px;
+                        thead {
+                            tr {
+                                th, td {
+                                    height: 60px;
+                                }
+                                th {
+                                    font-size: rem(20px);
+                                    &[class*=answer] {
+                                        position: relative;
+                                        &:after {
+                                            content:"";
+                                            @include wh-center ($position: absolute);
+                                        }
+                                    }
+                                    &.answer {
+                                        &:after {
+                                            @extend .kw-icon;
+                                            @include sprite($icon-answer-full);
+                                        }
+                                    }
+                                    &.wrong-answer {
+                                        &:after {
+                                            @extend .kw-icon;
+                                            @include sprite($icon-wrong-answer-full);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                th, td {
+                                    font-size: rem(30px);
+                                    height: 80px;
+                                }
+                                th {
+                                    .title {
+                                        left: -65px;
+                                        width: 65px;
+                                        font-size: rem(18px);
+                                        color: #fff;
+                                        line-height: 22px;
+                                    }
+                                    &:before {
+                                        top: 8px;
+                                        left: -70px;
+                                        width: 70px;
+                                        height: 64px;
+                                        background-size: 70px 64px;
+                                    }
+                                }
+                                &:nth-of-type(1) {
+                                    th {
+                                        .title {
+                                            top: 18px;
+                                        }
+                                        &:before {
+                                            background: url("../../assets/images/bg/bg-table-th-full-01.png") no-repeat;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                   th {
+                                        .title {
+                                            top: 29px;
+                                        }
+                                        &:before {
+                                            background: url("../../assets/images/bg/bg-table-th-full-02.png") no-repeat;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(3) {
+                                    display: table-row;
+                                    th, td {
+                                        display: table-cell;
+                                        height: 80px;
+                                    }
+                                    th {
+                                        .title {
+                                            top: 19px;
+                                        }
+                                        &:before {
+                                            background: url("../../assets/images/bg/bg-table-th-full-03.png") no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.weekly-scoring-result {
+    &.remote-full {
+        .container {
+            .content {
+                .comment {
+                    display: block;
+                    padding-top: 32px;
+                    padding-bottom: 56px;
+                    @extend %clearfix;
+                    .fl, .fr {
+                        position: relative;
+                        width: 50%;
+                        height: 72px;
+                        span {
+                            color: #f24a71;
+                        }
+                        p {
+                            font-weight: bold;
+                            @include h-center ($position: absolute);
+                            padding-left: 100px;
+                            padding-right: 40px
+                        }
+                        &:before {
+                            position: absolute;
+                            left: 10px;
+                            right: 140px;
+                            content: "";
+                        }
+                    }
+                    .fl {
+                        &:before {
+                            @extend .kw-icon;
+                            @include sprite($icon-o-and-x, $display: inline-block);
+                        }
+                    }
+                    .fr {
+                        &:before {
+                            @extend .kw-icon;
+                            @include sprite($icon-start-diagnosis, $display: inline-block);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_03정리의달인_01저학년,
+ 03_웹공유_03정리의달인_02고학년
+ (kyowon-smart-redpen/html/remote-theorem-swell.html)
+--------------------------------------------------------------------------------------- */

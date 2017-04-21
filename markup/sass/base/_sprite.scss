@@ -1,3 +1,26 @@
+$icon-answer-full: -348px -0px 64px 64px;
+$icon-answer: -348px -184px 49px 49px;
+$icon-badge-ok-full: -264px -84px 74px 79px;
+$icon-badge-ok: -348px -64px 60px 64px;
+$icon-badge-praise-sticker-full: -0px -0px 94px 99px;
+$icon-badge-praise-sticker: -152px -183px 70px 72px;
+$icon-goal-title: -348px -277px 39px 39px;
+$icon-korean-full: -84px -99px 84px 84px;
+$icon-korean: -222px -183px 68px 68px;
+$icon-math-1: -272px -259px 68px 68px;
+$icon-math-2: -68px -259px 68px 68px;
+$icon-math-full-1: -180px -0px 84px 84px;
+$icon-math-full-2: -264px -0px 84px 84px;
+$icon-o-and-x: -76px -183px 76px 76px;
+$icon-science-full: -168px -99px 84px 84px;
+$icon-science: -136px -259px 68px 68px;
+$icon-social-full: -0px -99px 84px 84px;
+$icon-social: -0px -259px 68px 68px;
+$icon-start-diagnosis: -0px -183px 76px 76px;
+$icon-vasleys-full: -94px -0px 86px 84px;
+$icon-vasleys: -204px -259px 68px 68px;
+$icon-wrong-answer-full: -348px -128px 54px 56px;
+$icon-wrong-answer: -348px -233px 42px 44px;
 $btn-clinic-lecture: -104px -0px 52px 56px;
 $btn-close: -0px -96px 52px 56px;
 $btn-next-month: -104px -56px 36px 38px;
@@ -6,13 +29,6 @@ $btn-scoring-results-full-off: -0px -0px 104px 48px;
 $btn-scoring-results-full-on: -0px -48px 104px 48px;
 $btn-scoring-results-off: -52px -96px 48px 52px;
 $btn-scoring-results-on: -100px -96px 48px 52px;
-$icon-answer: -70px -99px 64px 64px;
-$icon-badge-praise-sticker-full: -0px -0px 94px 99px;
-$icon-badge-praise-sticker: -0px -99px 70px 72px;
-$icon-goal-title: -188px -99px 39px 39px;
-$icon-o-and-x: -94px -0px 76px 76px;
-$icon-start-diagnosis: -170px -0px 76px 76px;
-$icon-wrong-answer: -134px -99px 54px 56px;
 @mixin sprite-width($sprite) {
 	width: nth($sprite, 3);
 }
@@ -39,10 +55,10 @@ $icon-wrong-answer: -134px -99px 54px 56px;
 	@include sprite-height($sprite);
 }
 
-.kw-btn {
-	background-image: url('../../assets/images/sprite/sprite-btn.png');
-}
-
 .kw-icon {
 	background-image: url('../../assets/images/sprite/sprite-icon.png');
+}
+
+.kw-btn {
+	background-image: url('../../assets/images/sprite/sprite-btn.png');
 }
