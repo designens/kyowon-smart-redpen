@@ -528,6 +528,9 @@
     @extend .check-progress-weekly-diagnosis;
     .container {
         .content {
+            .table-title {
+                display: inline-block;
+            }
             .week-tab-menu {
                 margin-left: 0;
                 margin-right: -10px;
@@ -733,7 +736,6 @@
  03_화상관리_02학습진척도_04주간진단_03칭찬딱지모아보기
  (kyowon-smart-redpen/html/full-learning-progress-weekly-compliment.html)
 --------------------------------------------------------------------------------------- */
-
 .check-progress-weekly-compliment {
     &.remote-full {
         .container {
@@ -797,6 +799,193 @@
                             font-weight: bold;
                             text-align: center;
                             line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_01진척도점검_06디지털첨삭_01,
+ 03_웹공유_01진척도점검_06디지털첨삭_02,
+ 03_웹공유_01진척도점검_06디지털첨삭_03
+ (kyowon-smart-redpen/html/remote-check-progress-digital.html)
+--------------------------------------------------------------------------------------- */
+.check-progress-digital {
+    .container {
+        .content {
+            padding-top: 40px;
+            .medal-box {
+                display: table;
+                margin: 0 auto;
+                @extend %clearfix;
+                li {
+                    display: table-cell;
+                    width: 218px;
+                    text-align: center;
+                    .medal {
+                        display: inline-block;
+                    }
+                    p {
+                        font-weight: bold;
+                        &.title {
+                            font-size: rem(30px);
+                            margin-top: 22px;
+                        }
+                        &:nth-of-type(2) {
+                            font-size: rem(20px);
+                            color: #099896;
+                        }
+                        &:nth-of-type(3) {
+                            font-size: rem(20px);
+                            color: #555;
+                        }
+                    }
+                    .btn-completed {
+                        width: 180px;
+                        height: 58px;
+                        font-weight: bold;
+                        color: #fff;
+                        margin-top: 25px;
+                        background: url("../../assets/images/bg/bg-btn-medal.png") no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_02주간진단분석_03채점결과_01문항최대
+ 03_웹공유_02주간진단분석_03채점결과_02문항10미만
+ (remote-weekly-scoring-result.html)
+--------------------------------------------------------------------------------------- */
+.weekly-scoring-result {
+    background: url("../../assets/images/bg/bg-weekly-scoring-result.png");
+    .header {
+        position: relative;
+        height: 80px;
+        background: #f24a71;
+        h1 {
+            font-size: rem(30px);
+            color: #fff;
+            line-height: 80px;
+            text-align: center;
+        }
+        .btn-close {
+            text-indent: -9999px;
+            @include sprite($btn-close);
+            @extend .kw-btn;
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+    }
+    .container {
+        background-color: transparent;
+    }
+}
+.weekly-scoring-result {
+    .table-bg {
+        width: 1100px;
+        height: 530px;
+        background: url("../../assets/images/bg/bg-table.png") center no-repeat;
+        margin: 0 auto;
+        .table-title {
+            position: relative;
+            width: 724px;
+            height: 84px;
+            background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat;
+            margin: 0 auto;
+            dl {
+                display: table;
+                @include wh-center ($position: absolute);
+                dt, dd {
+                    display: table-cell;
+                    font-weight: bold;
+                }
+                dt {
+                    font-size: rem(22px);
+                    color: #fff;
+                    padding-right: 47px;
+                    vertical-align: middle;
+                }
+                dd {
+                    font-size: rem(30px);
+                    color: #453a2e;
+                    span {
+                        font-size: rem(26px);
+                        color: #453a2e !important;
+                        padding-left: 6px;
+                        letter-spacing: 0.4em;
+                        &:nth-of-type(2) {
+                            &:after {
+                                position: relative;
+                                top: 5px;
+                                display: inline-block;
+                                content: "";
+                                height: 16px;
+                                padding-right: 50px;
+                                border-right: 2px solid #8be5fb;
+                                margin-right: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 04_스마트주간진단_07채점결과
+ (kyowon-smart-redpen/html/full-weekly-scoring-result.html)
+--------------------------------------------------------------------------------------- */
+.weekly-scoring-result {
+    &.remote-full {
+        width: 100%;
+        height: 100vh;
+        .container {
+            .content {
+                @extend %clearfix;
+                padding: 0;
+                padding-top: 30px;
+                .table-bg {
+                    width: 1100px;
+                    height: 530px;
+                    background: url("../../assets/images/bg/bg-table.png") center no-repeat;
+                    margin: 0 auto;
+                    .table-title {
+                        width: 724px;
+                        height: 84px;
+                        background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat;
+                        margin: 0 auto;
+                    }
+                    .table-score {
+                        th {
+                            display: table-cell !important;
+                            font-size: rem(20px);
+                            color: #8e5406;
+                            &.answer {
+                                @extend .kw-icon;
+                                @include sprite($icon-answer);
+                            }
+                            &.wrong-answer {
+                                @extend .kw-icon;
+                                @include sprite($icon-wrong-answer);
+                            }
+                        }
+                        td {
+                            font-size: rem(30px);
+                            color: #492914;
+                            .btn-clinic-lecture {
+                                @extend .kw-btn;
+                                @include sprite($btn-clinic-lecture);
+                                text-indent: -9999px;
+                            }
                         }
                     }
                 }

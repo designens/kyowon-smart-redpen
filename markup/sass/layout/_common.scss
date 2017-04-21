@@ -220,7 +220,7 @@
     .content {
         .table-title {
             margin-bottom: 6px;
-            span {
+            > span {
                 &:nth-of-type(2) {
                     position: relative;
                     color: #f24a71;

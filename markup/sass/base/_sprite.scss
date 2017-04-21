@@ -1,12 +1,18 @@
-$icon-badge-praise-sticker-full: -0px -0px 94px 99px;
-$icon-badge-praise-sticker: -94px -0px 70px 72px;
-$icon-goal-title: -0px -99px 39px 39px;
-$btn-next-month: -104px -52px 36px 38px;
-$btn-prev-month: -48px -96px 36px 38px;
+$btn-clinic-lecture: -104px -0px 52px 56px;
+$btn-close: -0px -96px 52px 56px;
+$btn-next-month: -104px -56px 36px 38px;
+$btn-prev-month: -156px -0px 36px 38px;
 $btn-scoring-results-full-off: -0px -0px 104px 48px;
 $btn-scoring-results-full-on: -0px -48px 104px 48px;
-$btn-scoring-results-off: -104px -0px 48px 52px;
-$btn-scoring-results-on: -0px -96px 48px 52px;
+$btn-scoring-results-off: -52px -96px 48px 52px;
+$btn-scoring-results-on: -100px -96px 48px 52px;
+$icon-answer: -70px -99px 64px 64px;
+$icon-badge-praise-sticker-full: -0px -0px 94px 99px;
+$icon-badge-praise-sticker: -0px -99px 70px 72px;
+$icon-goal-title: -188px -99px 39px 39px;
+$icon-o-and-x: -94px -0px 76px 76px;
+$icon-start-diagnosis: -170px -0px 76px 76px;
+$icon-wrong-answer: -134px -99px 54px 56px;
 @mixin sprite-width($sprite) {
 	width: nth($sprite, 3);
 }
@@ -33,10 +39,10 @@ $btn-scoring-results-on: -0px -96px 48px 52px;
 	@include sprite-height($sprite);
 }
 
-.kw-icon {
-	background-image: url('../../assets/images/sprite/sprite-icon.png');
-}
-
 .kw-btn {
 	background-image: url('../../assets/images/sprite/sprite-btn.png');
+}
+
+.kw-icon {
+	background-image: url('../../assets/images/sprite/sprite-icon.png');
 }

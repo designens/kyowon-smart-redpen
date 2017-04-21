@@ -3066,11 +3066,11 @@ input:-ms-input-placeholder { color: #222; }
 
 input:-moz-placeholder { color: #222; }
 
-.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
+.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"], .weekly-scoring-result .header .btn-close, .weekly-scoring-result.remote-full .container .content .table-bg .table-score td .btn-clinic-lecture { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
 
-.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"] { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
+.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker, .weekly-scoring-result.remote-full .container .content .table-bg .table-score th.answer, .weekly-scoring-result.remote-full .container .content .table-bg .table-score th.wrong-answer { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
 
-.container .content .week-tab-menu:after, .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-compliment .container .content .wrap:after { content: ''; display: block; clear: both; }
+.container .content .week-tab-menu:after, .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-compliment .container .content .wrap:after, .check-progress-digital .container .content .medal-box:after, .weekly-scoring-result.remote-full .container .content:after { content: ''; display: block; clear: both; }
 
 html { font-size: 10px; }
 
@@ -3132,9 +3132,9 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .container .header .year-month [class^="btn-"] span { position: absolute; top: -9999px; visibility: hidden; }
 
-.container .header .year-month .btn-prev { left: 2px; background-position: -48px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
+.container .header .year-month .btn-prev { left: 2px; background-position: -156px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
 
-.container .header .year-month .btn-next { right: 2px; background-position: -104px -52px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
+.container .header .year-month .btn-next { right: 2px; background-position: -104px -56px; background-repeat: no-repeat; overflow: hidden; display: block; width: 36px; height: 38px; }
 
 .container .header .tab-menu { position: absolute; right: 14px; bottom: 0; }
 
@@ -3156,13 +3156,13 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .container .content .table-title { margin-bottom: 6px; }
 
-.container .content .table-title span:nth-of-type(2) { position: relative; color: #f24a71; margin-right: 20px; }
+.container .content .table-title > span:nth-of-type(2) { position: relative; color: #f24a71; margin-right: 20px; }
 
-.container .content .table-title span:nth-of-type(2):after { position: absolute; top: 5px; display: inline-block; content: ""; height: 18px; padding-right: 20px; border-right: 2px solid #ddd; }
+.container .content .table-title > span:nth-of-type(2):after { position: absolute; top: 5px; display: inline-block; content: ""; height: 18px; padding-right: 20px; border-right: 2px solid #ddd; }
 
-.container .content .table-title span:nth-of-type(3) { margin-left: 20px; }
+.container .content .table-title > span:nth-of-type(3) { margin-left: 20px; }
 
-.container .content .table-title .icon { background-position: 0px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 39px; height: 39px; display: inline-block; vertical-align: -12px; margin-left: -2px; margin-right: 6px; }
+.container .content .table-title .icon { background-position: -188px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 39px; height: 39px; display: inline-block; vertical-align: -12px; margin-left: -2px; margin-right: 6px; }
 
 .container .content .table-title .gray { color: #c1c1c1; }
 
@@ -3320,15 +3320,15 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"] { font-size: 1.6rem; color: #fff; line-height: 16px; margin: 0 auto; margin-top: 5px; padding-bottom: 4px; cursor: pointer; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-on, .remote.smart-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-on { background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-on, .remote.smart-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-on { background-position: -100px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-off, .remote.smart-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-off { background-position: -104px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody th.row-title .btn-scoring-results-off, .remote.smart-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-off { background-position: -52px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody td, .remote.smart-weekly-diagnosis .table-type tbody td { font-weight: bold; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody td:nth-of-type(2), .remote.smart-weekly-diagnosis .table-type tbody td:nth-of-type(2) { line-height: 20px; }
 
-.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+.check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: 0px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
 
 .check-progress-weekly-diagnosis.remote .table-type tbody td.full, .remote.smart-weekly-diagnosis .table-type tbody td.full { display: none; border-left: 0; }
 
@@ -3361,7 +3361,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td.full, .remote-full.smart-weekly-diagnosis .table-type tbody td.full { display: table-cell; }
 
-.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
+.check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker { background-position: 0px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 70px; height: 72px; margin: 0 auto; text-indent: -9999px; }
 
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"] { font-size: 1.4rem; font-weight: bold; color: #fff; line-height: 1.2; margin: 0 auto; cursor: pointer; }
 
@@ -3370,6 +3370,8 @@ h3 { font-size: 20px; font-size: 2rem; }
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-off, .remote-full.smart-weekly-diagnosis .table-type tbody td .btn-scoring-results-full-off { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
 
 /* -------------------------------------------------------------------------------------- 04_스마트주간진단_01저학년, 04_스마트주간진단_02고학년 (kyowon-smart-redpen/html/full-smart-weekly-diagnosis.html) --------------------------------------------------------------------------------------- */
+.smart-weekly-diagnosis .container .content .table-title { display: inline-block; }
+
 .smart-weekly-diagnosis .container .content .week-tab-menu { margin-left: 0; margin-right: -10px; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_01, 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_02 (kyowon-smart-redpen/html/remote-check-progress-weekly-compliment.html) --------------------------------------------------------------------------------------- */
@@ -3463,5 +3465,70 @@ h3 { font-size: 20px; font-size: 2rem; }
 .check-progress-weekly-compliment.remote-full .container .content .wrap .fr p span { display: block; }
 
 .check-progress-weekly-compliment.remote-full .container .content .wrap .fr pre { font-weight: bold; text-align: center; line-height: 1.5; }
+
+/* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_06디지털첨삭_01, 03_웹공유_01진척도점검_06디지털첨삭_02, 03_웹공유_01진척도점검_06디지털첨삭_03 (kyowon-smart-redpen/html/remote-check-progress-digital.html) --------------------------------------------------------------------------------------- */
+.check-progress-digital .container .content { padding-top: 40px; }
+
+.check-progress-digital .container .content .medal-box { display: table; margin: 0 auto; }
+
+.check-progress-digital .container .content .medal-box li { display: table-cell; width: 218px; text-align: center; }
+
+.check-progress-digital .container .content .medal-box li .medal { display: inline-block; }
+
+.check-progress-digital .container .content .medal-box li p { font-weight: bold; }
+
+.check-progress-digital .container .content .medal-box li p.title { font-size: 3rem; margin-top: 22px; }
+
+.check-progress-digital .container .content .medal-box li p:nth-of-type(2) { font-size: 2rem; color: #099896; }
+
+.check-progress-digital .container .content .medal-box li p:nth-of-type(3) { font-size: 2rem; color: #555; }
+
+.check-progress-digital .container .content .medal-box li .btn-completed { width: 180px; height: 58px; font-weight: bold; color: #fff; margin-top: 25px; background: url("../../assets/images/bg/bg-btn-medal.png") no-repeat; }
+
+/* -------------------------------------------------------------------------------------- 03_웹공유_02주간진단분석_03채점결과_01문항최대 03_웹공유_02주간진단분석_03채점결과_02문항10미만 (remote-weekly-scoring-result.html) --------------------------------------------------------------------------------------- */
+.weekly-scoring-result { background: url("../../assets/images/bg/bg-weekly-scoring-result.png"); }
+
+.weekly-scoring-result .header { position: relative; height: 80px; background: #f24a71; }
+
+.weekly-scoring-result .header h1 { font-size: 3rem; color: #fff; line-height: 80px; text-align: center; }
+
+.weekly-scoring-result .header .btn-close { text-indent: -9999px; background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 52px; height: 56px; display: block; position: absolute; top: 15px; right: 20px; }
+
+.weekly-scoring-result .container { background-color: transparent; }
+
+.weekly-scoring-result .table-bg { width: 1100px; height: 530px; background: url("../../assets/images/bg/bg-table.png") center no-repeat; margin: 0 auto; }
+
+.weekly-scoring-result .table-bg .table-title { position: relative; width: 724px; height: 84px; background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat; margin: 0 auto; }
+
+.weekly-scoring-result .table-bg .table-title dl { display: table; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.weekly-scoring-result .table-bg .table-title dl dt, .weekly-scoring-result .table-bg .table-title dl dd { display: table-cell; font-weight: bold; }
+
+.weekly-scoring-result .table-bg .table-title dl dt { font-size: 2.2rem; color: #fff; padding-right: 47px; vertical-align: middle; }
+
+.weekly-scoring-result .table-bg .table-title dl dd { font-size: 3rem; color: #453a2e; }
+
+.weekly-scoring-result .table-bg .table-title dl dd span { font-size: 2.6rem; color: #453a2e !important; padding-left: 6px; letter-spacing: 0.4em; }
+
+.weekly-scoring-result .table-bg .table-title dl dd span:nth-of-type(2):after { position: relative; top: 5px; display: inline-block; content: ""; height: 16px; padding-right: 50px; border-right: 2px solid #8be5fb; margin-right: 50px; }
+
+/* -------------------------------------------------------------------------------------- 04_스마트주간진단_07채점결과 (kyowon-smart-redpen/html/full-weekly-scoring-result.html) --------------------------------------------------------------------------------------- */
+.weekly-scoring-result.remote-full { width: 100%; height: 100vh; }
+
+.weekly-scoring-result.remote-full .container .content { padding: 0; padding-top: 30px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg { width: 1100px; height: 530px; background: url("../../assets/images/bg/bg-table.png") center no-repeat; margin: 0 auto; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title { width: 724px; height: 84px; background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat; margin: 0 auto; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score th { display: table-cell !important; font-size: 2rem; color: #8e5406; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score th.answer { background-position: -70px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 64px; height: 64px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score th.wrong-answer { background-position: -134px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 54px; height: 56px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score td { font-size: 3rem; color: #492914; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score td .btn-clinic-lecture { background-position: -104px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 52px; height: 56px; text-indent: -9999px; }
 
 /*# sourceMappingURL=map/style.css.map */
