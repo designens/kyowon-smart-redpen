@@ -864,30 +864,14 @@
 --------------------------------------------------------------------------------------- */
 .weekly-scoring-result {
     background: url("../../assets/images/bg/bg-weekly-scoring-result.png");
-    .header {
-        position: relative;
-        height: 62px;
-        background: #f24a71;
-        h1 {
-            font-size: rem(25px);
-            color: #fff;
-            line-height: 62px;
-            text-align: center;
-        }
-        .btn-close {
-            text-indent: -9999px;
-            @include sprite($btn-close);
-            @extend .kw-btn;
-            position: absolute;
-            top: 6px;
-            right: 9px;
-        }
-    }
     .container {
         background-color: transparent;
         .content {
             padding-top: 40px;
             @extend %clearfix;
+        }
+        .comment {
+            display: none;
         }
     }
 }
@@ -1100,18 +1084,6 @@
  (kyowon-smart-redpen/html/full-weekly-scoring-result.html)
 --------------------------------------------------------------------------------------- */
 .weekly-scoring-result {
-    &.remote-full {
-        .header {
-            height: 80px;
-            h1 {
-                font-size: rem(30px);
-                line-height: 80px;
-            }
-            .btn-close {
-                top: 15px;
-                right: 20px;
-            }
-        }
         width: 100%;
         .container {
             min-width: 1200px;
@@ -1378,6 +1350,9 @@
                                     font-weight: bold;
                                     text-align: left;
                                     line-height: 20px;
+                                    span {
+                                        display: block;
+                                    }
                                 }
                                 [class*="icon-"] {
                                     @extend .kw-icon;
@@ -1485,6 +1460,13 @@
                                 }
                                 .box-icon {
                                     width: 41%;
+                                    .subject {
+                                        width: 100%;
+                                        text-align: center;
+                                        span {
+                                            display: inline;
+                                        }
+                                    }
                                 }
                                 .box-btn {
                                     width: 59%;

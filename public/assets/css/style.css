@@ -3066,7 +3066,7 @@ input:-ms-input-placeholder { color: #222; }
 
 input:-moz-placeholder { color: #222; }
 
-.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"], .weekly-scoring-result .header .btn-close, .weekly-scoring-result .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-scoring-result .table-bg .table-score tbody tr td .btn-clinic-lecture { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
+.kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"], .weekly-scoring-result .header-pop .btn-close, .weekly-scoring-result .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-scoring-result .table-bg .table-score tbody tr td .btn-clinic-lecture { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
 
 .kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker, .weekly-scoring-result .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .comment .fl:before, .weekly-scoring-result.remote-full .container .content .comment .fr:before, .theorem-swell .container .content .table-type tbody tr td .box-icon [class*="icon-"], .theorem-swell.remote-full .container .comment li:before, .theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon [class*="icon-"] { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
 
@@ -3488,15 +3488,17 @@ h3 { font-size: 20px; font-size: 2rem; }
 /* -------------------------------------------------------------------------------------- 03_웹공유_02주간진단분석_03채점결과_01문항최대 03_웹공유_02주간진단분석_03채점결과_02문항10미만 (remote-weekly-scoring-result.html) --------------------------------------------------------------------------------------- */
 .weekly-scoring-result { background: url("../../assets/images/bg/bg-weekly-scoring-result.png"); }
 
-.weekly-scoring-result .header { position: relative; height: 62px; background: #f24a71; }
+.weekly-scoring-result .header-pop { position: relative; height: 62px; background: #f24a71; }
 
-.weekly-scoring-result .header h1 { font-size: 2.5rem; color: #fff; line-height: 62px; text-align: center; }
+.weekly-scoring-result .header-pop h1 { font-size: 2.5rem; color: #fff; line-height: 62px; text-align: center; }
 
-.weekly-scoring-result .header .btn-close { text-indent: -9999px; background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 52px; height: 56px; position: absolute; top: 6px; right: 9px; }
+.weekly-scoring-result .header-pop .btn-close { text-indent: -9999px; background-position: 0px -96px; background-repeat: no-repeat; overflow: hidden; display: block; width: 52px; height: 56px; position: absolute; top: 6px; right: 9px; }
 
 .weekly-scoring-result .container { background-color: transparent; }
 
 .weekly-scoring-result .container .content { padding-top: 40px; }
+
+.weekly-scoring-result .container .comment { display: none; }
 
 .weekly-scoring-result .table-bg { position: relative; width: 840px; height: 485px; background: url("../../assets/images/bg/bg-table.png") center no-repeat; margin: 0 auto; }
 
@@ -3565,11 +3567,11 @@ h3 { font-size: 20px; font-size: 2rem; }
 /* -------------------------------------------------------------------------------------- 04_스마트주간진단_07채점결과 (kyowon-smart-redpen/html/full-weekly-scoring-result.html) --------------------------------------------------------------------------------------- */
 .weekly-scoring-result.remote-full { width: 100%; }
 
-.weekly-scoring-result.remote-full .header { height: 80px; }
+.weekly-scoring-result.remote-full .header-pop { height: 80px; }
 
-.weekly-scoring-result.remote-full .header h1 { font-size: 3rem; line-height: 80px; }
+.weekly-scoring-result.remote-full .header-pop h1 { font-size: 3rem; line-height: 80px; }
 
-.weekly-scoring-result.remote-full .header .btn-close { top: 15px; right: 20px; }
+.weekly-scoring-result.remote-full .header-pop .btn-close { top: 15px; right: 20px; }
 
 .weekly-scoring-result.remote-full .container { min-width: 1200px; }
 
@@ -3660,6 +3662,8 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .theorem-swell .container .content .table-type tbody tr td .box-icon .subject { position: absolute; top: 14px; left: 14px; font-weight: bold; text-align: left; line-height: 20px; }
 
+.theorem-swell .container .content .table-type tbody tr td .box-icon .subject span { display: block; }
+
 .theorem-swell .container .content .table-type tbody tr td .box-icon [class*="icon-"] { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
 .theorem-swell .container .content .table-type tbody tr td .box-icon .icon-korean { background-position: -222px -183px; background-repeat: no-repeat; overflow: hidden; display: block; width: 68px; height: 68px; }
@@ -3692,6 +3696,10 @@ h3 { font-size: 20px; font-size: 2rem; }
 .theorem-swell.remote-full .container .content .table-type tbody tr td [class*="box-"] { position: relative; float: left; height: inherit; }
 
 .theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon { width: 41%; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .subject { width: 100%; text-align: center; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .subject span { display: inline; }
 
 .theorem-swell.remote-full .container .content .table-type tbody tr td .box-btn { width: 59%; }
 
