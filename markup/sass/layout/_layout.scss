@@ -1336,7 +1336,7 @@
                             &:first-child {
                                 border-left: 0;
                             }
-                            [class^="box-"] {
+                            [class*="box-"] {
                                 position: relative;
                                 width: 100%;
                             }
@@ -1360,6 +1360,17 @@
                             .box-icon {
                                 height: 94px;
                                 background: #fff5e6;
+                                 &.base {
+                                    [class*="icon-"] {
+                                        -webkit-filter: grayscale(1); /* Webkit */
+                                        filter: gray; /* IE6-9 */
+                                        filter: grayscale(1); /* W3C */
+                                        opacity: 0.3;
+                                    }
+                                    .subject {
+                                        color: #ccc;
+                                    }
+                                }
                                 .subject {
                                     position: absolute;
                                     top: 14px;
@@ -1368,15 +1379,9 @@
                                     text-align: left;
                                     line-height: 20px;
                                 }
-                                [class^="icon-"] {
+                                [class*="icon-"] {
                                     @extend .kw-icon;
                                     @include wh-center ($position: absolute);
-                                    &.base {
-                                        -webkit-filter: grayscale(1); /* Webkit */
-                                        filter: gray; /* IE6-9 */
-                                        filter: grayscale(1); /* W3C */
-                                        opacity: 0.3;
-                                    }
                                 }
                                 .icon-korean {
                                     @include sprite($icon-korean);
@@ -1423,7 +1428,7 @@
                             .box-btn {
                                 height: 66px;
                                 padding-top: 15px;
-                                [class^="btn-"] {
+                                [class*="btn-"] {
                                     display: inline-block;
                                     width: 89px;
                                     height: 36px;
@@ -1473,7 +1478,7 @@
                     tbody {
                         tr {
                             td {
-                                [class^="box-"] {
+                                [class*="box-"] {
                                     position: relative;
                                     float: left;
                                     height: inherit;
@@ -1487,7 +1492,7 @@
                                 .box-btn {
                                     padding-top: 16px;
                                     padding-bottom: 16px;
-                                    [class^="btn-"] {
+                                    [class*="btn-"] {
                                         width: 110px;
                                         height: 42px;
                                         border-radius: 21px;
@@ -1547,7 +1552,7 @@
                                         top: inherit;
                                         bottom: 12px;
                                     }
-                                    [class^="icon-"] {
+                                    [class*="icon-"] {
                                         @extend .kw-icon;
                                         top: 54px;
                                     }
