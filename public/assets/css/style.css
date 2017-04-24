@@ -3066,9 +3066,9 @@ input:-ms-input-placeholder { color: #222; }
 
 input:-moz-placeholder { color: #222; }
 
-.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker, .weekly-scoring-result .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .comment .fl:before, .weekly-scoring-result.remote-full .container .content .comment .fr:before { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
-
 .kw-btn, .container .header .year-month .btn-prev, .container .header .year-month .btn-next, .check-progress-weekly-diagnosis.remote .table-type tbody th.row-title [class^="btn-scoring-results"], .remote.smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"], .weekly-scoring-result .header .btn-close, .weekly-scoring-result .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-scoring-result .table-bg .table-score tbody tr td .btn-clinic-lecture { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
+
+.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis.remote .table-type tbody td .badge-praise-sticker, .remote.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-diagnosis.remote-full .table-type tbody td .badge-praise-sticker, .remote-full.smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker, .weekly-scoring-result .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .comment .fl:before, .weekly-scoring-result.remote-full .container .content .comment .fr:before, .theorem-swell .container .content .table-type tbody tr td .box-icon [class^="icon-"], .theorem-swell.remote-full .container .comment li:before, .theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon [class^="icon-"] { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
 
 .container .content .week-tab-menu:after, .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-compliment .container .content .wrap:after, .check-progress-digital .container .content .medal-box:after, .weekly-scoring-result .container .content:after, .weekly-scoring-result.remote-full .container .content .comment:after { content: ''; display: block; clear: both; }
 
@@ -3498,8 +3498,6 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .weekly-scoring-result .container .content { padding-top: 40px; }
 
-.weekly-scoring-result .container .comment { display: none; }
-
 .weekly-scoring-result .table-bg { position: relative; width: 840px; height: 485px; background: url("../../assets/images/bg/bg-table.png") center no-repeat; margin: 0 auto; }
 
 .weekly-scoring-result .table-bg .table-title { position: absolute; left: 50%; transform: translateX(-50%); top: 84px; width: 510px; height: 60px; background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat; }
@@ -3589,6 +3587,8 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg .table-title dl dd span:nth-of-type(2):after { top: -2px; height: 16px; padding-right: 50px; margin-right: 50px; }
 
+.weekly-scoring-result.remote-full .container .comment { display: none; }
+
 .weekly-scoring-result.remote-full .container .content .table-bg .table-score { top: 198px; width: 940px; height: 302px; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr td { height: 60px; }
@@ -3639,6 +3639,90 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .weekly-scoring-result.remote-full .container .content .comment .fr:before { background-position: 0px -183px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 76px; height: 76px; }
 
-/* -------------------------------------------------------------------------------------- 03_웹공유_03정리의달인_01저학년, 03_웹공유_03정리의달인_02고학년 (kyowon-smart-redpen/html/remote-theorem-swell.html) --------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- 03_웹공유_03정리의달인_01저학년, 03_웹공유_03정리의달인_02고학년 (kyowon-smart-redpen/html/remote-theorem-swell.html) 03_웹공유_04쌤과함께_01 (kyowon-smart-redpen/html/remote-teacher-together.html) --------------------------------------------------------------------------------------- */
+.theorem-swell .container .content .table-type thead tr th { height: 28px; }
+
+.theorem-swell .container .content .table-type thead tr th:first-child { border-right-width: 0 !important; }
+
+.theorem-swell .container .content .table-type tbody tr td { height: 140px; }
+
+.theorem-swell .container .content .table-type tbody tr td:first-child { border-left: 0; }
+
+.theorem-swell .container .content .table-type tbody tr td [class^="box-"] { position: relative; width: 100%; }
+
+.theorem-swell .container .comment { display: none; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon { height: 94px; background: #fff5e6; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon .subject { position: absolute; top: 14px; left: 14px; font-weight: bold; text-align: left; line-height: 20px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon [class^="icon-"] { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon [class^="icon-"].base { -webkit-filter: grayscale(1); /* Webkit */ filter: gray; /* IE6-9 */ filter: grayscale(1); /* W3C */ opacity: 0.3; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon .icon-korean { background-position: -222px -183px; background-repeat: no-repeat; overflow: hidden; display: block; width: 68px; height: 68px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon .icon-vasleys { background-position: -136px -259px; background-repeat: no-repeat; overflow: hidden; display: block; width: 68px; height: 68px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon .icon-social { background-position: -68px -259px; background-repeat: no-repeat; overflow: hidden; display: block; width: 68px; height: 68px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon .icon-science { background-position: -204px -259px; background-repeat: no-repeat; overflow: hidden; display: block; width: 68px; height: 68px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon .icon-math-1 { background-position: -272px -259px; background-repeat: no-repeat; overflow: hidden; display: block; width: 68px; height: 68px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon .icon-math-2 { background-position: 0px -259px; background-repeat: no-repeat; overflow: hidden; display: block; width: 68px; height: 68px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-icon .icon-badge-ok { top: inherit; left: inherit; right: 10px; bottom: 4px; transform: inherit; background-position: -348px -64px; background-repeat: no-repeat; overflow: hidden; display: block; width: 60px; height: 64px; text-indent: -9999px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-btn { height: 66px; padding-top: 15px; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-btn [class^="btn-"] { display: inline-block; width: 89px; height: 36px; font-weight: bold; color: #fff; border-radius: 18px; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
+
+.theorem-swell .container .content .table-type tbody tr td .box-btn [class^="btn-"].base { -webkit-filter: grayscale(1); /* Webkit */ filter: gray; /* IE6-9 */ filter: grayscale(1); /* W3C */ opacity: 0.1; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-btn .btn-view-lessons { background: #f24a71; }
+
+.theorem-swell .container .content .table-type tbody tr td .box-btn .btn-teacher-note { background: #8e5406; }
+
+/* -------------------------------------------------------------------------------------- 03_화상관리_03정리의달인_01저학년, 03_화상관리_03정리의달인_02고학년 (kyowon-smart-redpen/html/full-theorem-swell.html) --------------------------------------------------------------------------------------- */
+.theorem-swell.remote-full .container .content .table-type thead tr th { height: 50px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td [class^="box-"] { position: relative; float: left; height: inherit; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon { width: 41%; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-btn { width: 59%; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-btn { padding-top: 16px; padding-bottom: 16px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-btn [class^="btn-"] { width: 110px; height: 42px; border-radius: 21px; margin-bottom: 20px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-btn [class^="btn-"]:last-child { margin-bottom: 0; }
+
+.theorem-swell.remote-full .container .content { min-height: 510px; padding: 30px 0; border-bottom: 2px solid #686868; margin: 0 30px; }
+
+.theorem-swell.remote-full .container .comment { display: block; padding: 16px 30px; }
+
+.theorem-swell.remote-full .container .comment li { font-weight: bold; color: #555; line-height: 26px; }
+
+.theorem-swell.remote-full .container .comment li:before { content: ""; background-position: -390px -233px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 22px; height: 18px; padding-right: 10px; vertical-align: text-bottom; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .subject { position: absolute; left: 50%; transform: translateX(-50%); top: inherit; bottom: 12px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon [class^="icon-"] { top: 54px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .icon-korean { background-position: -264px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 84px; height: 84px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .icon-vasleys { background-position: -94px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 86px; height: 84px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .icon-social { background-position: 0px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 84px; height: 84px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .icon-science { background-position: -168px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 84px; height: 84px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .icon-math-1 { background-position: -84px -99px; background-repeat: no-repeat; overflow: hidden; display: block; width: 84px; height: 84px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .icon-math-2 { background-position: -180px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 84px; height: 84px; }
+
+.theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .icon-badge-ok { top: 5px; left: 6px; right: inherit; bottom: inherit; transform: inherit; background-position: -264px -84px; background-repeat: no-repeat; overflow: hidden; display: block; width: 74px; height: 79px; }
 
 /*# sourceMappingURL=map/style.css.map */

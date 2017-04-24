@@ -889,9 +889,6 @@
             padding-top: 40px;
             @extend %clearfix;
         }
-        .comment {
-            display: none;
-        }
     }
 }
 .weekly-scoring-result {
@@ -1155,6 +1152,9 @@
                     }
                 }
             }
+            .comment {
+                display: none;
+            }
         }
     }
 }
@@ -1312,4 +1312,277 @@
  03_웹공유_03정리의달인_01저학년,
  03_웹공유_03정리의달인_02고학년
  (kyowon-smart-redpen/html/remote-theorem-swell.html)
+ 03_웹공유_04쌤과함께_01
+ (kyowon-smart-redpen/html/remote-teacher-together.html)
 --------------------------------------------------------------------------------------- */
+.theorem-swell {
+    .container {
+        .content {
+            .table-type {
+                thead {
+                    tr {
+                        th {
+                            height: 28px;
+                            &:first-child {
+                                border-right-width: 0 !important;
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            height: 140px;
+                            &:first-child {
+                                border-left: 0;
+                            }
+                            [class^="box-"] {
+                                position: relative;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .comment {
+            display: none;
+        }
+    }
+}
+.theorem-swell {
+    .container {
+        .content {
+            .table-type {
+                tbody {
+                    tr {
+                        td {
+                            .box-icon {
+                                height: 94px;
+                                background: #fff5e6;
+                                .subject {
+                                    position: absolute;
+                                    top: 14px;
+                                    left: 14px;
+                                    font-weight: bold;
+                                    text-align: left;
+                                    line-height: 20px;
+                                }
+                                [class^="icon-"] {
+                                    @extend .kw-icon;
+                                    @include wh-center ($position: absolute);
+                                    &.base {
+                                        -webkit-filter: grayscale(1); /* Webkit */
+                                        filter: gray; /* IE6-9 */
+                                        filter: grayscale(1); /* W3C */
+                                        opacity: 0.3;
+                                    }
+                                }
+                                .icon-korean {
+                                    @include sprite($icon-korean);
+                                }
+                                .icon-vasleys {
+                                    @include sprite($icon-vasleys);
+                                }
+                                .icon-social {
+                                    @include sprite($icon-social);
+                                }
+                                .icon-science {
+                                    @include sprite($icon-science);
+                                }
+                                .icon-math-1 {
+                                    @include sprite($icon-math-1);
+                                }
+                                .icon-math-2 {
+                                    @include sprite($icon-math-2);
+                                }
+                                .icon-badge-ok {
+                                    top: inherit;
+                                    left: inherit;
+                                    right: 10px;
+                                    bottom: 4px;
+                                    transform: inherit;
+                                    @include sprite($icon-badge-ok);
+                                    text-indent: -9999px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.theorem-swell {
+    .container {
+        .content {
+            .table-type {
+                tbody {
+                    tr {
+                        td {
+                            .box-btn {
+                                height: 66px;
+                                padding-top: 15px;
+                                [class^="btn-"] {
+                                    display: inline-block;
+                                    width: 89px;
+                                    height: 36px;
+                                    font-weight: bold;
+                                    color: #fff;
+                                    border-radius: 18px;
+                                    box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.2);
+                                    &.base {
+                                        -webkit-filter: grayscale(1); /* Webkit */
+                                        filter: gray; /* IE6-9 */
+                                        filter: grayscale(1); /* W3C */
+                                        opacity: 0.1;
+                                    }
+                                }
+                                .btn-view-lessons {
+                                    background: #f24a71;
+                                }
+                                .btn-teacher-note {
+                                    background: #8e5406;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_화상관리_03정리의달인_01저학년,
+ 03_화상관리_03정리의달인_02고학년
+ (kyowon-smart-redpen/html/full-theorem-swell.html)
+--------------------------------------------------------------------------------------- */
+.theorem-swell {
+    &.remote-full {
+        .container {
+            .content {
+                .table-type {
+                    thead {
+                        tr {
+                            th {
+                                height: 50px;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                [class^="box-"] {
+                                    position: relative;
+                                    float: left;
+                                    height: inherit;
+                                }
+                                .box-icon {
+                                    width: 41%;
+                                }
+                                .box-btn {
+                                    width: 59%;
+                                }
+                                .box-btn {
+                                    padding-top: 16px;
+                                    padding-bottom: 16px;
+                                    [class^="btn-"] {
+                                        width: 110px;
+                                        height: 42px;
+                                        border-radius: 21px;
+                                        margin-bottom: 20px;
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.theorem-swell {
+    &.remote-full {
+        .container {
+            .content {
+                min-height: 510px;
+                padding: 30px 0;
+                border-bottom: 2px solid #686868;
+                margin: 0 30px;
+            }
+            .comment {
+                display: block;
+                padding: 16px 30px;
+                li {
+                    font-weight: bold;
+                    color: #555;
+                    line-height: 26px;
+                    &:before {
+                        content: "";
+                        @extend .kw-icon;
+                        @include sprite($icon-pencil, $display: inline-block);
+                        padding-right: 10px;
+                        vertical-align: text-bottom;
+                    }
+                }
+            }
+        }
+    }
+}
+.theorem-swell {
+    &.remote-full {
+        .container {
+            .content {
+                .table-type {
+                    tbody {
+                        tr {
+                            td {
+                                .box-icon {
+                                    .subject {
+                                        @include w-center ($position: absolute);
+                                        top: inherit;
+                                        bottom: 12px;
+                                    }
+                                    [class^="icon-"] {
+                                        @extend .kw-icon;
+                                        top: 54px;
+                                    }
+                                    .icon-korean {
+                                        @include sprite($icon-korean-full);
+                                    }
+                                    .icon-vasleys {
+                                        @include sprite($icon-vasleys-full);
+                                    }
+                                    .icon-social {
+                                        @include sprite($icon-social-full);
+                                    }
+                                    .icon-science {
+                                        @include sprite($icon-science-full);
+                                    }
+                                    .icon-math-1 {
+                                        @include sprite($icon-math-full-1);
+                                    }
+                                    .icon-math-2 {
+                                        @include sprite($icon-math-full-2);
+                                    }
+                                    .icon-badge-ok {
+                                        top: 5px;
+                                        left: 6px;
+                                        right: inherit;
+                                        bottom: inherit;
+                                        transform: inherit;
+                                        @include sprite($icon-badge-ok-full);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
