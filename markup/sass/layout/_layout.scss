@@ -9,6 +9,7 @@
 .check-progress-all {
     .container {
         .content {
+            padding-bottom: 0;
             .progress-set {
                 position: relative;
                 width: 100%;
@@ -101,9 +102,11 @@
             .progress-graph {
                 p {
                     &.percent {
-                        font-size: rem(16px);
                         margin-top: 10px;
                         span {
+                            font-size: rem(16px);
+                            font-weight: bold;
+                            color: #7c4e29;
                             &:nth-of-type(1) {
                                 margin-left: 14px;
                             }
@@ -222,56 +225,57 @@
  (kyowon-smart-redpen/html/remote-check-progress-textbook.html)
 --------------------------------------------------------------------------------------- */
 .check-progress-textbook {
-    &.remote {
-        .container {
-            .content {
-                .table-type {
-                    thead {
-                        tr {
-                            th {
-                                height: 27px;
+    .container {
+        .content {
+            .table-type {
+                thead {
+                    tr {
+                        th {
+                            height: 27px;
+                            &:first-child {
+                                border-right: 1px solid #555;
                             }
                         }
                     }
-                    tbody {
-                        tr {
-                            th {
-                                font-size: rem(16px);
-                                height: 96px;
-                                line-height: 17px;
-                                vertical-align: middle;
-                                background: #fff5e6;
-                            }
-                            td {
-                                font-size: rem(14px);
-                                vertical-align: top;
-                                .wrap {
-                                    padding: 10px;
-                                    p {
-                                        font-weight: bold;
+                }
+                tbody {
+                    tr {
+                        th {
+                            font-size: rem(16px);
+                            height: 96px;
+                            line-height: 17px;
+                            vertical-align: middle;
+                            background: #fff5e6;
+                        }
+                        td {
+                            font-size: rem(14px);
+                            vertical-align: top;
+                            .wrap {
+                                padding: 10px;
+                                p {
+                                    font-weight: bold;
+                                }
+                                .day {
+                                    color: #f24a71;
+                                }
+                                .learning {
+                                    margin-top: 13px;
+                                    span {
+                                        display: block;
+                                        width: 50px;
+                                        height: 18px;
+                                        line-height: 18px;
+                                        font-size: rem(13px);
+                                        color: #fff;
+                                        letter-spacing: -0.03em;
+                                        background: #ff8550;
+                                        border-radius: 9px;
+                                        margin: 0 auto;
                                     }
-                                    .day {
-                                        color: #f24a71;
-                                    }
-                                    .learning {
-                                        margin-top: 13px;
-                                        span {
-                                            display: block;
-                                            width: 50px;
-                                            height: 18px;
-                                            line-height: 18px;
-                                            font-size: rem(13px);
-                                            color: #fff;
-                                            letter-spacing: -0.03em;
-                                            background: #ff8550;
-                                            border-radius: 9px;
-                                            margin: 0 auto;
-                                        }
-                                    }
-                                    .date {
-                                        color: #7c4e29;
-                                        margin-top: 3px;
-                                    }
+                                }
+                                .date {
+                                    color: #7c4e29;
+                                    margin-top: 3px;
                                 }
                             }
                         }
@@ -305,39 +309,19 @@
                                 font-size: rem(18px);
                                 height: 110px;
                                 line-height: 20px;
-                                vertical-align: middle;
-                                background: #fff5e6;
                             }
                             td {
                                 font-size: rem(16px);
-                                vertical-align: top;
                                 .wrap {
-                                    padding: 10px;
-                                    p {
-                                        font-weight: bold;
-                                    }
-                                    .day {
-                                        color: #f24a71;
-                                    }
                                     .learning {
-                                        margin-top: 13px;
                                         span {
-                                            display: block;
-                                            width: 50px;
                                             height: 20px;
                                             line-height: 20px;
                                             font-size: rem(14px);
-                                            color: #fff;
-                                            letter-spacing: -0.03em;
-                                            background: #ff8550;
-                                            border-radius: 9px;
-                                            margin: 0 auto;
                                         }
                                     }
                                     .date {
                                         font-size: rem(20px);
-                                        color: #7c4e29;
-                                        margin-top: 3px;
                                     }
                                 }
                             }
@@ -357,72 +341,77 @@
  (kyowon-smart-redpen/html/remote-weekly-diagnostic-analysis.html)
 --------------------------------------------------------------------------------------- */
 .check-progress-weekly-diagnosis {
-    &.remote {
-        .table-type {
-            font-size: rem(14px) !important;
-            thead {
-                tr {
-                    th {
-                        height: 50px;
-                        line-height: 18px;
-                        span {
-                            font-weight: normal;
-                        }
-                        &.full {
-                            display: none;
-                        }
-                        &:nth-of-type(1) {
-                            width: 72px;
-                        }
-                        &:nth-of-type(3) {
-                            width: 102px;
-                        }
-                        &:nth-of-type(7) {
-                            width: 106px;
-                        }
-                        &:nth-of-type(8) {
-                            width: 106px;
-                        }
-                    }
-                }
-            }
-            tbody {
+    .table-type {
+        font-size: rem(14px) !important;
+        thead {
+            tr {
                 th {
-                    height: 96px;
-                    &.row-title {
-                        [class^="btn-scoring-results"] {
-                            font-size: rem(16px);
-                            color: #fff;
-                            line-height: 16px;
-                            margin: 0 auto;
-                            margin-top: 5px;
-                            padding-bottom: 4px;
-                            @extend .kw-btn;
-                            cursor: pointer;
-                        }
-                        .btn-scoring-results-on {
-                            @include sprite($btn-scoring-results-on);
-                        }
-                        .btn-scoring-results-off {
-                            @include sprite($btn-scoring-results-off);
-                        }
+                    height: 50px;
+                    line-height: 18px;
+                    &:first-child {
+                        border-right: 1px solid #555;
                     }
-                }
-                td {
-                    font-weight: bold;
-                    &:nth-of-type(2) {
-                        line-height: 20px;
-                    }
-                    .badge-praise-sticker {
-                        @include sprite($icon-badge-praise-sticker);
-                        @extend .kw-icon;
-                        margin: 0 auto;
-                        text-indent: -9999px;
+                    span {
+                        font-weight: normal;
                     }
                     &.full {
                         display: none;
-                        border-left: 0;
                     }
+                    &:nth-of-type(1) {
+                        width: 72px;
+                    }
+                    &:nth-of-type(3) {
+                        width: 102px;
+                    }
+                    &:nth-of-type(7) {
+                        width: 106px;
+                    }
+                    &:nth-of-type(8) {
+                        width: 106px;
+                    }
+                }
+            }
+        }
+    }
+}
+.check-progress-weekly-diagnosis {
+    .table-type {
+        tbody {
+            th {
+                height: 94px;
+                &.row-title {
+                    [class^="btn-scoring-results"] {
+                        font-size: rem(16px);
+                        color: #fff;
+                        line-height: 16px;
+                        margin: 0 auto;
+                        margin-top: 5px;
+                        padding-bottom: 4px;
+                        @extend .kw-btn;
+                        cursor: pointer;
+                    }
+                    .btn-scoring-results-on {
+                        @include sprite($btn-scoring-results-on);
+                    }
+                    .btn-scoring-results-off {
+                        @include sprite($btn-scoring-results-off);
+                    }
+                }
+            }
+            td {
+                font-weight: bold;
+                &:nth-of-type(2) {
+                    line-height: 20px;
+                }
+                .badge-praise-sticker {
+                    @include sprite($icon-badge-praise-sticker);
+                    @extend .kw-icon;
+                    margin: 0 auto;
+                    text-indent: -9999px;
+                }
+                &.full {
+                    display: none;
+                    border-left: 0;
                 }
             }
         }
@@ -441,19 +430,13 @@
         }
         .table-type {
             thead {
-                font-size: rem(16px) !important;
+                font-size: rem(16px);
                 tr {
                     th {
                         height: 50px;
                         line-height: 20px;
-                        border-right: 0 !important;
-                        border-top-width: 0;
                         border-left-width: 0;
                         border-right-width: 0;
-                        border-bottom-width: 1px;
-                        span {
-                            font-weight: normal;
-                        }
                         &.full {
                             display: table-cell;
                         }
@@ -469,6 +452,12 @@
                     }
                 }
             }
+        }
+    }
+}
+.check-progress-weekly-diagnosis {
+    &.remote-full {
+        .table-type {
             tbody {
                 font-size: rem(18px) !important;
                 th {
@@ -482,21 +471,12 @@
                 }
                 td {
                     font-weight: bold;
-                    border-top-width: 0;
                     border-left-width: 0;
-                    border-right-width: 0;
-                    border-bottom-width: 1px;
                     &:nth-of-type(2) {
                         line-height: 20px;
                     }
                     &.full {
                         display: table-cell;
-                    }
-                    .badge-praise-sticker {
-                        @include sprite($icon-badge-praise-sticker);
-                        @extend .kw-icon;
-                        margin: 0 auto;
-                        text-indent: -9999px;
                     }
                     [class^="btn-scoring-results-full"] {
                         font-size: rem(14px);
@@ -505,13 +485,13 @@
                         line-height: 1.2;
                         margin: 0 auto;
                         @extend .kw-btn;
-                        cursor: pointer;
                     }
                     .btn-scoring-results-full-on {
                         @include sprite($btn-scoring-results-full-on);
                     }
                     .btn-scoring-results-full-off {
                         @include sprite($btn-scoring-results-full-off);
+                        cursor: default;
                     }
                 }
             }
@@ -876,146 +856,70 @@
     }
 }
 .weekly-scoring-result {
-    .table-bg {
-        position: relative;
-        width:  840px;
-        height: 485px;
-        background: url("../../assets/images/bg/bg-table.png") center no-repeat;
-        margin: 0 auto;
-        .table-title {
-            @include w-center($position: absolute);
-            top: 84px;
-            width: 510px;
-            height: 60px;
-            background: url("../../assets/images/bg/bg-guide-plate.png") center no-repeat;
-            dl {
-                display: table;
-                margin: 11px auto;
-                dt, dd {
-                    display: table-cell;
-                    font-weight: bold;
+    .container {
+        .content {
+            .table-bg {
+                position: relative;
+                width:  840px;
+                height: 485px;
+                margin: 0 auto;
+                background: url("../../assets/images/bg/bg-table-top.png"),
+                                    url("../../assets/images/bg/bg-table-bottom.png");
+                background-repeat: no-repeat, no-repeat;
+                background-position: top center, bottom center;
+                &:before {
+                    position: absolute;
+                    top: 115px;
+                    bottom: 29px;
+                    left: 0;
+                    right: 0;
+                    display: block;
+                    content: '';
+                    background: url("../../assets/images/bg/bg-table-center.png") center repeat-y;
                 }
-                dt {
-                    font-size: rem(18px);
-                    color: #fff;
-                    padding-right: 13px;
-                    vertical-align: middle;
-                }
-                dd {
-                    font-size: rem(25px);
-                    color: #453a2e;
-                    span {
-                        font-size: rem(22px);
-                        color: #453a2e !important;
-                        padding-left: 6px;
-                        letter-spacing: 0.4em;
-                        &:nth-of-type(2) {
-                            &:after {
-                                position: relative;
-                                top: 0;
-                                display: inline-block;
-                                content: "";
-                                height: 16px;
-                                padding-right: 20px;
-                                border-right: 2px solid #8be5fb;
-                                margin-right: 30px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-.weekly-scoring-result {
-    .table-bg {
-        .table-score {
-            @include w-center($position: absolute);
-            top: 184px;
-            width: 720px;
-            height: 270px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 10px;
-            thead {
-                tr {
-                    th {
-                        font-size: rem(15px);
-                        color: #8e5406;
-                        height: 90px;
-                        background: #fff5e6;
-                        border-right: 1px solid #fadfc2;
-                        &:first-child {
-                            border-top-left-radius: 10px;
-                        }
-                        &:last-child {
-                            border-top-right-radius: 10px;
-                            border-right: 0;
-                        }
-                        &[class*=answer] {
-                            position: relative;
-                            &:after {
-                                content:"";
-                                @include wh-center ($position: absolute);
-                            }
-                        }
-                        &.answer {
-                            &:after {
-                                @extend .kw-icon;
-                                @include sprite($icon-answer);
-                            }
-                        }
-                        &.wrong-answer {
-                            &:after {
-                                @extend .kw-icon;
-                                @include sprite($icon-wrong-answer);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-.weekly-scoring-result {
-    .table-bg {
-        .table-score {
-            tbody {
-                tr {
-                    th, td {
-                        font-size: rem(22px);
-                        font-weight: bold;
-                        text-align: center;
-                        height: 90px;
-                        border: 1px solid #fadfc2;
-                        .btn-clinic-lecture {
-                            @extend .kw-btn;
-                            @include sprite($btn-clinic-lecture, $display: inline-block);
-                            text-indent: -9999px;
-                        }
-                    }
-                    th {
-                        position: relative;
-                        border-top-left-radius: 10px;
-                        .title {
-                            position: absolute;
-                            left: -53px;
-                            width: 54px;
-                            font-size: rem(18px);
+                .table-title {
+                    @include w-center($position: absolute);
+                    top: 84px;
+                    width: 510px;
+                    height: 60px;
+                    background: #17caf7;
+                    border: 4px solid #15b5de;
+                    border-radius: 10px;
+                    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+                    dl {
+                        display: table;
+                        margin: 8px auto;
+                        dt, dd {
+                            display: table-cell;
                             font-weight: bold;
-                            color: #fff;
-                            text-align: center;
-                            line-height: 22px;
                         }
-                        &:before {
-                            position: absolute;
-                            top: 16px;
-                            left: -58px;
-                            display: inline-block;
-                            content:"";
-                            width: 58px;
-                            height: 59px;
-                            background-size: 58px 59px;
+                        dt {
+                            font-size: rem(18px);
+                            color: #fff;
+                            padding-right: 13px;
+                            vertical-align: middle;
+                        }
+                        dd {
+                            font-size: rem(25px);
+                            color: #453a2e;
+                            span {
+                                font-size: rem(22px);
+                                color: #453a2e !important;
+                                padding-left: 6px;
+                                letter-spacing: 0.4em;
+                                &:nth-of-type(2) {
+                                    &:after {
+                                        position: relative;
+                                        top: 0;
+                                        display: inline-block;
+                                        content: "";
+                                        height: 16px;
+                                        padding-right: 20px;
+                                        border-right: 2px solid #8be5fb;
+                                        margin-right: 30px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -1024,53 +928,161 @@
     }
 }
 .weekly-scoring-result {
-    .table-bg {
-        .table-score {
-            tbody {
-                tr {
-                    &:nth-of-type(1) {
-                        th {
-                            .title {
-                                top: 24px;
-                            }
-                            &:before {
-                                background: url("../../assets/images/bg/bg-table-th-01.png") no-repeat;
+    .container {
+        .content {
+            .table-bg {
+                .table-score {
+                    @include w-center($position: absolute);
+                    top: 184px;
+                    width: 720px;
+                    height: 270px;
+                    margin: 0 auto;
+                    background: #fff;
+                    border-radius: 10px;
+                    thead {
+                        tr {
+                            th {
+                                font-size: rem(15px);
+                                color: #8e5406;
+                                height: 90px;
+                                background: #fff5e6;
+                                border-right: 1px solid #fadfc2;
+                                &:first-child {
+                                    border-top-left-radius: 10px;
+                                }
+                                &:last-child {
+                                    border-top-right-radius: 10px;
+                                    border-right: 0;
+                                }
+                                &[class*=answer] {
+                                    position: relative;
+                                    &:after {
+                                        content:"";
+                                        @include wh-center ($position: absolute);
+                                    }
+                                }
+                                &.answer {
+                                    &:after {
+                                        @extend .kw-icon;
+                                        @include sprite($icon-answer);
+                                    }
+                                }
+                                &.wrong-answer {
+                                    &:after {
+                                        @extend .kw-icon;
+                                        @include sprite($icon-wrong-answer);
+                                    }
+                                }
                             }
                         }
                     }
-                    &:nth-of-type(2) {
-                        border-bottom-left-radius: 10px;
-                        border-bottom-right-radius: 10px;
-                        th {
-                            border-left: 0;
-                            border-bottom: 0;
-                            .title {
-                                top: 34px;
+                }
+            }
+        }
+    }
+}
+.weekly-scoring-result {
+    .container {
+        .content {
+            .table-bg {
+                .table-score {
+                    tbody {
+                        tr {
+                            th, td {
+                                font-size: rem(22px);
+                                font-weight: bold;
+                                text-align: center;
+                                height: 90px;
+                                border: 1px solid #fadfc2;
+                                .btn-clinic-lecture {
+                                    @extend .kw-btn;
+                                    @include sprite($btn-clinic-lecture, $display: inline-block);
+                                    text-indent: -9999px;
+                                }
                             }
-                            &:before {
-                                background: url("../../assets/images/bg/bg-table-th-02.png") no-repeat;
-                            }
-                        }
-                        td {
-                             border-bottom: 0;
-                             &:last-child {
-                                border-right: 0;
+                            th {
+                                position: relative;
+                                border-top-left-radius: 10px;
+                                .title {
+                                    position: absolute;
+                                    left: -53px;
+                                    width: 54px;
+                                    font-size: rem(18px);
+                                    font-weight: bold;
+                                    color: #fff;
+                                    text-align: center;
+                                    line-height: 22px;
+                                }
+                                &:before {
+                                    position: absolute;
+                                    top: 16px;
+                                    left: -58px;
+                                    display: inline-block;
+                                    content:"";
+                                    width: 58px;
+                                    height: 59px;
+                                    background-size: 58px 59px;
+                                }
                             }
                         }
                     }
-                    &:nth-of-type(3) {
-                        display: none;
-                    }
-                    &:nth-of-type(1) {
-                        th, td {
-                            color: #492914;
-                            border-top: 0;
-                            border-left: 0;
-                        }
-                    }
-                    &:nth-of-type(2) {
-                        th, td {
-                            color: #df2028;
+                }
+            }
+        }
+    }
+}
+.weekly-scoring-result {
+    .container {
+        .content {
+            .table-bg {
+                .table-score {
+                    tbody {
+                        tr {
+                            &:nth-of-type(1) {
+                                th {
+                                    .title {
+                                        top: 24px;
+                                    }
+                                    &:before {
+                                        background: url("../../assets/images/bg/bg-table-th-01.png") no-repeat;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                border-bottom-left-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                                th {
+                                    border-left: 0;
+                                    border-bottom: 0;
+                                    .title {
+                                        top: 34px;
+                                    }
+                                    &:before {
+                                        background: url("../../assets/images/bg/bg-table-th-02.png") no-repeat;
+                                    }
+                                }
+                                td {
+                                     border-bottom: 0;
+                                     &:last-child {
+                                        border-right: 0;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(3) {
+                                display: none;
+                            }
+                            &:nth-of-type(1) {
+                                th, td {
+                                    color: #492914;
+                                    border-top: 0;
+                                    border-left: 0;
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                th, td {
+                                    color: #df2028;
+                                }
+                            }
                         }
                     }
                 }
@@ -1084,7 +1096,8 @@
  (kyowon-smart-redpen/html/full-weekly-scoring-result.html)
 --------------------------------------------------------------------------------------- */
 .weekly-scoring-result {
-        width: 100%;
+    width: 100%;
+    &.remote-full {
         .container {
             min-width: 1200px;
             .content {
@@ -1096,10 +1109,10 @@
                     .table-title {
                         width: 724px;
                         height: 84px;
-                        background: url("../../assets/images/bg/bg-guide-plate-full.png") center no-repeat;
+                        border-width: 7px;
                         margin: 0 auto;
                         dl {
-                            margin: 19px auto;
+                            margin: 13px auto;
                             dt {
                                 font-size: rem(22px);
                                 padding-right: 47px;
@@ -1240,7 +1253,6 @@
                 .comment {
                     display: block;
                     padding-top: 32px;
-                    padding-bottom: 56px;
                     @extend %clearfix;
                     .fl, .fr {
                         position: relative;
@@ -1416,6 +1428,7 @@
                                         filter: gray; /* IE6-9 */
                                         filter: grayscale(1); /* W3C */
                                         opacity: 0.1;
+                                        cursor: default;
                                     }
                                 }
                                 .btn-view-lessons {
@@ -1566,6 +1579,172 @@
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+  03_웹공유_03정리의달인_03학습보기
+ (kyowon-smart-redpen/html/remote-theorem-swell-problem.html)
+ 03_화상관리_03정리의달인_03학습보기
+ 03_화상관리_03정리의달인_04쌤의노트
+ 03_화상관리_04쌤과함께_02학습보기
+ 03_화상관리_04쌤과함께_03쌤의노트
+ (kyowon-smart-redpen/html/full-theorem-swell-problem.html)
+--------------------------------------------------------------------------------------- */
+.theorem-swell-problem {
+    overflow-y: auto;
+    .container {
+        @extend %clearfix;
+        .content {
+            position: relative;
+            padding: 0;
+            .icon-ok-big {
+                position: absolute;
+                top: 10px;
+                right: 12px;
+                @extend .kw-icon;
+                @include sprite($icon-badge-ok-big);
+                z-index: 1;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_01진척도점검_05모의고사
+ (kyowon-smart-redpen/html/remote-check-progress-mock-examination.html)
+--------------------------------------------------------------------------------------- */
+.check-progress-mock-examination {
+    .container {
+        .content {
+            .table-title {
+                margin-bottom: 12px;
+                span {
+                    color: #f24a71;
+                }
+            }
+            .table-type {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                thead {
+                    tr {
+                        th {
+                            font-size: rem(14px);
+                            height: 30px;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        th, td {
+                            font-weight: normal;
+                            color: #555;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_02주간진단분석_04목표설정
+ (kyowon-smart-redpen/html/remote-weekly-goal-setting.html)
+--------------------------------------------------------------------------------------- */
+.weekly-goal-setting {
+    @extend .weekly-scoring-result;
+    .container {
+        .content {
+            .table-bg {
+                width:  840px;
+                height: 498px;
+                &:before {
+                    top: 116px;
+                    bottom: 30px;
+                }
+                .table-title {
+                    width: 360px;
+                    font-size: rem(25px);
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 50px;
+                    [class^="btn-"] {
+                        position: absolute;
+                        top: 5px;
+                        @extend .kw-btn;
+                    }
+                    .btn-month-prev {
+                        left: 13px;
+                        @include sprite($btn-month-prev);
+                    }
+                    .btn-month-next {
+                        right: 13px;
+                        @include sprite($btn-month-next);
+                    }
+                }
+            }
+        }
+    }
+}
+.weekly-goal-setting {
+    .container {
+        .content {
+            .table-bg {
+                .table-goals-setting {
+                    @include w-center ($position: absolute);
+                    top: 184px;
+                    width: 720px;
+                    .goals-setting {
+                        position: relative;
+                        margin-bottom: 5px;
+                        span {
+                            position: absolute;
+                            top: 24px;
+                            left: 20px;
+                            font-size: rem(20px);
+                            font-weight: bold;
+                            color: #8e5406;
+                            line-height: 22px;
+                            padding-right: 20px;
+                            border-right: 2px solid hsla(34, 92%, 29%, 0.5);
+                        }
+                        input[type="text"] {
+                            width: 605px;
+                            height: 60px;
+                            font-size: rem(20px);
+                            font-weight: bold;
+                            color: #222;
+                            background: #fff;
+                            padding-left: 100px;
+                            padding-right: 20px;
+                            border-top: 1px solid #ccc;
+                            border-radius: 10px;
+                            box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.05) inset;
+                        }
+                        [class^="btn-"] {
+                            @extend .kw-btn;
+                            font-size: rem(20px);
+                            font-weight: bold;
+                            color: #fff;
+                            margin-left: 10px;
+                        }
+                        .btn-goal-completion {
+                            @include sprite($btn-goal-completion, $display: inline-block);
+                        }
+                        .btn-goal-save {
+                            @include sprite($btn-goal-save, $display: inline-block);
                         }
                     }
                 }
