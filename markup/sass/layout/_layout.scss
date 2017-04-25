@@ -1668,7 +1668,6 @@
     .container {
         .content {
             .table-bg {
-                width:  840px;
                 height: 498px;
                 &:before {
                     top: 116px;
@@ -1742,9 +1741,232 @@
                         }
                         .btn-goal-completion {
                             @include sprite($btn-goal-completion, $display: inline-block);
+                            cursor: default;
                         }
                         .btn-goal-save {
                             @include sprite($btn-goal-save, $display: inline-block);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------
+ 03_웹공유_01진척도점검_02기본선택
+ (kyowon-smart-redpen/html/remote-check-progress-base.html)
+--------------------------------------------------------------------------------------- */
+.check-progress-base {
+    .container {
+        .content {
+            .progress-set {
+                @extend %clearfix;
+                [class^="progress-"] {
+                    float: left;
+                    width: 50%;
+                    height: 504px;
+                    border-right: 2px solid #e5e5e5;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                    .wrap {
+                        position: relative;
+                        width: 380px;
+                        &:before {
+                            position: absolute;
+                            top: 20px;
+                            right: 40px;
+                            display: block;
+                            content: '';
+                            @extend .kw-icon;
+                        }
+                        .item-box {
+                            height: 180px;
+                            border-radius: 20px;
+                            padding: 25px 0;
+                            p {
+                                font-weight: bold;
+                                padding: 0 40px;
+                                &.title {
+                                    font-size: rem(20px);
+                                }
+                                &.percent {
+                                    font-size: rem(30px);
+                                    line-height: 1.2;
+                                }
+                            }
+                            .progress {
+                                position: relative;
+                                .icon-percent {
+                                    position: absolute;
+                                    top: 14px;
+                                    @extend .kw-icon;
+                                }
+                                progress {
+                                    width: 300px;
+                                    margin: 30px 40px 0 40px;
+                                }
+                                .text-percent {
+                                    font-size: rem(14px);
+                                    color: #555;
+                                    padding: 0 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.check-progress-base {
+    .container {
+        .content {
+            .progress-set {
+                .progress-basic {
+                    .wrap {
+                        &:before {
+                            @include sprite($icon-progress-basic);
+                        }
+                        .item-box {
+                            background: #dceeee;
+                            .percent {
+                                color: #099896;
+                            }
+                            .progress {
+                                .icon-percent {
+                                    left: 174px;
+                                    @include sprite($icon-percent-basic, $display: inline-block);
+                                }
+                                .text-percent {
+                                    padding-left: 160px;
+                                }
+                                @include progress($value: #07d2cf);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.check-progress-base {
+    .container {
+        .content {
+            .progress-set {
+                .progress-select {
+                    .wrap {
+                        &:before {
+                            @include sprite($icon-progress-select);
+                        }
+                        float: right;
+                        .item-box {
+                            background: #f6ecde;
+                            .percent {
+                                color: #e36138;
+                            }
+                            .progress {
+                                .icon-percent {
+                                    left: 264px;
+                                    @include sprite($icon-percent-select, $display: inline-block);
+                                }
+                                .text-percent {
+                                    padding-left: 250px;
+                                }
+                                @include progress($value: #f57022);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.check-progress-base {
+    .container {
+        .content {
+            .progress-set {
+                [class^="progress-"] {
+                    .wrap {
+                        .item-list {
+                            margin-top: 46px;
+                            ul {
+                                margin-bottom: 30px;
+                                @extend %clearfix;
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                                li {
+                                    float: left;
+                                    font-size: rem(18px);
+                                    font-weight: bold;
+                                    &:first-child {
+                                        width: 62px;
+                                        padding-top: 3px;
+                                        padding-left: 8px;
+                                    }
+                                    &:last-child {
+                                        width: 83px;
+                                        text-align: right;
+                                        padding-top: 3px;
+                                        padding-right: 8px;
+                                    }
+                                    .progress {
+                                        position: relative;
+                                        .icon-percent {
+                                            position: absolute;
+                                            top: -4px;
+                                            @extend .kw-icon;
+                                            @include sprite($icon-percent-default);
+                                        }
+                                        &.korean {
+                                            @include progress($bg: #d9ecec,$value: #10d83f);
+                                            .icon-percent {
+                                                left: 106px;
+                                            }
+                                            .text-percent {
+                                                padding-left: 86px;
+                                            }
+                                        }
+                                        &.math {
+                                            @include progress($bg: #d9ecec,$value: #ff385d);
+                                            .icon-percent {
+                                                left: 106px;
+                                            }
+                                            .text-percent {
+                                                padding-left: 86px;
+                                            }
+                                        }
+                                        &.social {
+                                            @include progress($bg: #d9ecec,$value: #8761fd);
+                                            .icon-percent {
+                                                left: 106px;
+                                            }
+                                            .text-percent {
+                                                padding-left: 86px;
+                                            }
+                                        }
+                                        &.science {
+                                            @include progress($bg: #d9ecec,$value: #00baff);
+                                            .icon-percent {
+                                                left: 106px;
+                                            }
+                                            .text-percent {
+                                                padding-left: 86px;
+                                            }
+                                        }
+                                        progress {
+                                            width: 235px;
+                                            height: 6px;
+                                        }
+                                        .text-percent {
+                                            font-size: rem(14px);
+                                            color: #555;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }

@@ -51,13 +51,13 @@ input[type="reset"], input[type="button"], input[type="submit"] { line-height: n
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0 0 0px 1000px white inset; }
 
-input::-webkit-input-placeholder { color: #222; }
+input::-webkit-input-placeholder { color: #ccc; }
 
-input::-moz-placeholder { color: #222; }
+input::-moz-placeholder { color: #ccc; }
 
-input:-ms-input-placeholder { color: #222; }
+input:-ms-input-placeholder { color: #ccc; }
 
-input:-moz-placeholder { color: #222; }
+input:-moz-placeholder { color: #ccc; }
 
 html { font-size: 10px; }
 

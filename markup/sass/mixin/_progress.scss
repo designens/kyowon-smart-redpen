@@ -1,0 +1,21 @@
+@mixin progress($bg: #959595, $value: #07d2cf) {
+    progress,
+    progress[role][aria-valuenow] {
+       background: $bg !important;
+    }
+    progress::-webkit-progress-bar {
+        background: $bg;
+    }
+    progress {
+        color: $value;
+    }
+    progress::-moz-progress-bar {
+        background: $value;
+    }
+    progress::-webkit-progress-value {
+        background: $value;
+    }
+    progress[aria-valuenow]:before  {
+        background: $value;
+    }
+}
