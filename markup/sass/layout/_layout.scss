@@ -1096,8 +1096,8 @@
  (kyowon-smart-redpen/html/full-weekly-scoring-result.html)
 --------------------------------------------------------------------------------------- */
 .weekly-scoring-result {
-    width: 100%;
     &.remote-full {
+        width: 100%;
         .container {
             min-width: 1200px;
             .content {
@@ -1780,8 +1780,10 @@
                             display: block;
                             content: '';
                             @extend .kw-icon;
+                            z-index: 10;
                         }
                         .item-box {
+                            position: relative;
                             height: 180px;
                             border-radius: 20px;
                             padding: 25px 0;
@@ -1798,19 +1800,56 @@
                             }
                             .progress {
                                 position: relative;
+                                margin-left: 40px;
+                                margin-right: 40px;
+                                margin-top: 30px;
                                 .icon-percent {
                                     position: absolute;
-                                    top: 14px;
+                                    top: -14px;
+                                    z-index: 10;
+                                    margin-left: -15px;
                                     @extend .kw-icon;
+                                    // Class width 값 제어 Percent 반복문
+                                    $percent: 100;
+                                    @for $i from 1 through $percent {
+                                        &.w#{$i} {
+                                            left: $i + %;
+                                        }
+                                    }
                                 }
-                                progress {
-                                    width: 300px;
-                                    margin: 30px 40px 0 40px;
+                            }
+                            .text-percent {
+                                position: absolute;
+                                font-size: rem(14px);
+                                font-weight: bold;
+                                width: 82px;
+                                text-align: center;
+                                color: #555;
+                                @for $i from 1 through 18 {
+                                    &.w#{$i} {
+                                        text-align: left;
+                                        left: 40px;
+                                    }
                                 }
-                                .text-percent {
-                                    font-size: rem(14px);
-                                    color: #555;
-                                    padding: 0 6px;
+                                @for $i from 19 through 60 {
+                                    &.w#{$i} {
+                                        left: $i + %;
+                                        text-align: center;
+                                        margin-left: -41px;
+                                    }
+                                }
+                                @for $i from 61 through 80 {
+                                    &.w#{$i} {
+                                        left: $i + %;
+                                        text-align: center;
+                                        margin-left: -61px;
+                                    }
+                                }
+                                @for $i from 81 through 100 {
+                                    &.w#{$i} {
+                                        text-align: right;
+                                        right: 40px;
+                                    }
                                 }
                             }
                         }
@@ -1835,14 +1874,10 @@
                                 color: #099896;
                             }
                             .progress {
+                                @include progress($value: #07d2cf);
                                 .icon-percent {
-                                    left: 174px;
                                     @include sprite($icon-percent-basic, $display: inline-block);
                                 }
-                                .text-percent {
-                                    padding-left: 160px;
-                                }
-                                @include progress($value: #07d2cf);
                             }
                         }
                     }
@@ -1868,11 +1903,7 @@
                             }
                             .progress {
                                 .icon-percent {
-                                    left: 264px;
                                     @include sprite($icon-percent-select, $display: inline-block);
-                                }
-                                .text-percent {
-                                    padding-left: 250px;
                                 }
                                 @include progress($value: #f57022);
                             }
@@ -1898,16 +1929,17 @@
                                     margin-bottom: 0;
                                 }
                                 li {
+                                    position: relative;
                                     float: left;
                                     font-size: rem(18px);
                                     font-weight: bold;
                                     &:first-child {
-                                        width: 62px;
+                                        width: 73px;
                                         padding-top: 3px;
                                         padding-left: 8px;
                                     }
                                     &:last-child {
-                                        width: 83px;
+                                        width: 72px;
                                         text-align: right;
                                         padding-top: 3px;
                                         padding-right: 8px;
@@ -1916,53 +1948,68 @@
                                         position: relative;
                                         .icon-percent {
                                             position: absolute;
-                                            top: -4px;
+                                            top: -3px;
+                                            margin-left: -11px;
+                                            z-index: 10;
                                             @extend .kw-icon;
                                             @include sprite($icon-percent-default);
-                                        }
-                                        &.korean {
-                                            @include progress($bg: #d9ecec,$value: #10d83f);
-                                            .icon-percent {
-                                                left: 106px;
-                                            }
-                                            .text-percent {
-                                                padding-left: 103px;
-                                            }
-                                        }
-                                        &.math {
-                                            @include progress($bg: #d9ecec,$value: #ff385d);
-                                            .icon-percent {
-                                                left: 106px;
-                                            }
-                                            .text-percent {
-                                                padding-left: 103px;
-                                            }
-                                        }
-                                        &.social {
-                                            @include progress($bg: #d9ecec,$value: #8761fd);
-                                            .icon-percent {
-                                                left: 106px;
-                                            }
-                                            .text-percent {
-                                                padding-left: 103px;
-                                            }
-                                        }
-                                        &.science {
-                                            @include progress($bg: #d9ecec,$value: #00baff);
-                                            .icon-percent {
-                                                left: 106px;
-                                            }
-                                            .text-percent {
-                                                padding-left: 103px;
+                                            // Class width 값 제어 Percent 반복문
+                                            $percent: 100;
+                                            @for $i from 1 through $percent {
+                                                &.w#{$i} {
+                                                    left: $i + %;
+                                                }
                                             }
                                         }
                                         progress {
-                                            width: 235px;
-                                            height: 6px;
+                                            width: 235px !important;
+                                            height: 6px !important;
                                         }
-                                        .text-percent {
-                                            font-size: rem(14px);
-                                            color: #555;
+                                        &.korean {
+                                            @include progress($bg: #d9ecec,$value: #10d83f);
+                                        }
+                                        &.math {
+                                            @include progress($bg: #d9ecec,$value: #ff385d);
+                                        }
+                                        &.social {
+                                            @include progress($bg: #d9ecec,$value: #8761fd);
+                                        }
+                                        &.science {
+                                            @include progress($bg: #d9ecec,$value: #00baff);
+                                        }
+                                    }
+                                    .text-percent {
+                                        position: absolute;
+                                        font-size: rem(14px);
+                                        font-weight: bold;
+                                        width: 42px;
+                                        text-align: center;
+                                        color: #555;
+                                        @for $i from 1 through 18 {
+                                            &.w#{$i} {
+                                                text-align: left;
+                                                left: 40px;
+                                            }
+                                        }
+                                        @for $i from 19 through 60 {
+                                            &.w#{$i} {
+                                                left: $i + %;
+                                                text-align: center;
+                                                margin-left: -21px;
+                                            }
+                                        }
+                                        @for $i from 61 through 80 {
+                                            &.w#{$i} {
+                                                left: $i + %;
+                                                text-align: center;
+                                                margin-left: -41px;
+                                            }
+                                        }
+                                        @for $i from 81 through 100 {
+                                            &.w#{$i} {
+                                                text-align: right;
+                                                right: 40px;
+                                            }
                                         }
                                     }
                                 }

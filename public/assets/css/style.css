@@ -3066,6 +3066,22 @@ input:-ms-input-placeholder { color: #ccc; }
 
 input:-moz-placeholder { color: #ccc; }
 
+progress[value] { appearance: none; -moz-appearance: none; -webkit-appearance: none; display: inline-block; border: none; background-size: auto; }
+
+progress[value][role][aria-valuenow] { appearance: none; -moz-appearance: none; -webkit-appearance: none; display: inline-block; border: none; background-size: auto; }
+
+progress[value][role][aria-valuenow]:after { background-image: none; }
+
+progress[value][role][aria-valuenow]:before { display: table; }
+
+progress[value][role][aria-valuenow] strong { display: none; }
+
+progress[value]::-webkit-progress-value, progress[value]::-webkit-progress-inner-element { display: table; }
+
+progress[value]::-webkit-progress-bar { display: table-cell; }
+
+progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value { display: table; }
+
 .kw-btn, .wrap .header .year-month .btn-prev, .wrap .header .year-month .btn-next, .wrap .header-pop .btn-close, .check-progress-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"], .weekly-scoring-result .container .content .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-goal-setting .container .content .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-scoring-result .container .content .table-bg .table-score tbody tr td .btn-clinic-lecture, .weekly-goal-setting .container .content .table-bg .table-score tbody tr td .btn-clinic-lecture, .weekly-goal-setting .container .content .table-bg .table-title [class^="btn-"], .weekly-goal-setting .container .content .table-bg .table-goals-setting .goals-setting [class^="btn-"] { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
 
 .kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker, .weekly-scoring-result .container .content .table-bg .table-score thead tr th.answer:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.answer:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.wrong-answer:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .comment .fl:before, .remote-full.weekly-goal-setting .container .content .comment .fl:before, .weekly-scoring-result.remote-full .container .content .comment .fr:before, .remote-full.weekly-goal-setting .container .content .comment .fr:before, .theorem-swell .container .content .table-type tbody tr td .box-icon [class*="icon-"], .theorem-swell.remote-full .container .comment li:before, .theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon [class*="icon-"], .theorem-swell-problem .container .content .icon-ok-big, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap:before, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
@@ -3110,7 +3126,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .wrap .header .year-month { position: relative; left: 14px; top: 14px; width: 216px; height: 40px; background: url("../../assets/images/bg/bg-btn-set.png") no-repeat; }
 
-.wrap .header .year-month p { font-weight: bold; color: #fff; text-align: center; padding: 8px 40px; }
+.wrap .header .year-month p { font-size: 20px; font-weight: bold; color: #fff; text-align: center; padding: 4px 40px; }
 
 .wrap .header .year-month [class^="btn-"] { position: absolute; top: 2px; }
 
@@ -3122,21 +3138,19 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .wrap .header .tab-menu { position: absolute; right: 14px; bottom: 0; }
 
-.wrap .header .tab-menu ul li { float: left; }
+.wrap .header .tab-menu ul li { position: relative; float: left; width: 110px; line-height: 1; text-align: center; padding-left: 2px; }
 
-.wrap .header .tab-menu ul li.selected a span, .wrap .header .tab-menu ul li:hover a span, .wrap .header .tab-menu ul li:focus a span, .wrap .header .tab-menu ul li:active a span { border-left: 2px solid transparent; color: #f24a71 !important; }
+.wrap .header .tab-menu ul li:before, .wrap .header .tab-menu ul li::before { display: block; content: ''; position: absolute; top: 16px; left: 0; right: 0; width: 110px; height: 18px; border-right: 2px solid rgba(0, 0, 0, 0.2); }
 
-.wrap .header .tab-menu ul li.selected, .wrap .header .tab-menu ul li:hover, .wrap .header .tab-menu ul li:focus, .wrap .header .tab-menu ul li:active { background: #fff; border-radius: 10px 10px 0px 0px; -moz-border-radius: 10px 10px 0px 0px; -webkit-border-radius: 10px 10px 0px 0px; }
+.wrap .header .tab-menu ul li:last-child:before, .wrap .header .tab-menu ul li:last-child::before { display: none; }
 
-.wrap .header .tab-menu ul li.selected + li a span, .wrap .header .tab-menu ul li:hover + li a span, .wrap .header .tab-menu ul li:focus + li a span, .wrap .header .tab-menu ul li:active + li a span { border-left: 2px solid transparent; color: #fff; }
+.wrap .header .tab-menu ul li a { position: relative; left: 50%; transform: translateX(-50%); display: inline-block; width: 108px; height: 48px; line-height: 48px; }
 
-.wrap .header .tab-menu ul li.selected a span, .wrap .header .tab-menu ul li:hover a span, .wrap .header .tab-menu ul li:focus a span, .wrap .header .tab-menu ul li:active a span { border-left: 2px solid transparent; color: #f24a71; }
+.wrap .header .tab-menu ul li a span { font-size: 1.7rem; font-weight: bold; color: #fff; }
 
-.wrap .header .tab-menu ul li a { display: block; width: 110px; height: 48px; line-height: 48px; font-size: 1.7rem; font-weight: bold; }
+.wrap .header .tab-menu ul li.selected a, .wrap .header .tab-menu ul li:hover a, .wrap .header .tab-menu ul li:focus a, .wrap .header .tab-menu ul li:active a { background: #fff; border-radius: 10px 10px 0px 0px; -moz-border-radius: 10px 10px 0px 0px; -webkit-border-radius: 10px 10px 0px 0px; }
 
-.wrap .header .tab-menu ul li a span { display: inline-block; color: #fff; width: 100%; text-align: center; line-height: 1; vertical-align: middle; border-left: 2px solid rgba(0, 0, 0, 0.2); }
-
-.wrap .header .tab-menu ul li:first-child a span { border: 0; }
+.wrap .header .tab-menu ul li.selected a span, .wrap .header .tab-menu ul li:hover a span, .wrap .header .tab-menu ul li:focus a span, .wrap .header .tab-menu ul li:active a span { color: #f24a71; }
 
 .wrap { background: #fff; }
 
@@ -3573,7 +3587,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 .weekly-scoring-result .container .content .table-bg .table-score tbody tr:nth-of-type(2) th, .weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(2) th, .weekly-scoring-result .container .content .table-bg .table-score tbody tr:nth-of-type(2) td, .weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(2) td { color: #df2028; }
 
 /* -------------------------------------------------------------------------------------- 04_스마트주간진단_07채점결과 (kyowon-smart-redpen/html/full-weekly-scoring-result.html) --------------------------------------------------------------------------------------- */
-.weekly-scoring-result, .weekly-goal-setting { width: 100%; }
+.weekly-scoring-result.remote-full, .remote-full.weekly-goal-setting { width: 100%; }
 
 .weekly-scoring-result.remote-full .container, .remote-full.weekly-goal-setting .container { min-width: 1200px; }
 
@@ -3793,9 +3807,9 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-base .container .content .progress-set [class^="progress-"] .wrap { position: relative; width: 380px; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap:before { position: absolute; top: 20px; right: 40px; display: block; content: ''; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap:before { position: absolute; top: 20px; right: 40px; display: block; content: ''; z-index: 10; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box { height: 180px; border-radius: 20px; padding: 25px 0; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box { position: relative; height: 180px; border-radius: 20px; padding: 25px 0; }
 
 .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box p { font-weight: bold; padding: 0 40px; }
 
@@ -3803,13 +3817,411 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box p.percent { font-size: 3rem; line-height: 1.2; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress { position: relative; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress { position: relative; margin-left: 40px; margin-right: 40px; margin-top: 30px; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent { position: absolute; top: 14px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent { position: absolute; top: -14px; z-index: 10; margin-left: -15px; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress progress { width: 300px; margin: 30px 40px 0 40px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w1 { left: 1%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .text-percent { font-size: 1.4rem; color: #555; padding: 0 6px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w2 { left: 2%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w3 { left: 3%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w4 { left: 4%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w5 { left: 5%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w6 { left: 6%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w7 { left: 7%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w8 { left: 8%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w9 { left: 9%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w10 { left: 10%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w11 { left: 11%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w12 { left: 12%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w13 { left: 13%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w14 { left: 14%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w15 { left: 15%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w16 { left: 16%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w17 { left: 17%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w18 { left: 18%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w19 { left: 19%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w20 { left: 20%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w21 { left: 21%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w22 { left: 22%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w23 { left: 23%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w24 { left: 24%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w25 { left: 25%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w26 { left: 26%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w27 { left: 27%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w28 { left: 28%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w29 { left: 29%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w30 { left: 30%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w31 { left: 31%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w32 { left: 32%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w33 { left: 33%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w34 { left: 34%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w35 { left: 35%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w36 { left: 36%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w37 { left: 37%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w38 { left: 38%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w39 { left: 39%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w40 { left: 40%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w41 { left: 41%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w42 { left: 42%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w43 { left: 43%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w44 { left: 44%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w45 { left: 45%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w46 { left: 46%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w47 { left: 47%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w48 { left: 48%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w49 { left: 49%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w50 { left: 50%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w51 { left: 51%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w52 { left: 52%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w53 { left: 53%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w54 { left: 54%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w55 { left: 55%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w56 { left: 56%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w57 { left: 57%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w58 { left: 58%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w59 { left: 59%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w60 { left: 60%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w61 { left: 61%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w62 { left: 62%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w63 { left: 63%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w64 { left: 64%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w65 { left: 65%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w66 { left: 66%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w67 { left: 67%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w68 { left: 68%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w69 { left: 69%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w70 { left: 70%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w71 { left: 71%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w72 { left: 72%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w73 { left: 73%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w74 { left: 74%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w75 { left: 75%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w76 { left: 76%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w77 { left: 77%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w78 { left: 78%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w79 { left: 79%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w80 { left: 80%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w81 { left: 81%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w82 { left: 82%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w83 { left: 83%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w84 { left: 84%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w85 { left: 85%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w86 { left: 86%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w87 { left: 87%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w88 { left: 88%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w89 { left: 89%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w90 { left: 90%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w91 { left: 91%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w92 { left: 92%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w93 { left: 93%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w94 { left: 94%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w95 { left: 95%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w96 { left: 96%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w97 { left: 97%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w98 { left: 98%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w99 { left: 99%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent.w100 { left: 100%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent { position: absolute; font-size: 1.4rem; font-weight: bold; width: 82px; text-align: center; color: #555; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w1 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w2 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w3 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w4 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w5 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w6 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w7 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w8 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w9 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w10 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w11 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w12 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w13 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w14 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w15 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w16 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w17 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w18 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w19 { left: 19%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w20 { left: 20%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w21 { left: 21%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w22 { left: 22%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w23 { left: 23%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w24 { left: 24%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w25 { left: 25%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w26 { left: 26%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w27 { left: 27%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w28 { left: 28%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w29 { left: 29%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w30 { left: 30%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w31 { left: 31%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w32 { left: 32%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w33 { left: 33%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w34 { left: 34%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w35 { left: 35%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w36 { left: 36%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w37 { left: 37%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w38 { left: 38%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w39 { left: 39%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w40 { left: 40%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w41 { left: 41%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w42 { left: 42%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w43 { left: 43%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w44 { left: 44%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w45 { left: 45%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w46 { left: 46%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w47 { left: 47%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w48 { left: 48%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w49 { left: 49%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w50 { left: 50%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w51 { left: 51%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w52 { left: 52%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w53 { left: 53%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w54 { left: 54%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w55 { left: 55%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w56 { left: 56%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w57 { left: 57%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w58 { left: 58%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w59 { left: 59%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w60 { left: 60%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w61 { left: 61%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w62 { left: 62%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w63 { left: 63%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w64 { left: 64%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w65 { left: 65%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w66 { left: 66%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w67 { left: 67%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w68 { left: 68%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w69 { left: 69%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w70 { left: 70%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w71 { left: 71%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w72 { left: 72%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w73 { left: 73%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w74 { left: 74%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w75 { left: 75%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w76 { left: 76%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w77 { left: 77%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w78 { left: 78%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w79 { left: 79%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w80 { left: 80%; text-align: center; margin-left: -61px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w81 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w82 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w83 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w84 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w85 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w86 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w87 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w88 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w89 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w90 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w91 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w92 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w93 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w94 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w95 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w96 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w97 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w98 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w99 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .text-percent.w100 { text-align: right; right: 40px; }
 
 .check-progress-base .container .content .progress-set .progress-basic .wrap:before { background-position: -84px -187px; background-repeat: no-repeat; overflow: hidden; display: block; width: 84px; height: 84px; }
 
@@ -3817,21 +4229,19 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .percent { color: #099896; }
 
-.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress .icon-percent { left: 174px; background-position: -425px -34px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 31px; height: 34px; }
+.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value] { background: #959595 !important; width: 300px; height: 16px; color: #07d2cf; }
 
-.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress .text-percent { padding-left: 160px; }
+.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value] span { display: none; background: #07d2cf; height: inherit; }
 
-.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress, .check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[role][aria-valuenow] { background: #959595 !important; }
+.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value][role][aria-valuenow] { background: #959595 !important; width: 300px; height: 16px; }
 
-.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress::-webkit-progress-bar { background: #959595; }
+.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value]::-webkit-progress-inner-element { background: #07d2cf; }
 
-.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress { color: #07d2cf; }
+.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value]::-webkit-progress-bar { background: #959595 !important; }
 
-.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress::-moz-progress-bar { background: #07d2cf; }
+.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value]::-moz-progress-bar, .check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[value][aria-valuenow]:before { background: #07d2cf; }
 
-.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress::-webkit-progress-value { background: #07d2cf; }
-
-.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress progress[aria-valuenow]:before { background: #07d2cf; }
+.check-progress-base .container .content .progress-set .progress-basic .wrap .item-box .progress .icon-percent { background-position: -425px -34px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 31px; height: 34px; }
 
 .check-progress-base .container .content .progress-set .progress-select .wrap { float: right; }
 
@@ -3841,21 +4251,19 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-base .container .content .progress-set .progress-select .wrap .item-box .percent { color: #e36138; }
 
-.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress .icon-percent { left: 264px; background-position: -425px 0px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 31px; height: 34px; }
+.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress .icon-percent { background-position: -425px 0px; background-repeat: no-repeat; overflow: hidden; display: inline-block; width: 31px; height: 34px; }
 
-.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress .text-percent { padding-left: 250px; }
+.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value] { background: #959595 !important; width: 300px; height: 16px; color: #f57022; }
 
-.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress, .check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[role][aria-valuenow] { background: #959595 !important; }
+.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value] span { display: none; background: #f57022; height: inherit; }
 
-.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress::-webkit-progress-bar { background: #959595; }
+.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value][role][aria-valuenow] { background: #959595 !important; width: 300px; height: 16px; }
 
-.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress { color: #f57022; }
+.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value]::-webkit-progress-inner-element { background: #f57022; }
 
-.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress::-moz-progress-bar { background: #f57022; }
+.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value]::-webkit-progress-bar { background: #959595 !important; }
 
-.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress::-webkit-progress-value { background: #f57022; }
-
-.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[aria-valuenow]:before { background: #f57022; }
+.check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value]::-moz-progress-bar, .check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set .progress-select .wrap .item-box .progress progress[value][aria-valuenow]:before { background: #f57022; }
 
 .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list { margin-top: 46px; }
 
@@ -3863,82 +4271,580 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul:last-child { margin-bottom: 0; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li { float: left; font-size: 1.8rem; font-weight: bold; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li { position: relative; float: left; font-size: 1.8rem; font-weight: bold; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li:first-child { width: 62px; padding-top: 3px; padding-left: 8px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li:first-child { width: 73px; padding-top: 3px; padding-left: 8px; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li:last-child { width: 83px; text-align: right; padding-top: 3px; padding-right: 8px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li:last-child { width: 72px; text-align: right; padding-top: 3px; padding-right: 8px; }
 
 .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress { position: relative; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent { position: absolute; top: -4px; background-position: -425px -68px; background-repeat: no-repeat; overflow: hidden; display: block; width: 22px; height: 24px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent { position: absolute; top: -3px; margin-left: -11px; z-index: 10; background-position: -425px -68px; background-repeat: no-repeat; overflow: hidden; display: block; width: 22px; height: 24px; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[role][aria-valuenow] { background: #d9ecec !important; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w1 { left: 1%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress::-webkit-progress-bar { background: #d9ecec; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w2 { left: 2%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress { color: #10d83f; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w3 { left: 3%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress::-moz-progress-bar { background: #10d83f; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w4 { left: 4%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress::-webkit-progress-value { background: #10d83f; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w5 { left: 5%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[aria-valuenow]:before { background: #10d83f; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w6 { left: 6%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean .icon-percent { left: 106px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w7 { left: 7%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean .text-percent { padding-left: 103px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w8 { left: 8%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[role][aria-valuenow] { background: #d9ecec !important; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w9 { left: 9%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress::-webkit-progress-bar { background: #d9ecec; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w10 { left: 10%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress { color: #ff385d; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w11 { left: 11%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress::-moz-progress-bar { background: #ff385d; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w12 { left: 12%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress::-webkit-progress-value { background: #ff385d; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w13 { left: 13%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[aria-valuenow]:before { background: #ff385d; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w14 { left: 14%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math .icon-percent { left: 106px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w15 { left: 15%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math .text-percent { padding-left: 103px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w16 { left: 16%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[role][aria-valuenow] { background: #d9ecec !important; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w17 { left: 17%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress::-webkit-progress-bar { background: #d9ecec; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w18 { left: 18%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress { color: #8761fd; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w19 { left: 19%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress::-moz-progress-bar { background: #8761fd; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w20 { left: 20%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress::-webkit-progress-value { background: #8761fd; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w21 { left: 21%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[aria-valuenow]:before { background: #8761fd; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w22 { left: 22%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social .icon-percent { left: 106px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w23 { left: 23%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social .text-percent { padding-left: 103px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w24 { left: 24%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[role][aria-valuenow] { background: #d9ecec !important; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w25 { left: 25%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress::-webkit-progress-bar { background: #d9ecec; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w26 { left: 26%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress { color: #00baff; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w27 { left: 27%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress::-moz-progress-bar { background: #00baff; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w28 { left: 28%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress::-webkit-progress-value { background: #00baff; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w29 { left: 29%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[aria-valuenow]:before { background: #00baff; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w30 { left: 30%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science .icon-percent { left: 106px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w31 { left: 31%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science .text-percent { padding-left: 103px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w32 { left: 32%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress progress { width: 235px; height: 6px; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w33 { left: 33%; }
 
-.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .text-percent { font-size: 1.4rem; color: #555; }
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w34 { left: 34%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w35 { left: 35%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w36 { left: 36%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w37 { left: 37%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w38 { left: 38%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w39 { left: 39%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w40 { left: 40%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w41 { left: 41%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w42 { left: 42%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w43 { left: 43%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w44 { left: 44%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w45 { left: 45%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w46 { left: 46%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w47 { left: 47%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w48 { left: 48%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w49 { left: 49%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w50 { left: 50%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w51 { left: 51%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w52 { left: 52%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w53 { left: 53%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w54 { left: 54%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w55 { left: 55%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w56 { left: 56%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w57 { left: 57%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w58 { left: 58%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w59 { left: 59%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w60 { left: 60%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w61 { left: 61%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w62 { left: 62%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w63 { left: 63%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w64 { left: 64%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w65 { left: 65%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w66 { left: 66%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w67 { left: 67%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w68 { left: 68%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w69 { left: 69%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w70 { left: 70%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w71 { left: 71%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w72 { left: 72%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w73 { left: 73%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w74 { left: 74%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w75 { left: 75%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w76 { left: 76%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w77 { left: 77%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w78 { left: 78%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w79 { left: 79%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w80 { left: 80%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w81 { left: 81%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w82 { left: 82%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w83 { left: 83%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w84 { left: 84%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w85 { left: 85%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w86 { left: 86%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w87 { left: 87%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w88 { left: 88%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w89 { left: 89%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w90 { left: 90%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w91 { left: 91%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w92 { left: 92%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w93 { left: 93%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w94 { left: 94%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w95 { left: 95%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w96 { left: 96%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w97 { left: 97%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w98 { left: 98%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w99 { left: 99%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent.w100 { left: 100%; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress progress { width: 235px !important; height: 6px !important; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value] { background: #d9ecec !important; width: 300px; height: 16px; color: #10d83f; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value] span { display: none; background: #10d83f; height: inherit; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value][role][aria-valuenow] { background: #d9ecec !important; width: 300px; height: 16px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value]::-webkit-progress-inner-element { background: #10d83f; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value]::-webkit-progress-bar { background: #d9ecec !important; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value]::-moz-progress-bar, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.korean progress[value][aria-valuenow]:before { background: #10d83f; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value] { background: #d9ecec !important; width: 300px; height: 16px; color: #ff385d; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value] span { display: none; background: #ff385d; height: inherit; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value][role][aria-valuenow] { background: #d9ecec !important; width: 300px; height: 16px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value]::-webkit-progress-inner-element { background: #ff385d; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value]::-webkit-progress-bar { background: #d9ecec !important; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value]::-moz-progress-bar, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.math progress[value][aria-valuenow]:before { background: #ff385d; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value] { background: #d9ecec !important; width: 300px; height: 16px; color: #8761fd; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value] span { display: none; background: #8761fd; height: inherit; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value][role][aria-valuenow] { background: #d9ecec !important; width: 300px; height: 16px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value]::-webkit-progress-inner-element { background: #8761fd; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value]::-webkit-progress-bar { background: #d9ecec !important; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value]::-moz-progress-bar, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.social progress[value][aria-valuenow]:before { background: #8761fd; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value] { background: #d9ecec !important; width: 300px; height: 16px; color: #00baff; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value] span { display: none; background: #00baff; height: inherit; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value][role][aria-valuenow] { background: #d9ecec !important; width: 300px; height: 16px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value]::-webkit-progress-inner-element { background: #00baff; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value]::-webkit-progress-bar { background: #d9ecec !important; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value]::-moz-progress-bar, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value]::-webkit-progress-value, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress.science progress[value][aria-valuenow]:before { background: #00baff; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent { position: absolute; font-size: 1.4rem; font-weight: bold; width: 42px; text-align: center; color: #555; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w1 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w2 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w3 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w4 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w5 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w6 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w7 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w8 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w9 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w10 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w11 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w12 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w13 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w14 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w15 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w16 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w17 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w18 { text-align: left; left: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w19 { left: 19%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w20 { left: 20%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w21 { left: 21%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w22 { left: 22%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w23 { left: 23%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w24 { left: 24%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w25 { left: 25%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w26 { left: 26%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w27 { left: 27%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w28 { left: 28%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w29 { left: 29%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w30 { left: 30%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w31 { left: 31%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w32 { left: 32%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w33 { left: 33%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w34 { left: 34%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w35 { left: 35%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w36 { left: 36%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w37 { left: 37%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w38 { left: 38%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w39 { left: 39%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w40 { left: 40%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w41 { left: 41%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w42 { left: 42%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w43 { left: 43%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w44 { left: 44%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w45 { left: 45%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w46 { left: 46%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w47 { left: 47%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w48 { left: 48%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w49 { left: 49%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w50 { left: 50%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w51 { left: 51%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w52 { left: 52%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w53 { left: 53%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w54 { left: 54%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w55 { left: 55%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w56 { left: 56%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w57 { left: 57%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w58 { left: 58%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w59 { left: 59%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w60 { left: 60%; text-align: center; margin-left: -21px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w61 { left: 61%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w62 { left: 62%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w63 { left: 63%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w64 { left: 64%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w65 { left: 65%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w66 { left: 66%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w67 { left: 67%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w68 { left: 68%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w69 { left: 69%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w70 { left: 70%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w71 { left: 71%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w72 { left: 72%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w73 { left: 73%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w74 { left: 74%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w75 { left: 75%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w76 { left: 76%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w77 { left: 77%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w78 { left: 78%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w79 { left: 79%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w80 { left: 80%; text-align: center; margin-left: -41px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w81 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w82 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w83 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w84 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w85 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w86 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w87 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w88 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w89 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w90 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w91 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w92 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w93 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w94 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w95 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w96 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w97 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w98 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w99 { text-align: right; right: 40px; }
+
+.check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .text-percent.w100 { text-align: right; right: 40px; }
+
+@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) { /* --------------------------------------------------------------------------------------
+ 03_웹공유_01진척도점검_02기본선택
+ (kyowon-smart-redpen/html/remote-check-progress-base.html)
+--------------------------------------------------------------------------------------- */
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress { position: relative; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span { position: absolute; top: 0; left: 0; display: inline-block !important; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w1 { width: 1%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w2 { width: 2%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w3 { width: 3%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w4 { width: 4%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w5 { width: 5%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w6 { width: 6%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w7 { width: 7%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w8 { width: 8%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w9 { width: 9%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w10 { width: 10%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w11 { width: 11%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w12 { width: 12%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w13 { width: 13%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w14 { width: 14%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w15 { width: 15%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w16 { width: 16%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w17 { width: 17%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w18 { width: 18%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w19 { width: 19%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w20 { width: 20%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w21 { width: 21%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w22 { width: 22%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w23 { width: 23%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w24 { width: 24%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w25 { width: 25%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w26 { width: 26%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w27 { width: 27%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w28 { width: 28%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w29 { width: 29%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w30 { width: 30%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w31 { width: 31%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w32 { width: 32%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w33 { width: 33%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w34 { width: 34%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w35 { width: 35%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w36 { width: 36%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w37 { width: 37%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w38 { width: 38%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w39 { width: 39%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w40 { width: 40%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w41 { width: 41%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w42 { width: 42%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w43 { width: 43%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w44 { width: 44%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w45 { width: 45%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w46 { width: 46%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w47 { width: 47%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w48 { width: 48%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w49 { width: 49%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w50 { width: 50%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w51 { width: 51%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w52 { width: 52%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w53 { width: 53%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w54 { width: 54%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w55 { width: 55%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w56 { width: 56%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w57 { width: 57%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w58 { width: 58%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w59 { width: 59%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w60 { width: 60%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w61 { width: 61%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w62 { width: 62%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w63 { width: 63%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w64 { width: 64%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w65 { width: 65%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w66 { width: 66%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w67 { width: 67%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w68 { width: 68%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w69 { width: 69%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w70 { width: 70%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w71 { width: 71%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w72 { width: 72%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w73 { width: 73%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w74 { width: 74%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w75 { width: 75%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w76 { width: 76%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w77 { width: 77%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w78 { width: 78%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w79 { width: 79%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w80 { width: 80%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w81 { width: 81%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w82 { width: 82%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w83 { width: 83%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w84 { width: 84%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w85 { width: 85%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w86 { width: 86%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w87 { width: 87%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w88 { width: 88%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w89 { width: 89%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w90 { width: 90%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w91 { width: 91%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w92 { width: 92%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w93 { width: 93%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w94 { width: 94%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w95 { width: 95%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w96 { width: 96%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w97 { width: 97%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w98 { width: 98%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w99 { width: 99%; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .progress progress span.w100 { width: 100%; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* --------------------------------------------------------------------------------------
+ 03_웹공유_01진척도점검_02기본선택
+ (kyowon-smart-redpen/html/remote-check-progress-base.html)
+--------------------------------------------------------------------------------------- */
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent { top: -14px !important; }
+  .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent { top: -2px !important; } }
 
 /*# sourceMappingURL=map/style.css.map */

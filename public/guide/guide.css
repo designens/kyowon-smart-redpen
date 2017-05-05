@@ -59,6 +59,22 @@ input:-ms-input-placeholder { color: #ccc; }
 
 input:-moz-placeholder { color: #ccc; }
 
+progress[value] { appearance: none; -moz-appearance: none; -webkit-appearance: none; display: inline-block; border: none; background-size: auto; }
+
+progress[value][role][aria-valuenow] { appearance: none; -moz-appearance: none; -webkit-appearance: none; display: inline-block; border: none; background-size: auto; }
+
+progress[value][role][aria-valuenow]:after { background-image: none; }
+
+progress[value][role][aria-valuenow]:before { display: table; }
+
+progress[value][role][aria-valuenow] strong { display: none; }
+
+progress[value]::-webkit-progress-value, progress[value]::-webkit-progress-inner-element { display: table; }
+
+progress[value]::-webkit-progress-bar { display: table-cell; }
+
+progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value { display: table; }
+
 html { font-size: 10px; }
 
 html body { font-size: 1.6rem; color: #222; line-height: 1.5; }
@@ -90,6 +106,8 @@ body { background: #ededed !important; font-size: 1.6rem !important; height: 100
 .wrap .all-link .location p:before { content: "\f0c1"; font-family: FontAwesome; font-size: 1rem; color: #ccc; padding-right: 0.5rem; vertical-align: top; }
 
 .wrap .all-link .location p a { color: #333; display: inline-block; }
+
+.wrap .all-link .location p a > span { display: inline-block; color: #e51d68; margin-left: 4px; margin-bottom: 0; }
 
 .wrap .all-link .location p span { font-size: 1.2rem; color: #aaa; display: block; margin-left: 20px; margin-bottom: 10px; }
 

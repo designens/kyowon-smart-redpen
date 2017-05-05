@@ -83,6 +83,12 @@ body {
                 a {
                     color: #333;
                     display: inline-block;
+                    > span {
+                        display: inline-block;
+                        color: #e51d68;
+                        margin-left: 4px;
+                        margin-bottom: 0;
+                    }
                 }
                 span {
                     font-size: rem(12px);

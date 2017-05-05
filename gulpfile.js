@@ -112,10 +112,10 @@ gulp.task('build', function() {
     gulp.start('sass');
     gulp.start('sass:guide');
     gulp.start('js');
+    gulp.start('imagemin');
     gulp.start('sprites');
     gulp.start('iconfont');
     gulp.start('font:move');
-    gulp.start('imagemin');
     setTimeout(function() {
         gulp.start('css:min');
     }, 7000);
@@ -138,12 +138,12 @@ gulp.task('watch', function() {
 // =======================================
 // 폴더 제거 업무
 // =======================================
-gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + SRC + '/iconfont/fonts ' + SRC + '/iconfont/preview ' + SRC + '/sass/fonts/_iconfont.scss' + BUILD + '/assets/css/map ' + BUILD + '/assets/css/style.css'));
+gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + SRC + '/iconfont/preview ' + SRC + '/sass/fonts/_iconfont.scss' + BUILD + '/assets/css/map ' + BUILD + '/assets/css/style.css'));
 
 // =======================================
 // 서버 업무
 // =======================================
-gulp.task('server', ['imagemin', 'iconfont', 'htmlSSI', 'sass', 'sass:guide', 'js', 'sprites'], function() {
+gulp.task('server', ['htmlSSI', 'sass', 'sass:guide', 'js', 'imagemin', 'sprites', 'iconfont'], function() {
     browserSync.init({
         // 알림 설정
         notify: !true,
@@ -187,6 +187,7 @@ gulp.task('sass', function() {
         .pipe( filter("**/*.css") )
         .pipe( reload({stream: true}) );
  });
+
 gulp.task('sass:guide', function() {
     return gulp.src( SRC + '/guide/**.{sass,scss}')
         .pipe(sourcemaps.init())
