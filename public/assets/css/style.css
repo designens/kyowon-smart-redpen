@@ -3058,13 +3058,13 @@ input[type="reset"], input[type="button"], input[type="submit"] { line-height: n
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0 0 0px 1000px white inset; }
 
-input::-webkit-input-placeholder { color: #ccc; }
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari*/ color: #ccc; }
 
-input::-moz-placeholder { color: #ccc; }
+input::-moz-placeholder { /* Firefox 19+*/ color: #ccc; }
 
-input:-ms-input-placeholder { color: #ccc; }
+input:-ms-input-placeholder { /* IE 10+*/ color: #ccc !important; }
 
-input:-moz-placeholder { color: #ccc; }
+input:-moz-placeholder { /* Firefox 18-*/ color: #ccc; }
 
 progress[value] { appearance: none; -moz-appearance: none; -webkit-appearance: none; display: inline-block; border: none; background-size: auto; }
 
@@ -3082,11 +3082,11 @@ progress[value]::-webkit-progress-bar { display: table-cell; }
 
 progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value { display: table; }
 
+.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge .badge-praise-sticker, .weekly-scoring-result .container .content .table-bg .table-score thead tr th [class*="answer"]:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th [class*="answer"]:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th [class*="answer"]:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th [class*="answer"]:after, .weekly-scoring-result.remote-full .container .content .comment .fl:before, .remote-full.weekly-goal-setting .container .content .comment .fl:before, .weekly-scoring-result.remote-full .container .content .comment .fr:before, .remote-full.weekly-goal-setting .container .content .comment .fr:before, .theorem-swell .container .content .table-type tbody tr td .box-icon [class*="icon-"], .theorem-swell.remote-full .container .comment li:before, .theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon [class*="icon-"], .theorem-swell-problem .container .content .icon-ok-big, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap:before, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
+
 .kw-btn, .wrap .header .year-month .btn-prev, .wrap .header .year-month .btn-next, .wrap .header-pop .btn-close, .check-progress-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .check-progress-weekly-diagnosis.remote-full .table-type tbody td [class^="btn-scoring-results-full"], .remote-full.smart-weekly-diagnosis .table-type tbody td [class^="btn-scoring-results-full"], .weekly-scoring-result .container .content .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-goal-setting .container .content .table-bg .table-score tbody tr th .btn-clinic-lecture, .weekly-scoring-result .container .content .table-bg .table-score tbody tr td .btn-clinic-lecture, .weekly-goal-setting .container .content .table-bg .table-score tbody tr td .btn-clinic-lecture, .weekly-goal-setting .container .content .table-bg .table-title [class^="btn-"], .weekly-goal-setting .container .content .table-bg .table-goals-setting .goals-setting [class^="btn-"] { background-image: url("../../assets/images/sprite/sprite-btn.png"); }
 
-.kw-icon, .container .content .table-title .icon, .check-progress-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .smart-weekly-diagnosis .table-type tbody td .badge-praise-sticker, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker, .weekly-scoring-result .container .content .table-bg .table-score thead tr th.answer:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.answer:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th.answer:after, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.wrong-answer:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-scoring-result.remote-full .container .content .comment .fl:before, .remote-full.weekly-goal-setting .container .content .comment .fl:before, .weekly-scoring-result.remote-full .container .content .comment .fr:before, .remote-full.weekly-goal-setting .container .content .comment .fr:before, .theorem-swell .container .content .table-type tbody tr td .box-icon [class*="icon-"], .theorem-swell.remote-full .container .comment li:before, .theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon [class*="icon-"], .theorem-swell-problem .container .content .icon-ok-big, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap:before, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-box .progress .icon-percent, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul li .progress .icon-percent { background-image: url("../../assets/images/sprite/sprite-icon.png"); }
-
-.wrap .content .week-tab-menu:after, .container .content .table-type tr th:after, .container .content .table-type tr td:after, .check-progress-weekly-compliment .container .content .wrap:after, .check-progress-digital .container .content .medal-box:after, .weekly-scoring-result .container .content:after, .weekly-goal-setting .container .content:after, .weekly-scoring-result.remote-full .container .content .comment:after, .remote-full.weekly-goal-setting .container .content .comment:after, .theorem-swell-problem .container:after, .check-progress-base .container .content .progress-set:after, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul:after { content: ''; display: block; clear: both; }
+.wrap .content .week-tab-menu:after, .check-progress-textbook .container .content .table-type tbody tr td .wrap:after, .check-progress-weekly-compliment .container .content .wrap:after, .check-progress-digital .container .content .medal-box:after, .weekly-scoring-result .container .content:after, .weekly-goal-setting .container .content:after, .weekly-scoring-result.remote-full .container .content .comment:after, .remote-full.weekly-goal-setting .container .content .comment:after, .theorem-swell-problem .container:after, .check-progress-base .container .content .progress-set:after, .check-progress-base .container .content .progress-set [class^="progress-"] .wrap .item-list ul:after { content: ''; display: block; clear: both; }
 
 html { font-size: 10px; }
 
@@ -3115,12 +3115,12 @@ h3 { font-size: 20px; font-size: 2rem; }
 /* 원격 지원 축소 화면 설정 */
 .remote { width: 940px; height: 640px; }
 
-.remote .container { overflow-y: auto; }
+.remote .container { overflow-x: hidden; overflow-y: auto; }
 
 .remote .container .content { padding: 30px 50px; }
 
 /* 원격 지원 풀 화면 설정 */
-.remote-full { min-width: 1000px; min-height: 710px; }
+.remote-full { min-width: 1200px; min-height: 710px; }
 
 .remote-full .container .content { padding: 30px; }
 
@@ -3148,7 +3148,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .wrap .header .tab-menu ul li a span { font-size: 1.7rem; font-weight: bold; color: #fff; }
 
-.wrap .header .tab-menu ul li.selected a, .wrap .header .tab-menu ul li:hover a, .wrap .header .tab-menu ul li:focus a, .wrap .header .tab-menu ul li:active a { background: #fff; border-radius: 10px 10px 0px 0px; -moz-border-radius: 10px 10px 0px 0px; -webkit-border-radius: 10px 10px 0px 0px; }
+.wrap .header .tab-menu ul li.selected a, .wrap .header .tab-menu ul li:hover a, .wrap .header .tab-menu ul li:focus a, .wrap .header .tab-menu ul li:active a { background: #fff; border-radius: 10px 10px 0px 0px; -moz-border-radius: 10px 10px 0px 0px; -webkit-border-radius: 10px 10px 0px 0px; border-bottom: 1px solid #fff; }
 
 .wrap .header .tab-menu ul li.selected a span, .wrap .header .tab-menu ul li:hover a span, .wrap .header .tab-menu ul li:focus a span, .wrap .header .tab-menu ul li:active a span { color: #f24a71; }
 
@@ -3196,11 +3196,11 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .container .content .table-title .btn-next-week-goal { float: right; width: 190px; height: 44px; font-size: 1.8rem; font-weight: bold; color: #fff; padding-bottom: 5px; margin-top: -1px; background: url("../../assets/images/bg/bg-btn-goal.png") no-repeat; }
 
-.container .content .table-type { width: 100%; border-top: 2px solid #555; }
+.container .content .table-type { width: 100%; }
 
 .container .content .table-type thead { background: #f3f3f3; }
 
-.container .content .table-type thead tr th { border-bottom: 1px solid #555; border-right-width: 0; }
+.container .content .table-type thead tr th { border-top: 2px solid #555; border-bottom: 1px solid #555; }
 
 .container .content .table-type thead tr th:first-child { border-left-width: 0; }
 
@@ -3298,11 +3298,13 @@ h3 { font-size: 20px; font-size: 2rem; }
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_03교과서단짝_01저학년, 03_웹공유_01진척도점검_03교과서단짝_02고학년 (kyowon-smart-redpen/html/remote-check-progress-textbook.html) --------------------------------------------------------------------------------------- */
 .check-progress-textbook .container .content .table-type thead tr th { height: 27px; }
 
-.check-progress-textbook .container .content .table-type thead tr th:first-child { border-right: 1px solid #555; }
+.check-progress-textbook .container .content .table-type thead tr th:first-child { width: 120px; table-layout: fixed; border-right: 1px solid #555; }
 
 .check-progress-textbook .container .content .table-type tbody tr th { font-size: 1.6rem; height: 96px; line-height: 17px; vertical-align: middle; background: #fff5e6; }
 
-.check-progress-textbook .container .content .table-type tbody tr td { font-size: 1.4rem; vertical-align: top; }
+.check-progress-textbook .container .content .table-type tbody tr th:first-child { border-right-width: 1px; }
+
+.check-progress-textbook .container .content .table-type tbody tr td { position: relative; font-size: 1.4rem; vertical-align: top; }
 
 .check-progress-textbook .container .content .table-type tbody tr td .wrap { padding: 10px; }
 
@@ -3310,22 +3312,26 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-textbook .container .content .table-type tbody tr td .wrap .day { color: #f24a71; }
 
-.check-progress-textbook .container .content .table-type tbody tr td .wrap .learning { margin-top: 13px; }
+.check-progress-textbook .container .content .table-type tbody tr td .wrap .learning-date { position: absolute; left: 0; right: 0; bottom: 0; padding-top: 6px; padding-bottom: 10px; height: 58px; background: url("../../assets/images/bg/bg-learning-day.png"); }
 
-.check-progress-textbook .container .content .table-type tbody tr td .wrap .learning span { display: block; width: 50px; height: 18px; line-height: 18px; font-size: 1.3rem; color: #fff; letter-spacing: -0.03em; background: #ff8550; border-radius: 9px; margin: 0 auto; }
+.check-progress-textbook .container .content .table-type tbody tr td .wrap .learning-date .learning span { display: block; width: 50px; height: 18px; line-height: 18px; font-size: 1.3rem; color: #fff; letter-spacing: -0.03em; background: #ff8550; border-radius: 9px; margin: 0 auto; }
 
-.check-progress-textbook .container .content .table-type tbody tr td .wrap .date { color: #7c4e29; margin-top: 3px; }
+.check-progress-textbook .container .content .table-type tbody tr td .wrap .learning-date .date { color: #7c4e29; margin-top: 3px; }
 
 /* -------------------------------------------------------------------------------------- 03_화상관리_02학습진척도_03교과서단짝_01저학년, 03_화상관리_02학습진척도_03교과서단짝_02고학년 (kyowon-smart-redpen/html/full-check-progress-textbook.html) --------------------------------------------------------------------------------------- */
 .check-progress-textbook.remote-full .container .content .table-type thead tr th { height: 50px; }
 
-.check-progress-textbook.remote-full .container .content .table-type tbody tr th { font-size: 1.8rem; height: 110px; line-height: 20px; }
+.check-progress-textbook.remote-full .container .content .table-type tbody tr th { font-size: 1.8rem; height: 100px; line-height: 20px; }
 
 .check-progress-textbook.remote-full .container .content .table-type tbody tr td { font-size: 1.6rem; }
 
-.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .learning span { height: 20px; line-height: 20px; font-size: 1.4rem; }
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap { padding: 7px; }
 
-.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .date { font-size: 2rem; }
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .learning-date { height: 65px; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .learning-date .learning span { height: 20px; line-height: 20px; font-size: 1.3rem; }
+
+.check-progress-textbook.remote-full .container .content .table-type tbody tr td .wrap .learning-date .date { font-size: 2rem; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_01저학년, 03_웹공유_01진척도점검_04주간진단_02고학년 (kyowon-smart-redpen/html/remote-check-progress-weekly-diagnosis.html) 03_웹공유_02주간진단분석_01저학년, 03_웹공유_02주간진단분석_02고학년 (kyowon-smart-redpen/html/remote-weekly-diagnostic-analysis.html) --------------------------------------------------------------------------------------- */
 .check-progress-weekly-diagnosis .table-type, .smart-weekly-diagnosis .table-type { font-size: 1.4rem !important; }
@@ -3346,15 +3352,17 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-diagnosis .table-type thead tr th:nth-of-type(8), .smart-weekly-diagnosis .table-type thead tr th:nth-of-type(8) { width: 106px; }
 
-.check-progress-weekly-diagnosis .table-type tbody th, .smart-weekly-diagnosis .table-type tbody th { height: 94px; }
+.check-progress-weekly-diagnosis .table-type tbody th, .smart-weekly-diagnosis .table-type tbody th { height: 94px; background: #fff5e6; }
 
-.check-progress-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"] { font-size: 1.6rem; color: #fff; line-height: 16px; margin: 0 auto; margin-top: 5px; padding-bottom: 4px; cursor: pointer; }
+.check-progress-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"], .smart-weekly-diagnosis .table-type tbody th.row-title [class^="btn-scoring-results"] { font-size: 1.4rem; color: #fff; line-height: 16px; margin: 0 auto; margin-top: 5px; padding-bottom: 4px; cursor: pointer; }
 
 .check-progress-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-on, .smart-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-on { background-position: 0px -164px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
 
 .check-progress-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-off, .smart-weekly-diagnosis .table-type tbody th.row-title .btn-scoring-results-off { background-position: -200px -112px; background-repeat: no-repeat; overflow: hidden; display: block; width: 48px; height: 52px; }
 
 .check-progress-weekly-diagnosis .table-type tbody td, .smart-weekly-diagnosis .table-type tbody td { font-weight: bold; }
+
+.check-progress-weekly-diagnosis .table-type tbody td span, .smart-weekly-diagnosis .table-type tbody td span { color: #f0315c; }
 
 .check-progress-weekly-diagnosis .table-type tbody td:nth-of-type(2), .smart-weekly-diagnosis .table-type tbody td:nth-of-type(2) { line-height: 20px; }
 
@@ -3401,9 +3409,11 @@ h3 { font-size: 20px; font-size: 2rem; }
 .smart-weekly-diagnosis .container .content .week-tab-menu { margin-left: 0; margin-right: -10px; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_01, 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_02 (kyowon-smart-redpen/html/remote-check-progress-weekly-compliment.html) --------------------------------------------------------------------------------------- */
-.check-progress-weekly-compliment .container .content { padding: 30px 0 30px 50px; }
+.check-progress-weekly-compliment .container .content { padding: 30px 0; }
 
-.check-progress-weekly-compliment .container .content .wrap .fl { width: -webkit-calc( 100% - 388px); width: -moz-calc( 100% - 388px); width: calc( 100% - 388px); }
+.check-progress-weekly-compliment .container .content .week-tab-menu { margin-left: 0; margin-bottom: 18px; padding-left: 38px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl { width: -webkit-calc( 100% - 338px); width: -moz-calc( 100% - 338px); width: calc( 100% - 338px); }
 
 .check-progress-weekly-compliment .container .content .wrap .fl h1 { position: relative; margin-bottom: 10px; }
 
@@ -3417,11 +3427,11 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr:first-child { border-top: 2px solid #555; }
 
-.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr th, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td { height: 105px; }
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr th, .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td { height: 105px; line-height: 105px; }
 
 .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr th { width: 60px; background: #f3f3f3; border-right: 1px solid #555; }
 
-.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td { position: relative; }
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td { position: relative; border-right: 1px solid transparent; }
 
 .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td:before { display: block; width: 76px; height: 76px; line-height: 76px; font-size: 1.6rem; font-weight: bold; color: #fff; text-align: center; border-radius: 50%; background: #f3f3f3; margin: 0 auto; }
 
@@ -3433,7 +3443,9 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td:nth-of-type(4):before { content: "과학"; }
 
-.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge-praise-sticker { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-position: -177px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 94px; height: 99px; text-indent: -9999px; }
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge { position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 105px; }
+
+.check-progress-weekly-compliment .container .content .wrap .fl .table-type tbody tr td .badge .badge-praise-sticker { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-position: -177px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 94px; height: 99px; text-indent: -9999px; }
 
 .check-progress-weekly-compliment .container .content .wrap .fr { position: relative; width: -webkit-calc( 100% - 502px); width: -moz-calc( 100% - 502px); width: calc( 100% - 502px); }
 
@@ -3453,9 +3465,11 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-compliment .container .content .wrap .fr pre { color: #333; line-height: 1.4; }
 
+.check-progress-weekly-compliment.remote .container .content .wrap { width: 840px; margin: 0 auto; }
+
 .check-progress-weekly-compliment.remote .container .content .wrap .fl p.full { display: none; }
 
-.check-progress-weekly-compliment.remote .container .content .wrap .fr { padding: 0 50px 0 70px; }
+.check-progress-weekly-compliment.remote .container .content .wrap .fr { padding-left: 70px; }
 
 .check-progress-weekly-compliment.remote .container .content .wrap .fr p span { display: inline; }
 
@@ -3466,6 +3480,8 @@ h3 { font-size: 20px; font-size: 2rem; }
 /* -------------------------------------------------------------------------------------- 03_화상관리_02학습진척도_04주간진단_03칭찬딱지모아보기 (kyowon-smart-redpen/html/full-learning-progress-weekly-compliment.html) --------------------------------------------------------------------------------------- */
 .check-progress-weekly-compliment.remote-full .container .content { padding: 30px 0 30px 30px; }
 
+.check-progress-weekly-compliment.remote-full .container .content .week-tab-menu { margin-left: -12px; padding-left: 0; }
+
 .check-progress-weekly-compliment.remote-full .container .content .wrap .fl { width: 54%; float: left; margin-right: 1.2%; }
 
 .check-progress-weekly-compliment.remote-full .container .content .wrap .fl h1 { font-size: 2rem; text-align: center; }
@@ -3474,7 +3490,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-weekly-compliment.remote-full .container .content .wrap .fl p.full { display: block; }
 
-.check-progress-weekly-compliment.remote-full .container .content .wrap .fl p.messge { font-size: 1.6rem; color: #888; text-align: center; margin: 12px 0 21px 0; }
+.check-progress-weekly-compliment.remote-full .container .content .wrap .fl p.messge { font-size: 1.6rem; font-weight: bold; color: #888; text-align: center; margin: 12px 0 21px 0; }
 
 .check-progress-weekly-compliment.remote-full .container .content .wrap .fr { padding-left: 55px; padding-right: 30px; width: 44.8%; float: right; margin-right: 0; }
 
@@ -3505,7 +3521,7 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .check-progress-digital .container .content .medal-box li p.title { font-size: 3rem; margin-top: 22px; }
 
-.check-progress-digital .container .content .medal-box li p:nth-of-type(2) { font-size: 2rem; color: #099896; }
+.check-progress-digital .container .content .medal-box li p:nth-of-type(2) { font-size: 2rem; color: #099896; margin-top: 15px; }
 
 .check-progress-digital .container .content .medal-box li p:nth-of-type(3) { font-size: 2rem; color: #555; }
 
@@ -3538,21 +3554,27 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .weekly-scoring-result .container .content .table-bg .table-title dl dd span:nth-of-type(2):after, .weekly-goal-setting .container .content .table-bg .table-title dl dd span:nth-of-type(2):after { position: relative; top: 0; display: inline-block; content: ""; height: 16px; padding-right: 20px; border-right: 2px solid #8be5fb; margin-right: 30px; }
 
-.weekly-scoring-result .container .content .table-bg .table-score, .weekly-goal-setting .container .content .table-bg .table-score { position: absolute; left: 50%; transform: translateX(-50%); top: 184px; width: 720px; height: 270px; margin: 0 auto; background: #fff; border-radius: 10px; }
+.weekly-scoring-result .container .content .table-bg .table-score, .weekly-goal-setting .container .content .table-bg .table-score { position: absolute; left: 50%; transform: translateX(-50%); top: 184px; width: 720px; height: 270px; margin: 0 auto; background: #fff; border-radius: 10px; border-collapse: collapse; }
 
-.weekly-scoring-result .container .content .table-bg .table-score thead tr th, .weekly-goal-setting .container .content .table-bg .table-score thead tr th { font-size: 1.5rem; color: #8e5406; height: 90px; background: #fff5e6; border-right: 1px solid #fadfc2; }
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th, .weekly-goal-setting .container .content .table-bg .table-score thead tr th { position: relative; font-size: 1.5rem; color: #8e5406; height: 90px; line-height: 90px; background: #fff5e6; }
+
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th p, .weekly-goal-setting .container .content .table-bg .table-score thead tr th p { border-right: 1px solid #fadfc2; }
 
 .weekly-scoring-result .container .content .table-bg .table-score thead tr th:first-child, .weekly-goal-setting .container .content .table-bg .table-score thead tr th:first-child { border-top-left-radius: 10px; }
 
-.weekly-scoring-result .container .content .table-bg .table-score thead tr th:last-child, .weekly-goal-setting .container .content .table-bg .table-score thead tr th:last-child { border-top-right-radius: 10px; border-right: 0; }
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th:last-child, .weekly-goal-setting .container .content .table-bg .table-score thead tr th:last-child { border-top-right-radius: 10px; }
 
-.weekly-scoring-result .container .content .table-bg .table-score thead tr th[class*=answer], .weekly-goal-setting .container .content .table-bg .table-score thead tr th[class*=answer] { position: relative; }
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th [class*="answer"], .weekly-goal-setting .container .content .table-bg .table-score thead tr th [class*="answer"] { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-.weekly-scoring-result .container .content .table-bg .table-score thead tr th[class*=answer]:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th[class*=answer]:after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th [class*="answer"]:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th [class*="answer"]:after { content: ""; }
 
-.weekly-scoring-result .container .content .table-bg .table-score thead tr th.answer:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th.answer:after { background-position: -314px -355px; background-repeat: no-repeat; overflow: hidden; display: block; width: 49px; height: 49px; }
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th .answer, .weekly-goal-setting .container .content .table-bg .table-score thead tr th .answer { width: 49px; height: 49px; }
 
-.weekly-scoring-result .container .content .table-bg .table-score thead tr th.wrong-answer:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th.wrong-answer:after { background-position: -310px -271px; background-repeat: no-repeat; overflow: hidden; display: block; width: 42px; height: 44px; }
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th .answer:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th .answer:after { background-position: -314px -355px; background-repeat: no-repeat; overflow: hidden; display: block; width: 49px; height: 49px; }
+
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th .wrong-answer, .weekly-goal-setting .container .content .table-bg .table-score thead tr th .wrong-answer { width: 42px; height: 44px; }
+
+.weekly-scoring-result .container .content .table-bg .table-score thead tr th .wrong-answer:after, .weekly-goal-setting .container .content .table-bg .table-score thead tr th .wrong-answer:after { background-position: -310px -271px; background-repeat: no-repeat; overflow: hidden; display: block; width: 42px; height: 44px; }
 
 .weekly-scoring-result .container .content .table-bg .table-score tbody tr th, .weekly-goal-setting .container .content .table-bg .table-score tbody tr th, .weekly-scoring-result .container .content .table-bg .table-score tbody tr td, .weekly-goal-setting .container .content .table-bg .table-score tbody tr td { font-size: 2.2rem; font-weight: bold; text-align: center; height: 90px; border: 1px solid #fadfc2; }
 
@@ -3587,15 +3609,15 @@ h3 { font-size: 20px; font-size: 2rem; }
 .weekly-scoring-result .container .content .table-bg .table-score tbody tr:nth-of-type(2) th, .weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(2) th, .weekly-scoring-result .container .content .table-bg .table-score tbody tr:nth-of-type(2) td, .weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(2) td { color: #df2028; }
 
 /* -------------------------------------------------------------------------------------- 04_스마트주간진단_07채점결과 (kyowon-smart-redpen/html/full-weekly-scoring-result.html) --------------------------------------------------------------------------------------- */
-.weekly-scoring-result.remote-full, .remote-full.weekly-goal-setting { width: 100%; }
-
-.weekly-scoring-result.remote-full .container, .remote-full.weekly-goal-setting .container { min-width: 1200px; }
+.weekly-scoring-result.remote-full .container, .remote-full.weekly-goal-setting .container { width: 100%; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg, .remote-full.weekly-goal-setting .container .content .table-bg { width: 1100px; height: 530px; background: url("../../assets/images/bg/bg-table-full.png") center no-repeat; margin: 0 auto; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-title, .remote-full.weekly-goal-setting .container .content .table-bg .table-title { width: 724px; height: 84px; border-width: 7px; margin: 0 auto; }
+.weekly-scoring-result.remote-full .container .content .table-bg:before, .remote-full.weekly-goal-setting .container .content .table-bg:before { background: transparent; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-title dl, .remote-full.weekly-goal-setting .container .content .table-bg .table-title dl { margin: 13px auto; }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title, .remote-full.weekly-goal-setting .container .content .table-bg .table-title { width: 724px; height: 84px; margin: 0 auto; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-title dl, .remote-full.weekly-goal-setting .container .content .table-bg .table-title dl { margin: 16px auto; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg .table-title dl dt, .remote-full.weekly-goal-setting .container .content .table-bg .table-title dl dt { font-size: 2.2rem; padding-right: 47px; }
 
@@ -3609,17 +3631,21 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg .table-score, .remote-full.weekly-goal-setting .container .content .table-bg .table-score { top: 198px; width: 940px; height: 302px; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr td, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr td { height: 60px; }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th, .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr td, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr td { height: 60px; line-height: 60px; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th { font-size: 2rem; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th[class*=answer], .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th[class*=answer] { position: relative; }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th [class*="answer"], .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th [class*="answer"] { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th[class*=answer]:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th[class*=answer]:after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th [class*="answer"]:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th [class*="answer"]:after { content: ""; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.answer:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th.answer:after { background-position: -136px -355px; background-repeat: no-repeat; overflow: hidden; display: block; width: 64px; height: 64px; }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th .answer, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th .answer { width: 64px; height: 64px; }
 
-.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th.wrong-answer:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th.wrong-answer:after { background-position: -260px -355px; background-repeat: no-repeat; overflow: hidden; display: block; width: 54px; height: 56px; }
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th .answer:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th .answer:after { background-position: -136px -355px; background-repeat: no-repeat; overflow: hidden; display: block; width: 64px; height: 64px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th .wrong-answer, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th .wrong-answer { width: 54px; height: 56px; }
+
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score thead tr th .wrong-answer:after, .remote-full.weekly-goal-setting .container .content .table-bg .table-score thead tr th .wrong-answer:after { background-position: -260px -355px; background-repeat: no-repeat; overflow: hidden; display: block; width: 54px; height: 56px; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr th, .remote-full.weekly-goal-setting .container .content .table-bg .table-score tbody tr th, .weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr td, .remote-full.weekly-goal-setting .container .content .table-bg .table-score tbody tr td { font-size: 3rem; height: 80px; }
 
@@ -3639,11 +3665,13 @@ h3 { font-size: 20px; font-size: 2rem; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) th, .remote-full.weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(3) th, .weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) td, .remote-full.weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(3) td { display: table-cell; height: 80px; }
 
+.weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) th, .remote-full.weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(3) th { border-top-left-radius: 0; }
+
 .weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) th .title, .remote-full.weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(3) th .title { top: 19px; }
 
 .weekly-scoring-result.remote-full .container .content .table-bg .table-score tbody tr:nth-of-type(3) th:before, .remote-full.weekly-goal-setting .container .content .table-bg .table-score tbody tr:nth-of-type(3) th:before { background: url("../../assets/images/bg/bg-table-th-full-03.png") no-repeat; }
 
-.weekly-scoring-result.remote-full .container .content .comment, .remote-full.weekly-goal-setting .container .content .comment { display: block; padding-top: 32px; }
+.weekly-scoring-result.remote-full .container .content .comment, .remote-full.weekly-goal-setting .container .content .comment { display: block; padding-top: 10px; border-top: 2px solid #fff; margin-top: 20px; }
 
 .weekly-scoring-result.remote-full .container .content .comment .fl, .remote-full.weekly-goal-setting .container .content .comment .fl, .weekly-scoring-result.remote-full .container .content .comment .fr, .remote-full.weekly-goal-setting .container .content .comment .fr { position: relative; width: 50%; height: 72px; }
 
@@ -3752,7 +3780,9 @@ h3 { font-size: 20px; font-size: 2rem; }
 .theorem-swell.remote-full .container .content .table-type tbody tr td .box-icon .icon-badge-ok { top: 5px; left: 6px; right: inherit; bottom: inherit; transform: inherit; background-position: -84px -271px; background-repeat: no-repeat; overflow: hidden; display: block; width: 74px; height: 79px; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_03정리의달인_03학습보기 (kyowon-smart-redpen/html/remote-theorem-swell-problem.html) 03_화상관리_03정리의달인_03학습보기 03_화상관리_03정리의달인_04쌤의노트 03_화상관리_04쌤과함께_02학습보기 03_화상관리_04쌤과함께_03쌤의노트 (kyowon-smart-redpen/html/full-theorem-swell-problem.html) --------------------------------------------------------------------------------------- */
-.theorem-swell-problem { overflow-y: auto; }
+.theorem-swell-problem { overflow-y: hidden; }
+
+.theorem-swell-problem .container { height: 578px; }
 
 .theorem-swell-problem .container .content { position: relative; padding: 0; }
 

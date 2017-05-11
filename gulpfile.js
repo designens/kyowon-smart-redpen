@@ -22,7 +22,6 @@ var gulp = require('gulp'),
     sprity = require('sprity'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    iconic = require('gulp-iconic'),
 
     bower = require('bower'),
     preen = require('preen'),
@@ -36,8 +35,8 @@ var gulp = require('gulp'),
 // =======================================
 
 // 디렉토리 설정
-const SRC          = 'markup';
-const BUILD       = 'public';
+const SRC      = 'markup';
+const BUILD    = 'public';
 const BOWER    = 'bower_components';
 
 // 파일 압축 설정
@@ -54,10 +53,7 @@ var dir = {
 
 // 자바스크립트 프래임워크(framework) 병합
 var js_order = [
-    // dir.js + '/**/*.js',
-    dir.js + '/lib/svg-injector.min.js',
-    dir.js + '/lib/flickity.pkgd.min.js',
-    dir.js + '/lib/jquery.sortable.min.js',
+    dir.js + '/**/*.js',
 ];
 
 // 자바스크립트 유지관리 파일 이동
@@ -114,7 +110,6 @@ gulp.task('build', function() {
     gulp.start('js');
     gulp.start('imagemin');
     gulp.start('sprites');
-    gulp.start('iconfont');
     gulp.start('font:move');
     setTimeout(function() {
         gulp.start('css:min');
@@ -138,12 +133,12 @@ gulp.task('watch', function() {
 // =======================================
 // 폴더 제거 업무
 // =======================================
-gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + SRC + '/iconfont/preview ' + SRC + '/sass/fonts/_iconfont.scss' + BUILD + '/assets/css/map ' + BUILD + '/assets/css/style.css'));
+gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + BUILD + '/assets/css/map' + BUILD + '/assets/css/style.css'));
 
 // =======================================
 // 서버 업무
 // =======================================
-gulp.task('server', ['htmlSSI', 'sass', 'sass:guide', 'js', 'imagemin', 'sprites', 'iconfont'], function() {
+gulp.task('server', ['htmlSSI', 'sass', 'sass:guide', 'js', 'imagemin', 'sprites'], function() {
     browserSync.init({
         // 알림 설정
         notify: !true,

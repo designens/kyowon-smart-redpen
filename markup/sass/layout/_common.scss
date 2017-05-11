@@ -32,6 +32,7 @@
     width: 940px;
     height: 640px;
     .container {
+        overflow-x: hidden;
         overflow-y: auto;
         .content {
              padding: 30px 50px;
@@ -40,7 +41,7 @@
 }
 /* 원격 지원 풀 화면 설정 */
 .remote-full {
-    min-width: 1000px;
+    min-width: 1200px;
     min-height: 710px;
     .container {
         .content {
@@ -138,6 +139,7 @@
                             border-radius: 10px 10px 0px 0px;
                             -moz-border-radius: 10px 10px 0px 0px;
                             -webkit-border-radius: 10px 10px 0px 0px;
+                            border-bottom: 1px solid #fff;
                             span {
                                 color: #f24a71;
                             }
@@ -295,13 +297,12 @@
     .content {
         .table-type {
             width: 100%;
-            border-top: 2px solid #555;
             thead {
                 background: #f3f3f3;
                 tr {
                     th {
+                        border-top: 2px solid #555;
                         border-bottom: 1px solid #555;
-                        border-right-width: 0;
                         &:first-child {
                             border-left-width: 0;
                         }
@@ -337,7 +338,6 @@
                     vertical-align: middle;
                     border: 1px solid #ccc;
                     border-right-width: 0;
-                    @extend %clearfix;
                 }
             }
         }

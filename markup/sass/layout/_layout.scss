@@ -233,6 +233,8 @@
                         th {
                             height: 27px;
                             &:first-child {
+                                width: 120px;
+                                table-layout:fixed;
                                 border-right: 1px solid #555;
                             }
                         }
@@ -246,36 +248,50 @@
                             line-height: 17px;
                             vertical-align: middle;
                             background: #fff5e6;
+                            &:first-child {
+                                border-right-width: 1px;
+                            }
                         }
                         td {
+                            position: relative;
                             font-size: rem(14px);
                             vertical-align: top;
                             .wrap {
                                 padding: 10px;
+                                @extend %clearfix;
                                 p {
                                     font-weight: bold;
                                 }
                                 .day {
                                     color: #f24a71;
                                 }
-                                .learning {
-                                    margin-top: 13px;
-                                    span {
-                                        display: block;
-                                        width: 50px;
-                                        height: 18px;
-                                        line-height: 18px;
-                                        font-size: rem(13px);
-                                        color: #fff;
-                                        letter-spacing: -0.03em;
-                                        background: #ff8550;
-                                        border-radius: 9px;
-                                        margin: 0 auto;
+                                .learning-date {
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    padding-top: 6px;
+                                    padding-bottom: 10px;
+                                    height: 58px;
+                                    background: url("../../assets/images/bg/bg-learning-day.png");
+                                    .learning {
+                                        span {
+                                            display: block;
+                                            width: 50px;
+                                            height: 18px;
+                                            line-height: 18px;
+                                            font-size: rem(13px);
+                                            color: #fff;
+                                            letter-spacing: -0.03em;
+                                            background: #ff8550;
+                                            border-radius: 9px;
+                                            margin: 0 auto;
+                                        }
                                     }
-                                }
-                                .date {
-                                    color: #7c4e29;
-                                    margin-top: 3px;
+                                    .date {
+                                        color: #7c4e29;
+                                        margin-top: 3px;
+                                    }
                                 }
                             }
                         }
@@ -307,21 +323,25 @@
                         tr {
                             th {
                                 font-size: rem(18px);
-                                height: 110px;
+                                height: 100px;
                                 line-height: 20px;
                             }
                             td {
                                 font-size: rem(16px);
                                 .wrap {
-                                    .learning {
-                                        span {
-                                            height: 20px;
-                                            line-height: 20px;
-                                            font-size: rem(14px);
+                                    padding: 7px;
+                                    .learning-date {
+                                        height: 65px;
+                                        .learning {
+                                            span {
+                                                height: 20px;
+                                                line-height: 20px;
+                                                font-size: rem(13px);
+                                            }
                                         }
-                                    }
-                                    .date {
-                                        font-size: rem(20px);
+                                        .date {
+                                            font-size: rem(20px);
+                                        }
                                     }
                                 }
                             }
@@ -379,9 +399,10 @@
         tbody {
             th {
                 height: 94px;
+                background: #fff5e6;
                 &.row-title {
                     [class^="btn-scoring-results"] {
-                        font-size: rem(16px);
+                        font-size: rem(14px);
                         color: #fff;
                         line-height: 16px;
                         margin: 0 auto;
@@ -400,6 +421,9 @@
             }
             td {
                 font-weight: bold;
+                span {
+                    color: #f0315c;
+                }
                 &:nth-of-type(2) {
                     line-height: 20px;
                 }
@@ -527,13 +551,18 @@
 .check-progress-weekly-compliment {
     .container {
         .content {
-            padding: 30px 0 30px 50px;
+            padding: 30px 0;
+            .week-tab-menu {
+                margin-left: 0;
+                margin-bottom: 18px;
+                padding-left: 38px;
+            }
             .wrap {
                 @extend %clearfix;
                 .fl {
-                    width: -webkit-calc( 100% - 388px );
-                    width: -moz-calc( 100% - 388px );
-                    width: calc( 100% - 388px );
+                    width: -webkit-calc( 100% - 338px );
+                    width: -moz-calc( 100% - 338px );
+                    width: calc( 100% - 338px );
                     h1 {
                         position: relative;
                         margin-bottom: 10px;
@@ -575,6 +604,7 @@
                                 }
                                 th, td {
                                     height: 105px;
+                                    line-height: 105px;
                                 }
                                 th {
                                     width: 60px;
@@ -583,6 +613,7 @@
                                 }
                                 td {
                                     position: relative;
+                                    border-right: 1px solid transparent;
                                     &:before {
                                         display: block;
                                         width: 76px;
@@ -616,11 +647,19 @@
                                             content: "과학";
                                         }
                                     }
-                                    .badge-praise-sticker {
-                                        @include wh-center ($position: absolute);
-                                        @include sprite($icon-badge-praise-sticker-full);
-                                        @extend .kw-icon;
-                                        text-indent: -9999px;
+                                    .badge {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        height: 105px;
+                                        .badge-praise-sticker {
+                                            @include wh-center ($position: absolute);
+                                            @include sprite($icon-badge-praise-sticker-full);
+                                            @extend .kw-icon;
+                                            text-indent: -9999px;
+                                        }
                                     }
                                 }
                             }
@@ -685,13 +724,15 @@
         .container {
             .content {
                 .wrap {
+                    width: 840px;
+                    margin: 0 auto;
                     .fl {
                         p.full {
                             display: none;
                         }
                     }
                     .fr {
-                        padding: 0 50px 0 70px;
+                        padding-left: 70px;
                         p {
                             span {
                                 display: inline;
@@ -721,6 +762,10 @@
         .container {
             .content {
                 padding: 30px 0 30px 30px;
+                .week-tab-menu {
+                    margin-left: -12px;
+                    padding-left: 0;
+                }
                 .wrap {
                     @include layout(11 15px/100px);
                     .fl {
@@ -740,6 +785,7 @@
                             }
                             &.messge {
                                 font-size: rem(16px);
+                                font-weight: bold;
                                 color: #888;
                                 text-align: center;
                                 margin: 12px 0 21px 0;
@@ -817,6 +863,7 @@
                         &:nth-of-type(2) {
                             font-size: rem(20px);
                             color: #099896;
+                            margin-top: 15px;
                         }
                         &:nth-of-type(3) {
                             font-size: rem(20px);
@@ -939,37 +986,43 @@
                     margin: 0 auto;
                     background: #fff;
                     border-radius: 10px;
+                    border-collapse: collapse;
                     thead {
                         tr {
                             th {
+                                position: relative;
                                 font-size: rem(15px);
                                 color: #8e5406;
                                 height: 90px;
+                                line-height: 90px;
                                 background: #fff5e6;
-                                border-right: 1px solid #fadfc2;
+                                p {
+                                    border-right: 1px solid #fadfc2;
+                                }
                                 &:first-child {
                                     border-top-left-radius: 10px;
                                 }
                                 &:last-child {
                                     border-top-right-radius: 10px;
-                                    border-right: 0;
                                 }
-                                &[class*=answer] {
-                                    position: relative;
-                                    &:after {
-                                        content:"";
-                                        @include wh-center ($position: absolute);
-                                    }
-                                }
-                                &.answer {
+                                [class*="answer"] {
+                                    @include wh-center ($position: absolute);
                                     &:after {
                                         @extend .kw-icon;
+                                        content:"";
+                                    }
+                                }
+                                .answer {
+                                    width: 49px;
+                                    height: 49px;
+                                    &:after {
                                         @include sprite($icon-answer);
                                     }
                                 }
-                                &.wrong-answer {
+                                .wrong-answer {
+                                    width: 42px;
+                                    height: 44px;
                                     &:after {
-                                        @extend .kw-icon;
                                         @include sprite($icon-wrong-answer);
                                     }
                                 }
@@ -1097,22 +1150,23 @@
 --------------------------------------------------------------------------------------- */
 .weekly-scoring-result {
     &.remote-full {
-        width: 100%;
         .container {
-            min-width: 1200px;
+            width: 100%;
             .content {
                 .table-bg {
                     width: 1100px;
                     height: 530px;
                     background: url("../../assets/images/bg/bg-table-full.png") center no-repeat;
                     margin: 0 auto;
+                    &:before {
+                        background: transparent;
+                    }
                     .table-title {
                         width: 724px;
                         height: 84px;
-                        border-width: 7px;
                         margin: 0 auto;
                         dl {
-                            margin: 13px auto;
+                            margin: 16px auto;
                             dt {
                                 font-size: rem(22px);
                                 padding-right: 47px;
@@ -1156,25 +1210,28 @@
                             tr {
                                 th, td {
                                     height: 60px;
+                                    line-height: 60px;
                                 }
                                 th {
                                     font-size: rem(20px);
-                                    &[class*=answer] {
-                                        position: relative;
-                                        &:after {
-                                            content:"";
-                                            @include wh-center ($position: absolute);
-                                        }
-                                    }
-                                    &.answer {
+                                    [class*="answer"] {
+                                        @include wh-center ($position: absolute);
                                         &:after {
                                             @extend .kw-icon;
+                                            content:"";
+                                        }
+                                    }
+                                    .answer {
+                                        width: 64px;
+                                        height: 64px;
+                                        &:after {
                                             @include sprite($icon-answer-full);
                                         }
                                     }
-                                    &.wrong-answer {
+                                    .wrong-answer {
+                                        width: 54px;
+                                        height: 56px;
                                         &:after {
-                                            @extend .kw-icon;
                                             @include sprite($icon-wrong-answer-full);
                                         }
                                     }
@@ -1230,6 +1287,7 @@
                                         height: 80px;
                                     }
                                     th {
+                                        border-top-left-radius: 0;
                                         .title {
                                             top: 19px;
                                         }
@@ -1252,7 +1310,9 @@
             .content {
                 .comment {
                     display: block;
-                    padding-top: 32px;
+                    padding-top: 10px;
+                    border-top: 2px solid #fff;
+                    margin-top: 20px;
                     @extend %clearfix;
                     .fl, .fr {
                         position: relative;
@@ -1597,9 +1657,10 @@
  (kyowon-smart-redpen/html/full-theorem-swell-problem.html)
 --------------------------------------------------------------------------------------- */
 .theorem-swell-problem {
-    overflow-y: auto;
+    overflow-y: hidden;
     .container {
         @extend %clearfix;
+        height: 578px;
         .content {
             position: relative;
             padding: 0;
