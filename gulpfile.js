@@ -95,7 +95,7 @@ var sprity_options = {
 // =======================================
 // 기본 업무
 // =======================================
-gulp.task('default', ['remove', 'bower', 'bower:copy', 'preen', 'server', 'font:move']);
+gulp.task('default', ['remove', 'bower', 'bower:copy', 'preen', 'server']);
 
 // =======================================
 // 빌드 업무
@@ -107,10 +107,8 @@ gulp.task('build', function() {
     gulp.start('htmlSSI');
     gulp.start('sass');
     gulp.start('sass:guide');
-    gulp.start('js');
     gulp.start('imagemin');
     gulp.start('sprites');
-    gulp.start('font:move');
     setTimeout(function() {
         gulp.start('css:min');
     }, 7000);
@@ -123,7 +121,6 @@ gulp.task('watch', function() {
     gulp.watch( SRC + '/**/*.html', ['htmlSSI'] );
     gulp.watch( SRC + '/sass/**/*', ['sass']);
     gulp.watch( SRC + '/guide/**/*', ['sass:guide']);
-    gulp.watch( SRC + '/js/**/*', ['js']);
     gulp.watch(SRC + '/assets/images/**/*', ['imagemin']);
     gulp.watch(SRC + '/assets/images/sprite/**/*', ['sprites']);
     gulp.watch( SRC + '/**/*.html' ).on('change', reload);
@@ -242,49 +239,6 @@ gulp.task('imagemin', function () {
             use: [pngquant()]
         }))
         .pipe( gulp.dest( BUILD + '/assets/images' ) );
- });
-
-// =======================================
-// Iconfont 업무
-// =======================================
-gulp.task('iconfont', ['iconfont:make']);
-
-gulp.task('iconfont:make', function(cb){
-    iconic({
-        // 템플릿 파일 경로 설정 (filename)
-        // gulp-iconic/template/_iconfont.scss
-        cssTemplate: SRC + '/sass/template/_iconfont.scss',
-        // Scss 생성 파일 경로 설정
-        cssFolder: SRC + '/sass/fonts',
-        // Fonts 생성 파일 경로 설정
-        fontFolder: SRC + '/iconfont/fonts',
-        // SVG 파일 경로 설정
-        svgFolder: SRC + '/iconfont/fonts_here',
-        // Preview 생성 폴더 경로 설정
-        previewFolder: SRC + '/iconfont/preview',
-        // font 경로 설정
-        fontUrl: '/assets/fonts',
-        // 아이콘 베이스라인 위치 설정
-        descent: 30
-    }, cb);
-
-    setTimeout(function() {
-        gulp.start('iconfont:move');
-    }, 1000);
- });
-
-gulp.task('iconfont:move', function(){
-    gulp.src(SRC + '/iconfont/fonts/*')
-        .pipe( gulp.dest( BUILD + '/assets/fonts' ) );
- });
-
-// =======================================
-// web font 업무
-// =======================================
-
-gulp.task('font:move', function(){
-    gulp.src(SRC + '/assets/fonts/*')
-        .pipe( gulp.dest( BUILD + '/assets/fonts' ) );
  });
 
 // =======================================

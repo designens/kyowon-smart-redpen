@@ -9,8 +9,7 @@
   "keywords": [
     "susy",
     "jquery",
-    "font-awesome",
-    "svg-injector"
+    "font-awesome"
   ],
   "homepage": "https://unicorn-iy.github.io",
   "private": true,
@@ -23,8 +22,7 @@
   ],
   "devDependencies": {
     "susy": "^2.2.12",
-    "font-awesome": "^4.7.0",
-    "svg-injector": "^1.1.3"
+    "font-awesome": "^4.7.0"
   },
   "preen": {
     "susy": [
@@ -33,9 +31,6 @@
     "font-awesome": [
       "fonts/**",
       "css/**"
-    ],
-    "svg-injector": [
-      "dist/svg-injector.min.js"
     ]
   }
 }
