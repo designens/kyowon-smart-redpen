@@ -10,4 +10,4 @@
 
 ## 프로젝트 관리
  - 일정관리 : https://goo.gl/sqWnvM
- - 사이트맵 : https://unicorn-iy.github.io
+ - 사이트맵 : kyowon-smart-redpen/index.html(오픈미정 리소스 비공개)
