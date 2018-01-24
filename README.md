@@ -1,5 +1,5 @@
 # 교원 스마트 빨간펜 화상관리
-(Hybtid Web Publishing)
+(Hybrid Web Publishing)
 
 ## Framework 구축
  - Sass
